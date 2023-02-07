@@ -3,6 +3,7 @@ from abc import ABC
 
 import requests
 from requests import Response
+from requests.adapters import HTTPAdapter
 
 JSON_HEADERS = {
     "Accept": "application/json",
@@ -50,6 +51,8 @@ class RestClient(Client):
 
         self._requests_timeout = timeout
         self._session = session or requests.Session()
+        self._session.mount("http://", HTTPAdapter(max_retries=5))
+        self._session.mount("https://", HTTPAdapter(max_retries=5))
         self.headers = headers if headers else JSON_HEADERS
         self.verify = verify
 
