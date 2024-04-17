@@ -10,13 +10,13 @@
 # Unique name of your enterprise-scale test cluster.
 # This value can not be altered after the configuration has been applied.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "dcapt-jira-test-manager"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
 # e.g.: products = ["jira"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["jira"]
 
 # License
 # To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
@@ -106,6 +106,18 @@ jira_image_repository = "atlassian/jira-software"
 # JSM
 # ! REQUIRED for JSM !
 # jira_image_repository = "atlassian/jira-servicemanagement"
+
+# Jira/JSM license
+# To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
+# If storing license as plain-text is not a concern for this environment, feel free to uncomment the following line and supply the license here.
+# Please make sure valid Jira/JSM license is used without spaces and new line symbols.
+# ! REQUIRED !
+jira_license = "AAAB4g0ODAoPeNqVUl1v2jAUfc+viLSXTVOyJED5kCyNJW5LGxJGaLdOvJjk0riExLIdKPv1cxIQbLRIe/Sxfc4995wPPyDRh4zrdle3+oOOPei0dNeb6Y7ltDWXA5G0yD0iAVWIYbUNu6f5NIZcwGzHICBrQG44HuOpOxr62gvlxNzf44RWvxEOZng6mY4irAXlegE8XD4I4AIZ9oEKvzLKdyc6nUqnJmO8SMpYmtXBEMVSbgkHk8SSbgBJXoIWlQsRc8pqsRrBG5KV5HiuiRQ7cSGXwBswa6RviUjR2N261zePt7uCtcOn5XWwmeX2l9DPXqP+anXvDtPpb/FrayXrZVey8ct9iT8nYWkl26T3fThHc3RwMvKQP/IiHBi+ctJqO7ZzyUckCa8mWpJMKCfAN8AVxbeflmP0n0LbGAW9K8MPOzfaCnaPamuVKfvKsrpWr9WytWcOkKcFY8Av7H1S8jglAv5N8vR3vRrGqTisFQfobx9vaL3VAQ+Ocdwpt3q0d6t/rDLQmxA+zQf6MSdtTKhCc5LH/1+Gs1adDnralAsc77TjsHFHC/kzyaloWvVAJ0SmmlvkUvFjNXyGhEoyJStzQXJBsq8lZeqJGRfrRvZsyBo9m+7CXvdqNfy+2B97Z1E7MCwCFDp/4aWnz2iaZ6fCIkRnVU1ODO69AhREub4kDxCwt8h5WH+V7ybOi8VOug==X02mu"
+
+# Number of Jira/JSM application nodes
+# Note: For initial installation this value needs to be set to 1 and it can be changed only after Jira is fully
+# installed and configured.
+jira_replica_count = 1
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
 # Jira version
