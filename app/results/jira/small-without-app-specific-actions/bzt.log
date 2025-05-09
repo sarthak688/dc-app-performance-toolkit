@@ -1,0 +1,407 @@
+[2025-05-09 09:49:33,268 INFO root] Taurus CLI Tool v1.16.32
+[2025-05-09 09:49:33,269 DEBUG root] Build: 14632 Tue Jun 25 09:00:22 UTC 2024
+[2025-05-09 09:49:33,269 DEBUG root] Extended git info:  e4da36d4 Release 1.16.32 changelog
+[2025-05-09 09:49:33,269 DEBUG root] Command-line options: {'log': '/tmp/bzt__dyj47pa.log', 'option': None, 'quiet': None, 'verbose': None, 'no_system_configs': None, 'aliases': []}
+[2025-05-09 09:49:33,269 DEBUG root] Python: CPython 3.11.8
+[2025-05-09 09:49:33,269 DEBUG root] OS: uname_result(system='Linux', node='ip-172-31-23-112', release='6.8.0-1024-aws', version='#26-Ubuntu SMP Tue Feb 18 17:22:37 UTC 2025', machine='x86_64')
+[2025-05-09 09:49:33,269 DEBUG root] Path to interpreter: /root/dc-app-performance-toolkit/venv/bin/python
+[2025-05-09 09:49:33,269 DEBUG root] Path to packages: ['/root/dc-app-performance-toolkit/venv/bin', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages', '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/setuptools/_vendor']
+[2025-05-09 09:49:33,269 DEBUG root] Default python: /root/dc-app-performance-toolkit/venv/bin/python
+[2025-05-09 09:49:33,269 DEBUG root] Default python3: /root/dc-app-performance-toolkit/venv/bin/python3
+[2025-05-09 09:49:33,269 DEBUG root] Using personal config: /root/.bzt-rc
+[2025-05-09 09:49:33,269 INFO root] Starting with configs: ['/root/.bzt-rc', 'jira.yml']
+[2025-05-09 09:49:33,270 INFO Engine] Configuring...
+[2025-05-09 09:49:33,280 DEBUG Engine] Base configs list: ['/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/resources/10-base-config.yml']
+[2025-05-09 09:49:33,280 DEBUG Engine.Configuration] Configs: ['/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/resources/10-base-config.yml']
+[2025-05-09 09:49:33,280 DEBUG Engine.Configuration] Reading /root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/resources/10-base-config.yml as YAML
+[2025-05-09 09:49:33,320 DEBUG Engine] User configs list: ['/root/.bzt-rc', 'jira.yml']
+[2025-05-09 09:49:33,320 DEBUG Engine.Configuration] Configs: ['/root/.bzt-rc', 'jira.yml']
+[2025-05-09 09:49:33,320 DEBUG Engine.Configuration] Reading /root/.bzt-rc as YAML
+[2025-05-09 09:49:33,322 DEBUG Engine.Configuration] Reading jira.yml as YAML
+[2025-05-09 09:49:33,331 DEBUG Engine.Configuration] Configs: ['/root/.bzt-rc', 'jira.yml']
+[2025-05-09 09:49:33,331 DEBUG Engine.Configuration] Reading /root/.bzt-rc as YAML
+[2025-05-09 09:49:33,333 DEBUG Engine.Configuration] Reading jira.yml as YAML
+[2025-05-09 09:49:33,342 INFO HTTPClient] Proxy settings not set
+[2025-05-09 09:49:33,342 INFO Engine] Artifacts dir: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33
+[2025-05-09 09:49:33,342 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective
+[2025-05-09 09:49:33,343 DEBUG Engine.Configuration] Dumping YAML config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.yml
+[2025-05-09 09:49:33,356 DEBUG Engine.Configuration] Dumping JSON config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.json
+[2025-05-09 09:49:33,357 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/merged.yml
+[2025-05-09 09:49:33,357 DEBUG Engine.Configuration] Dumping YAML config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/merged.yml
+[2025-05-09 09:49:33,362 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/merged.json
+[2025-05-09 09:49:33,362 DEBUG Engine.Configuration] Dumping JSON config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/merged.json
+[2025-05-09 09:49:33,363 DEBUG Engine] Add existing artifact (move=False): /root/.bzt-rc
+[2025-05-09 09:49:33,363 DEBUG Engine] Copying /root/.bzt-rc to /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/.bzt-rc
+[2025-05-09 09:49:33,363 DEBUG Engine] Add existing artifact (move=False): jira.yml
+[2025-05-09 09:49:33,363 DEBUG Engine] Copying jira.yml to /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/jira.yml
+[2025-05-09 09:49:33,363 DEBUG Engine] Set PYTHONPATH to :
+	CURRENT: '' +
+	TEMP: '/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/python-packages/3.11.8' +
+	USER: '/root/.bzt/python-packages/3.11.8'
+[2025-05-09 09:49:33,363 DEBUG Engine] Content of user packages dir: ['certifi', 'apiritif', 'typing_extensions.py', 'execnet', 'iniconfig', 'pycparser-2.22.dist-info', 'coverage', 'iniconfig-2.1.0.dist-info', 'requests', 'rust', 'packaging-25.0.dist-info', 'charset_normalizer-3.4.2.dist-info', 'apiritif-1.1.3.dist-info', 'py.py', 'cssselect', 'unicodecsv', 'charset_normalizer', 'idna', 'codecov', 'OpenSSL', 'cffi-1.17.1.dist-info', 'pytest-8.3.5.dist-info', 'unicodecsv-0.14.1.dist-info', 'cffi', 'coverage-7.8.0.dist-info', 'pyOpenSSL-25.0.0.dist-info', 'urllib3', 'packaging', 'lxml', 'certifi-2025.4.26.dist-info', '_cffi_backend.cpython-311-x86_64-linux-gnu.so', 'ply-3.11.dist-info', 'requests-2.32.3.dist-info', 'xdist', 'bin', 'chardet-5.2.0.dist-info', '__pycache__', 'nose2-0.15.1.dist-info', 'cryptography', 'codecov-2.1.13.dist-info', 'lxml-5.4.0.dist-info', 'jsonpath_ng-1.7.0.dist-info', 'pluggy-1.5.0.dist-info', 'urllib3-2.4.0.dist-info', 'execnet-2.1.1.dist-info', 'cryptography-44.0.3.dist-info', 'chardet', 'idna-3.10.dist-info', 'pluggy', 'ply', 'pytest', 'jsonpath_ng', 'typing_extensions-4.13.2.dist-info', 'pycparser', 'cssselect-1.3.0.dist-info', 'nose2', 'pytest_xdist-3.6.1.dist-info', '_pytest']
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: application_hostname=a29c1b22aa50e4b0c82128beea534b7e-1350679870.us-east-2.elb.amazonaws.com
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: application_protocol=http
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: application_port=80
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: secure=True
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: application_postfix=/jira
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: admin_login=admin
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: admin_password=admin
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: load_executor=jmeter
+[2025-05-09 09:49:33,364 DEBUG Engine] OS env: concurrency=2
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: test_duration=5m
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: ramp-up=3s
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: total_actions_per_hour=5450
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: WEBDRIVER_VISIBLE=False
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: JMETER_VERSION=5.6.3
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: LANGUAGE=en_US.utf8
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: allow_analytics=True
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: environment_compliance_check=True
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: create_issue=4
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: search_jql=11
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: view_issue=34
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: view_project_summary=3
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: view_dashboard=10
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: edit_issue=5
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: add_comment=2
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: browse_projects=9
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: view_scrum_board=8
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: view_kanban_board=7
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: view_backlog=6
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: browse_boards=1
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: standalone_extension=0
+[2025-05-09 09:49:33,365 DEBUG Engine] OS env: TAURUS_ARTIFACTS_DIR=/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33
+[2025-05-09 09:49:33,365 DEBUG root] Closing log handler: /tmp/bzt__dyj47pa.log
+[2025-05-09 09:49:33,365 DEBUG root] Switched writing logs to /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/bzt.log
+[2025-05-09 09:49:33,365 DEBUG root] Linting config
+[2025-05-09 09:49:33,367 INFO Engine] Preparing...
+[2025-05-09 09:49:33,369 DEBUG Engine] Module config: consolidator {'class': 'bzt.modules.aggregator.ConsolidatingAggregator', 'rtimes-len': 0, 'percentiles': []}
+[2025-05-09 09:49:33,369 DEBUG root] Importing module: bzt.modules.aggregator
+[2025-05-09 09:49:33,472 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/aggregator.py'>
+[2025-05-09 09:49:33,472 DEBUG Engine.consolidator] Buffer scaling setup: percentile None from [] selected
+[2025-05-09 09:49:33,472 DEBUG Engine] Module config: monitoring {'class': 'bzt.modules.monitoring.Monitoring'}
+[2025-05-09 09:49:33,473 DEBUG root] Importing module: bzt.modules.monitoring
+[2025-05-09 09:49:33,475 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/monitoring.py'>
+[2025-05-09 09:49:33,475 DEBUG Engine] Module config: shellexec {'class': 'bzt.modules.shellexec.ShellExecutor'}
+[2025-05-09 09:49:33,475 DEBUG root] Importing module: bzt.modules.shellexec
+[2025-05-09 09:49:33,476 DEBUG root] Loading class: 'ShellExecutor' from <module 'bzt.modules.shellexec' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/shellexec.py'>
+[2025-05-09 09:49:33,476 DEBUG Engine] Module config: pip-install {'class': 'bzt.modules.services.PipInstaller'}
+[2025-05-09 09:49:33,476 DEBUG root] Importing module: bzt.modules.services
+[2025-05-09 09:49:33,494 DEBUG pyvirtualdisplay] version=3.0
+[2025-05-09 09:49:33,507 DEBUG root] Loading class: 'PipInstaller' from <module 'bzt.modules.services' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/services.py'>
+[2025-05-09 09:49:33,507 INFO Engine.monitoring.LocalClient] Using StandardLocalMonitor for engine health monitoring
+[2025-05-09 09:49:33,508 DEBUG Engine.shellexec] Added prepare task: {'command': 'python util/pre_run/environment_checker.py'}
+[2025-05-09 09:49:33,508 DEBUG Engine.shellexec] Added prepare task: {'command': 'python util/pre_run/environment_compliance_check.py jira'}
+[2025-05-09 09:49:33,508 DEBUG Engine.shellexec] Added prepare task: {'command': 'python util/data_preparation/jira_prepare_data.py'}
+[2025-05-09 09:49:33,508 DEBUG Engine.shellexec] Added shutdown task: {'command': 'python util/post_run/jmeter_post_check.py'}
+[2025-05-09 09:49:33,508 DEBUG Engine.shellexec] Added shutdown task: {'command': 'python util/jtl_convertor/jtls-to-csv.py kpi.jtl selenium.jtl'}
+[2025-05-09 09:49:33,508 DEBUG Engine.shellexec] Added post-process task: {'command': 'python util/analytics/analytics.py jira'}
+[2025-05-09 09:49:33,508 DEBUG Engine.shellexec] Added post-process task: {'command': 'python util/post_run/cleanup_results_dir.py'}
+[2025-05-09 09:49:33,508 INFO Engine.shellexec.Task] Starting shell command: python util/pre_run/environment_checker.py
+[2025-05-09 09:49:33,509 DEBUG root] Executing shell: python util/pre_run/environment_checker.py at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:49:33,624 DEBUG Engine.shellexec.Task] Output for python util/pre_run/environment_checker.py:
+Python version: 3.11.8
+Data Center App Performance Toolkit version: 8.7.0
+
+[2025-05-09 09:49:33,624 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/pre_run/environment_checker.py
+[2025-05-09 09:49:33,624 INFO Engine.shellexec.Task] Starting shell command: python util/pre_run/environment_compliance_check.py jira
+[2025-05-09 09:49:33,625 DEBUG root] Executing shell: python util/pre_run/environment_compliance_check.py jira at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:49:35,400 DEBUG Engine.shellexec.Task] Output for python util/pre_run/environment_compliance_check.py jira:
+INFO: DCAPT version 8.7.0 is the latest.
+INFO: application_protocol (http or https): http
+INFO: application_hostname (should be without protocol, postfix and slash): a29c1b22aa50e4b0c82128beea534b7e-1350679870.us-east-2.elb.amazonaws.com
+INFO: application_port: 80
+INFO: application_postfix: /jira
+INFO: Product URL: http://a29c1b22aa50e4b0c82128beea534b7e-1350679870.us-east-2.elb.amazonaws.com:80/jira
+INFO: Product status: {"state":"RUNNING"}
+INFO: jira processors count: 1
+INFO: Chrome version: 136.0.7103.92
+INFO: Chromedriver version in jira.yml: 136.0.7103.92
+INFO: Java version: 17.0.15
+
+[2025-05-09 09:49:35,400 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/pre_run/environment_compliance_check.py jira
+[2025-05-09 09:49:35,400 INFO Engine.shellexec.Task] Starting shell command: python util/data_preparation/jira_prepare_data.py
+[2025-05-09 09:49:35,401 DEBUG root] Executing shell: python util/data_preparation/jira_prepare_data.py at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:49:37,749 DEBUG Engine.shellexec.Task] Output for python util/data_preparation/jira_prepare_data.py:
+Started preparing data
+Server url:  http://a29c1b22aa50e4b0c82128beea534b7e-1350679870.us-east-2.elb.amazonaws.com:80/jira
+INFO: Users search. Prefix: 'performance_', users_count: 2
+Users count: 2
+Projects: 2
+Issues count: 83
+Scrum boards count: 1
+Kanban boards count: 1
+Jqls count: 150
+------------------------
+Custom dataset issues: 0
+Finished preparing data
+
+[2025-05-09 09:49:37,749 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/data_preparation/jira_prepare_data.py
+[2025-05-09 09:49:37,749 DEBUG root] Executing shell: ['/root/dc-app-performance-toolkit/venv/bin/python', '-m', 'pip', '--version'] at .
+[2025-05-09 09:49:38,042 DEBUG root] Executing shell: ['/root/dc-app-performance-toolkit/venv/bin/python', '-m', 'pip', 'list'] at .
+[2025-05-09 09:49:38,468 DEBUG Engine] Module config: local {'class': 'bzt.modules.provisioning.Local'}
+[2025-05-09 09:49:38,469 DEBUG root] Importing module: bzt.modules.provisioning
+[2025-05-09 09:49:38,469 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/provisioning.py'>
+[2025-05-09 09:49:38,469 DEBUG Engine] Module config: jmeter {'class': 'bzt.modules.jmeter.JMeterExecutor', 'protocol-handlers': {'http': 'bzt.jmx.http.HTTPProtocolHandler', 'mqtt': 'bzt.jmx.mqtt.MQTTProtocolHandler', 'grpc': 'bzt.jmx.grpc.GRPCProtocolHandler'}, 'plugins': ['jpgc-casutg', 'jpgc-dummy', 'jpgc-ffw', 'jpgc-fifo', 'jpgc-functions', 'jpgc-json', 'jpgc-perfmon', 'jpgc-prmctl', 'jpgc-tst', 'jpgc-casutg=2.10', 'jpgc-dummy=0.4', 'jpgc-ffw=2.0', 'jpgc-fifo=0.2', 'jpgc-functions=2.2', 'jpgc-json=2.7', 'jpgc-perfmon=2.1', 'jpgc-prmctl=0.4', 'jpgc-tst=2.6', 'bzm-random-csv=0.8'], 'properties': {'jmeter.save.saveservice.autoflush': 'true', 'jmeter.save.saveservice.connect_time': 'true', 'jmeterengine.force.system.exit': 'true', 'summariser.name': ''}, 'version': '5.6.3', 'detect-plugins': True, 'memory-xmx': '8G', 'system-properties': {'server.rmi.ssl.disable': True, 'java.rmi.server.hostname': 'localhost', 'httpsampler.ignore_failed_embedded_resources': 'true'}}
+[2025-05-09 09:49:38,469 DEBUG root] Importing module: bzt.modules.jmeter
+[2025-05-09 09:49:38,469 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/jmeter.py'>
+[2025-05-09 09:49:38,469 DEBUG Engine] Module config: selenium {'class': 'bzt.modules._selenium.SeleniumExecutor', 'chromedriver': {'version': '136.0.7103.92'}}
+[2025-05-09 09:49:38,469 DEBUG root] Importing module: bzt.modules._selenium
+[2025-05-09 09:49:38,470 DEBUG root] Loading class: 'SeleniumExecutor' from <module 'bzt.modules._selenium' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/_selenium.py'>
+[2025-05-09 09:49:38,470 DEBUG Engine.local] Preparing executor: jmeter/130820540349392
+[2025-05-09 09:49:38,471 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/jmeter.log
+[2025-05-09 09:49:38,471 DEBUG Engine.jmeter] Checking if port 4445 is free
+[2025-05-09 09:49:38,471 DEBUG Engine.jmeter] Port 4445 is free
+[2025-05-09 09:49:38,471 DEBUG Engine.jmeter] Using port 4445 for management
+[2025-05-09 09:49:38,471 DEBUG Engine.jmeter] Getting Jmeter version.
+[2025-05-09 09:49:38,471 DEBUG Engine.jmeter] Autodetect version is enabled
+[2025-05-09 09:49:38,472 DEBUG Engine.jmeter] JMeter version: 5.6.3
+[2025-05-09 09:49:38,472 DEBUG Engine.jmeter] Setting JVM heap size to 8G
+[2025-05-09 09:49:38,472 DEBUG Engine.jmeter] Additional system properties {'server.rmi.ssl.disable': True, 'java.rmi.server.hostname': 'localhost', 'httpsampler.ignore_failed_embedded_resources': 'true'}
+[2025-05-09 09:49:38,472 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/system.properties
+[2025-05-09 09:49:38,472 DEBUG Engine.jmeter] Additional properties: {'jmeter.save.saveservice.autoflush': 'true', 'jmeter.save.saveservice.connect_time': 'true', 'jmeterengine.force.system.exit': 'true', 'summariser.name': '', 'application_hostname': 'a29c1b22aa50e4b0c82128beea534b7e-1350679870.us-east-2.elb.amazonaws.com', 'application_protocol': 'http', 'application_port': '80', 'application_postfix': '/jira', 'total_actions_per_hr': '5450', 'perc_create_issue': '4', 'perc_search_jql': '11', 'perc_view_issue': '34', 'perc_view_project_summary': '3', 'perc_view_dashboard': '10', 'perc_edit_issue': '5', 'perc_add_comment': '2', 'perc_browse_projects': '9', 'perc_view_scrum_board': '8', 'perc_view_kanban_board': '7', 'perc_view_backlog': '6', 'perc_browse_boards': '1', 'perc_standalone_extension': '0', 'jmeterengine.nongui.port': 4445, 'jmeterengine.nongui.maxport': 4445, 'jmeter.save.saveservice.timestamp_format': 'ms', 'sampleresult.default.encoding': 'UTF-8', 'user.classpath': '/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33:/root/dc-app-performance-toolkit/app/jmeter'}
+[2025-05-09 09:49:38,472 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/jmeter-bzt.properties
+[2025-05-09 09:49:38,472 DEBUG Engine.jmeter.JavaVM] Trying JavaVM: ['java', '-version']
+[2025-05-09 09:49:38,473 DEBUG root] Executing shell: ['java', '-version'] at .
+[2025-05-09 09:49:38,523 DEBUG Engine.jmeter.JavaVM] JavaVM output: openjdk version "17.0.15" 2025-04-15
+OpenJDK Runtime Environment (build 17.0.15+6-Ubuntu-0ubuntu124.04)
+OpenJDK 64-Bit Server VM (build 17.0.15+6-Ubuntu-0ubuntu124.04, mixed mode, sharing)
+
+[2025-05-09 09:49:38,523 DEBUG Engine.jmeter.TclLibrary] We don't need to check tcl library on this platform
+[2025-05-09 09:49:38,524 DEBUG Engine.jmeter.JMeter] Trying JMeter..
+[2025-05-09 09:49:38,524 DEBUG root] Executing shell: ['/root/.bzt/jmeter-taurus/5.6.3/bin/jmeter.sh', '-j', '/tmp/jmeterd_dfhe_olog', '--version'] at .
+[2025-05-09 09:49:39,804 DEBUG Engine.jmeter.JMeter] JMeter check: WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+    _    ____   _    ____ _   _ _____       _ __  __ _____ _____ _____ ____
+   / \  |  _ \ / \  / ___| | | | ____|     | |  \/  | ____|_   _| ____|  _ \
+  / _ \ | |_) / _ \| |   | |_| |  _|    _  | | |\/| |  _|   | | |  _| | |_) |
+ / ___ \|  __/ ___ \ |___|  _  | |___  | |_| | |  | | |___  | | | |___|  _ <
+/_/   \_\_| /_/   \_\____|_| |_|_____|  \___/|_|  |_|_____| |_| |_____|_| \_\ 5.6.3
+
+Copyright (c) 1999-2024 The Apache Software Foundation
+
+ / 
+[2025-05-09 09:49:39,816 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/kpi.jtl
+[2025-05-09 09:49:39,818 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/error.jtl
+[2025-05-09 09:49:39,822 INFO Engine.jmeter] 1 obsolete CookieManagers are found and fixed
+[2025-05-09 09:49:39,824 DEBUG Engine.jmeter.LoadSettingsProcessor] Load: LoadSpec(concurrency=2, throughput=None, ramp_up=3.0, hold=300.0, iterations=0, duration=303.0, steps=None)
+[2025-05-09 09:49:39,828 DEBUG Engine.jmeter.LoadSettingsProcessor.ThreadGroupHandler] Converting ThreadGroup (Jira) to ConcurrencyThreadGroup and apply load parameters
+[2025-05-09 09:49:39,828 DEBUG JMX] Saving JMX to: /root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+[2025-05-09 09:49:39,832 DEBUG root] Executing shell: ['/root/.bzt/jmeter-taurus/5.6.3/bin/PluginsManagerCMD.sh', 'install-for-jmx', '/root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx'] at .
+[2025-05-09 09:49:42,237 DEBUG Engine.jmeter.JMeter] Try to detect plugins for /root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+2025-05-09 09:49:40,838 INFO o.j.r.PluginManagerCMD: Command is: install-for-jmx
+2025-05-09 09:49:40,932 INFO o.j.r.JARSourceHTTP: Found cached repo
+2025-05-09 09:49:41,253 INFO o.j.r.PluginManager: Plugins Status: [jpgc-functions=2.2, jpgc-casutg=2.10, jpgc-dummy=0.4, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-json=2.7, jpgc-prmctl=0.4, jpgc-perfmon=2.1, jpgc-plugins-manager=1.7, bzm-random-csv=0.8, jpgc-tst=2.6, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2025-05-09 09:49:41,256 INFO o.j.r.PluginManagerCMD: Params line is: /root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+2025-05-09 09:49:41,819 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-05-09 09:49:41,841 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-05-09 09:49:41,846 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-05-09 09:49:41,894 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2025-05-09 09:49:41,977 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 09:49:41,978 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 09:49:41,978 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 09:49:41,978 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 09:49:41,978 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-05-09 09:49:41,978 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-05-09 09:49:42,182 INFO o.j.r.PluginManager: Finishing without changes
+
+
+[2025-05-09 09:49:42,237 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/jmeter.out
+[2025-05-09 09:49:42,237 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/jmeter.err
+[2025-05-09 09:49:42,240 DEBUG Engine.local] Preparing executor: selenium/130820540348944
+[2025-05-09 09:49:42,245 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+[2025-05-09 09:49:42,257 DEBUG urllib3.connectionpool] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/last-known-good-versions.json HTTP/1.1" 200 185
+[2025-05-09 09:49:42,258 INFO Engine.selenium] Latest stable version of chromedriver is 136.0.7103.92
+[2025-05-09 09:49:42,259 INFO Engine.selenium] Used version of chromedriver is 136.0.7103.92
+[2025-05-09 09:49:42,260 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): api.github.com:443
+[2025-05-09 09:49:42,374 DEBUG urllib3.connectionpool] https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/1.1" 200 None
+[2025-05-09 09:49:42,375 INFO Engine.selenium] Latest stable version of geckodriver is 0.36.0
+[2025-05-09 09:49:42,375 INFO Engine.selenium] Used version of geckodriver is 0.36.0
+[2025-05-09 09:49:42,375 DEBUG Engine.selenium.Selenium] Checking Selenium.
+[2025-05-09 09:49:42,375 DEBUG root] Executing shell: ['/root/dc-app-performance-toolkit/venv/bin/python', '-m', 'pip', '--version'] at .
+[2025-05-09 09:49:42,660 DEBUG root] Executing shell: ['/root/dc-app-performance-toolkit/venv/bin/python', '-m', 'pip', 'list'] at .
+[2025-05-09 09:49:43,079 DEBUG Engine.selenium] Using script type: pytest
+[2025-05-09 09:49:43,080 DEBUG Engine] Module config: pytest {'class': 'bzt.modules._pytest.PyTestExecutor'}
+[2025-05-09 09:49:43,080 DEBUG root] Importing module: bzt.modules._pytest
+[2025-05-09 09:49:43,083 DEBUG root] Loading class: 'PyTestExecutor' from <module 'bzt.modules._pytest' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/_pytest.py'>
+[2025-05-09 09:49:43,083 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/pytest.out
+[2025-05-09 09:49:43,084 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/pytest.err
+[2025-05-09 09:49:43,084 DEBUG Engine.pytest.PyTest] Checking PyTest.
+[2025-05-09 09:49:43,084 DEBUG root] Executing shell: ['/root/dc-app-performance-toolkit/venv/bin/python', '-m', 'pip', '--version'] at .
+[2025-05-09 09:49:43,369 DEBUG root] Executing shell: ['/root/dc-app-performance-toolkit/venv/bin/python', '-m', 'pip', 'list'] at .
+[2025-05-09 09:49:43,787 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/PyTestExecutor.ldjson
+[2025-05-09 09:49:43,788 DEBUG Engine] Module config: final-stats {'class': 'bzt.modules.reporting.FinalStatus'}
+[2025-05-09 09:49:43,788 DEBUG root] Importing module: bzt.modules.reporting
+[2025-05-09 09:49:43,798 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/reporting.py'>
+[2025-05-09 09:49:43,798 DEBUG Engine] Module config: console {'class': 'bzt.modules.console.ConsoleStatusReporter'}
+[2025-05-09 09:49:43,798 DEBUG root] Importing module: bzt.modules.console
+[2025-05-09 09:49:43,798 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/console.py'>
+[2025-05-09 09:49:43,798 DEBUG Engine] Module config: junit-xml {'class': 'bzt.modules.reporting.JUnitXMLReporter'}
+[2025-05-09 09:49:43,798 DEBUG root] Importing module: bzt.modules.reporting
+[2025-05-09 09:49:43,798 DEBUG root] Loading class: 'JUnitXMLReporter' from <module 'bzt.modules.reporting' from '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/modules/reporting.py'>
+[2025-05-09 09:49:43,804 DEBUG Engine.Configuration] Dumping YAML config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.yml
+[2025-05-09 09:49:43,817 DEBUG Engine.Configuration] Dumping JSON config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.json
+[2025-05-09 09:49:43,818 INFO Engine] Starting...
+[2025-05-09 09:49:43,818 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x76fb148391d0>
+[2025-05-09 09:49:43,818 DEBUG Engine] Startup <bzt.modules.shellexec.ShellExecutor object at 0x76fb11ef3610>
+[2025-05-09 09:49:43,818 DEBUG Engine] Startup <bzt.modules.services.PipInstaller object at 0x76fb08700190>
+[2025-05-09 09:49:43,818 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x76fb11f7b9d0>
+[2025-05-09 09:49:43,819 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x76fb07d9fd90>
+[2025-05-09 09:49:43,819 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x76fb07d9f950>
+[2025-05-09 09:49:43,819 INFO Engine.console] Waiting for results...
+[2025-05-09 09:49:43,819 DEBUG Engine] Startup <bzt.modules.reporting.JUnitXMLReporter object at 0x76fb07d65210>
+[2025-05-09 09:49:43,819 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x76fb07d63f90>
+[2025-05-09 09:49:43,819 DEBUG Engine.local] Delay setup for jmeter/jmeter: 0(start-at) + 0(delay) = 0
+[2025-05-09 09:49:43,819 DEBUG Engine.local] Delay setup for selenium/130820540348944: 0(start-at) + 0(delay) = 0
+[2025-05-09 09:49:43,820 DEBUG Engine.Configuration] Dumping YAML config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.yml
+[2025-05-09 09:49:43,834 DEBUG Engine.Configuration] Dumping JSON config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.json
+[2025-05-09 09:49:43,834 DEBUG root] Leveling down log file verbosity to INFO, use -v option to have DEBUG messages enabled
+[2025-05-09 09:49:43,834 DEBUG root] Leveled up log file verbosity
+[2025-05-09 09:49:43,834 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/GRACEFUL
+[2025-05-09 09:49:43,835 DEBUG root] Executing shell: ['/root/.bzt/jmeter-taurus/5.6.3/bin/jmeter.sh', '-t', '/root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx', '-j', '/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/jmeter.log', '-q', '/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/jmeter-bzt.properties', '-n', '-S', '/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/system.properties'] at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:49:43,841 DEBUG Engine.local] Starting execution: jmeter/jmeter, rest of available slots: 9223372036854775806
+[2025-05-09 09:49:43,842 DEBUG root] Leveling down log file verbosity to INFO, use -v option to have DEBUG messages enabled
+[2025-05-09 09:49:43,842 DEBUG root] Leveled up log file verbosity
+[2025-05-09 09:49:43,842 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/GRACEFUL-1
+[2025-05-09 09:49:43,842 DEBUG root] Executing shell: ['/root/dc-app-performance-toolkit/venv/bin/python', '/root/dc-app-performance-toolkit/venv/lib/python3.11/site-packages/bzt/resources/pytest_runner.py', '--report-file', '/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/PyTestExecutor.ldjson', '-d', '300.0', '/root/dc-app-performance-toolkit/app/selenium_ui/jira_ui.py'] at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:49:43,848 DEBUG Engine.local] Starting execution: selenium/130820540348944, rest of available slots: 9223372036854775805
+[2025-05-09 09:49:43,849 DEBUG root] Leveling down log file verbosity to INFO, use -v option to have DEBUG messages enabled
+[2025-05-09 09:49:44,054 INFO Engine.console] Waiting for finish...
+[2025-05-09 09:54:56,967 WARNING Engine] Please wait for graceful shutdown...
+[2025-05-09 09:54:56,974 DEBUG root] Leveled up log file verbosity
+[2025-05-09 09:54:56,974 INFO Engine] Shutting down...
+[2025-05-09 09:54:56,980 DEBUG Engine] Current stop reason: None
+[2025-05-09 09:54:56,982 DEBUG Engine.local] Shutdown jmeter/jmeter
+[2025-05-09 09:54:56,982 DEBUG Engine.local] Shutdown selenium/130820540348944
+[2025-05-09 09:54:57,982 DEBUG Engine.selenium] Selenium tests ran for 314.14032220840454 seconds
+[2025-05-09 09:54:57,982 DEBUG Engine.console] Restoring logging streams, [<StreamHandler (INFO)>]/{<StreamHandler (INFO)>: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>}
+[2025-05-09 09:54:57,983 INFO Engine.shellexec.Task] Starting shell command: python util/post_run/jmeter_post_check.py
+[2025-05-09 09:54:57,983 DEBUG root] Executing shell: python util/post_run/jmeter_post_check.py at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:54:58,036 DEBUG Engine.shellexec.Task] Output for python util/post_run/jmeter_post_check.py:
+jmeter_post_check: PASS
+
+[2025-05-09 09:54:58,036 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/post_run/jmeter_post_check.py
+[2025-05-09 09:54:58,036 INFO Engine.shellexec.Task] Starting shell command: python util/jtl_convertor/jtls-to-csv.py kpi.jtl selenium.jtl
+[2025-05-09 09:54:58,037 DEBUG root] Executing shell: python util/jtl_convertor/jtls-to-csv.py kpi.jtl selenium.jtl at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:54:58,666 DEBUG Engine.shellexec.Task] Output for python util/jtl_convertor/jtls-to-csv.py kpi.jtl selenium.jtl:
+Started validating jtl file: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/kpi.jtl
+File: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/kpi.jtl validated in 0.0037794113159179688 seconds
+Created file /tmp/tmpto_41juc/kpi.csv. Converted from jtl to csv in 0.030007123947143555 
+Started validating jtl file: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/selenium.jtl
+File: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/selenium.jtl validated in 0.003192424774169922 seconds
+Created file /tmp/tmpto_41juc/selenium.csv. Converted from jtl to csv in 0.03725624084472656 
+File /tmp/tmpto_41juc/kpi.csv successfully read
+File /tmp/tmpto_41juc/selenium.csv successfully read
+Created file /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/results.csv
+Done in 0.07591891288757324 seconds
+
+[2025-05-09 09:54:58,667 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/jtl_convertor/jtls-to-csv.py kpi.jtl selenium.jtl
+[2025-05-09 09:54:58,668 DEBUG Engine.Configuration] Dumping YAML config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.yml
+[2025-05-09 09:54:58,682 DEBUG Engine.Configuration] Dumping JSON config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.json
+[2025-05-09 09:54:58,683 INFO Engine] Post-processing...
+[2025-05-09 09:54:58,683 DEBUG Engine.local] Post-process jmeter/jmeter
+[2025-05-09 09:54:58,683 DEBUG Engine] Add existing artifact (move=True): /root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+[2025-05-09 09:54:58,683 DEBUG Engine] Moving /root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx to /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/modified_jira.jmx
+[2025-05-09 09:54:58,684 DEBUG Engine.local] Post-process selenium/130820540348944
+[2025-05-09 09:54:58,684 DEBUG Engine.jmeter.JTLReader] Buffer len: 2; Known errors count: 0
+[2025-05-09 09:54:58,684 DEBUG Engine.jmeter.JTLReader] Aggregating: 1746784488, 2 in buffer
+[2025-05-09 09:54:58,686 DEBUG Engine.consolidator] Putting datapoint 1746784488 into 1746784492
+[2025-05-09 09:54:58,687 DEBUG Engine.jmeter.JTLReader] Aggregating: 1746784489, 1 in buffer
+[2025-05-09 09:54:58,688 DEBUG Engine.consolidator] Putting datapoint 1746784489 into 1746784492
+[2025-05-09 09:54:58,689 DEBUG LoadSamplesReader] Buffer len: 2; Known errors count: 0
+[2025-05-09 09:54:58,689 DEBUG LoadSamplesReader] Aggregating: 1746784494, 2 in buffer
+[2025-05-09 09:54:58,690 DEBUG LoadSamplesReader] Aggregating: 1746784495, 1 in buffer
+[2025-05-09 09:54:58,692 DEBUG Engine.jmeter.JTLReader] Buffer len: 0; Known errors count: 0
+[2025-05-09 09:54:58,692 DEBUG LoadSamplesReader] Buffer len: 0; Known errors count: 0
+[2025-05-09 09:54:58,692 DEBUG Engine.consolidator] Consolidator buffer[4]: dict_keys([1746784492, 1746784493, 1746784494, 1746784495])
+[2025-05-09 09:54:58,692 DEBUG Engine.consolidator] Merging into 1746784492
+[2025-05-09 09:54:58,692 DEBUG Engine.consolidator] Merging 1746784492
+[2025-05-09 09:54:58,694 DEBUG Engine.consolidator] Merging 1746784492
+[2025-05-09 09:54:58,695 DEBUG Engine.consolidator] Merging 1746784492
+[2025-05-09 09:54:58,717 DEBUG Engine.consolidator] Processed datapoint: 1746784492/ConsolidatingAggregator@130820710316496
+[2025-05-09 09:54:58,717 DEBUG Engine.consolidator] Merging into 1746784493
+[2025-05-09 09:54:58,717 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2025-05-09 09:54:58,717 DEBUG Engine.consolidator] Adding sticky concurrency for /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/kpi.jtl@130820540434384
+[2025-05-09 09:54:58,736 DEBUG Engine.consolidator] Processed datapoint: 1746784493/ConsolidatingAggregator@130820710316496
+[2025-05-09 09:54:58,736 DEBUG Engine.consolidator] Merging into 1746784494
+[2025-05-09 09:54:58,736 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2025-05-09 09:54:58,736 DEBUG Engine.consolidator] Adding sticky concurrency for /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/kpi.jtl@130820540434384
+[2025-05-09 09:54:58,754 DEBUG Engine.consolidator] Processed datapoint: 1746784494/ConsolidatingAggregator@130820710316496
+[2025-05-09 09:54:58,754 DEBUG Engine.consolidator] Merging into 1746784495
+[2025-05-09 09:54:58,754 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2025-05-09 09:54:58,754 DEBUG Engine.consolidator] Adding sticky concurrency for /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/kpi.jtl@130820540434384
+[2025-05-09 09:54:58,771 DEBUG Engine.consolidator] Processed datapoint: 1746784495/ConsolidatingAggregator@130820710316496
+[2025-05-09 09:54:58,771 INFO Engine.final-stats] Test duration: 0:05:14
+[2025-05-09 09:54:58,772 INFO Engine.final-stats] Samples count: 786, 0.00% failures
+[2025-05-09 09:54:58,772 INFO Engine.final-stats] Average times: total 0.548, latency 0.000, connect 0.000
+[2025-05-09 09:54:58,772 INFO Engine.final-stats] Percentiles:
++---------------+---------------+
+| Percentile, % | Resp. Time, s |
++---------------+---------------+
+[2025-05-09 09:54:58,774 INFO Engine.final-stats] Request label stats:
++------------------------------------------------+--------+---------+--------+-------+
+| label                                          | status |    succ | avg_rt | error |
++------------------------------------------------+--------+---------+--------+-------+
+| jmeter_add_comment:open_comment                |   OK   | 100.00% |  0.125 |       |
+| jmeter_add_comment:save_comment                |   OK   | 100.00% |  0.337 |       |
+| jmeter_browse_boards                           |   OK   | 100.00% |  0.116 |       |
+| jmeter_browse_projects                         |   OK   | 100.00% |  0.101 |       |
+| jmeter_create_issue:fill_and_submit_issue_form |   OK   | 100.00% |  0.204 |       |
+| jmeter_create_issue:open_quick_create          |   OK   | 100.00% |  0.042 |       |
+| jmeter_edit_issue:open_editor                  |   OK   | 100.00% |  0.136 |       |
+| jmeter_edit_issue:save_edit                    |   OK   | 100.00% |  0.315 |       |
+| jmeter_login_and_view_dashboard                |   OK   | 100.00% |  0.492 |       |
+| jmeter_search_jql                              |   OK   | 100.00% |  0.374 |       |
+| jmeter_view_backlog                            |   OK   | 100.00% |  0.249 |       |
+| jmeter_view_dashboard                          |   OK   | 100.00% |  0.205 |       |
+| jmeter_view_issue                              |   OK   | 100.00% |  0.286 |       |
+| jmeter_view_kanban_board                       |   OK   | 100.00% |  0.215 |       |
+| jmeter_view_project_summary                    |   OK   | 100.00% |  0.187 |       |
+| jmeter_view_scrum_board                        |   OK   | 100.00% |  0.250 |       |
+| selenium_a_login                               |   OK   | 100.00% |  2.772 |       |
+| selenium_browse_boards_list                    |   OK   | 100.00% |  0.274 |       |
+| selenium_browse_projects_list                  |   OK   | 100.00% |  0.292 |       |
+| selenium_create_issue                          |   OK   | 100.00% |  2.604 |       |
+| selenium_edit_issue                            |   OK   | 100.00% |  1.865 |       |
+| selenium_save_comment                          |   OK   | 100.00% |  1.697 |       |
+| selenium_search_jql                            |   OK   | 100.00% |  0.995 |       |
+| selenium_view_backlog_for_scrum_board          |   OK   | 100.00% |  1.064 |       |
+| selenium_view_dashboard                        |   OK   | 100.00% |  0.335 |       |
+| selenium_view_issue                            |   OK   | 100.00% |  0.539 |       |
+| selenium_view_kanban_board                     |   OK   | 100.00% |  0.991 |       |
+| selenium_view_project_summary                  |   OK   | 100.00% |  0.496 |       |
+| selenium_view_scrum_board                      |   OK   | 100.00% |  1.008 |       |
+| selenium_z_log_out                             |   OK   | 100.00% |  0.489 |       |
++------------------------------------------------+--------+---------+--------+-------+
+[2025-05-09 09:54:58,774 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2025-05-09 09:54:58,774 DEBUG Engine] New artifact filename: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/xunit.xml
+[2025-05-09 09:54:58,775 INFO Engine.XUnitFileWriter] Writing JUnit XML report into: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/xunit.xml
+[2025-05-09 09:54:58,775 INFO Engine.shellexec.Task] Starting shell command: python util/analytics/analytics.py jira
+[2025-05-09 09:54:58,775 DEBUG root] Executing shell: python util/analytics/analytics.py jira at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:55:03,407 DEBUG Engine.shellexec.Task] Output for python util/analytics/analytics.py jira:
+Results summary log file created: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/results_summary.log
+None
+
+[2025-05-09 09:55:03,407 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/analytics/analytics.py jira
+[2025-05-09 09:55:03,408 INFO Engine.shellexec.Task] Starting shell command: python util/post_run/cleanup_results_dir.py
+[2025-05-09 09:55:03,408 DEBUG root] Executing shell: python util/post_run/cleanup_results_dir.py at /root/dc-app-performance-toolkit/app
+[2025-05-09 09:55:03,453 DEBUG Engine.shellexec.Task] Output for python util/post_run/cleanup_results_dir.py:
+The jmeter.out was removed successfully
+The jmeter-bzt.properties was removed successfully
+The merged.json was removed successfully
+The merged.yml was removed successfully
+The PyTestExecutor.ldjson was removed successfully
+The system.properties was removed successfully
+
+[2025-05-09 09:55:03,454 DEBUG Engine.shellexec.Task] Task was finished with exit code 0: python util/post_run/cleanup_results_dir.py
+[2025-05-09 09:55:03,455 DEBUG Engine.Configuration] Dumping YAML config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.yml
+[2025-05-09 09:55:03,471 DEBUG Engine.Configuration] Dumping JSON config into /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/effective.json
+[2025-05-09 09:55:03,472 INFO root] Artifacts dir: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33
+[2025-05-09 09:55:03,472 INFO root] Done performing with code: 0
+[2025-05-09 09:55:03,472 DEBUG root] Closing log handler: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_09-49-33/bzt.log
