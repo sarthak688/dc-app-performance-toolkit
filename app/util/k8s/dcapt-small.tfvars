@@ -13,20 +13,20 @@
 # This value can not be altered after the configuration has been applied.
 # Only lowercase letters, numbers, dashes, and dots are allowed.
 # ! REQUIRED !
-environment_name = "dcapt-product-small"
+environment_name = "tmh-jira-perf-testing"
 
 # Supported products: jira, confluence and bitbucket.
 # For JSM set product as jira.
 # e.g.: products = ["jira"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["jira"]
 
 # License
 # To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
 # If storing license as plain-text is not a concern for this environment, feel free to uncomment the following line and supply the license here.
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
-jira_license = "jira-license"
+jira_license = "AAAB4A0ODAoPeNqVUk1v2kAUvPtXWOqlPRitzUcw0kqFZUlpbEOAoKTi8jCPeIuxnfWahPz6+gMELQlSJV921jvzZt58GUihu7DXia0Tq2OaHcvUWX+mW8RqakwiKBFHfVBIC8Qg+WdrjvAxSnG2T9CDLVI2cl0+YcOuo/0WEmqHe74SxWvKvRmfjCfDKde8bLtEOVo/pChTaphHKv6WCLk/02kZpF2RJTJeZb6qFQcjjdfqFSTWwFdih1TJDLVptkx9KZJSrET4DsIMTueSKGcHhpFCWYFhJf0D0oC67JUNus0BWjZj73h3y+Y784VZbGVu3F7rrhvcP964WW8CnLTfn+yXZRD9CsO53CXd9f2CLujRybBPnWF/yj3DsYjdaDbqjWs+pgpkMdEawjR3gnKHMqfoPRLLsJ9GpjH02i3DGTVvtQ3u53lqhSmzRcgNadfrpvYsEaMgThKUV3IfZ9IPIMV/N3n+uowmkSI9xso9+rePD7Q+6kAfT+v4mbvVpwe3+tdiB3q1hG+Ljn7ak+aCyNEIIv//y3DRqvNBz5tyheOTdhwTt7SRfIZIpFWrHsQYVKCxOFI5P8+HDyls0gBUbSuUgvB7JpL8j5ofbyvVixlL9GK4K7EexEr4U60/10tPfzAsAhR6BoB2I0qhCILkgS7BDLcmg+PUuwIUcqbRoNrM+3cYX+g97XwvluKiI/E=X02mq"
 confluence_license = "confluence-license"
 bitbucket_license = "bitbucket-license"
 
