@@ -1,0 +1,787 @@
+2025-05-09 07:14:42 [INFO] Terraform will use '/data-center-terraform/conf.tfvars' to install the infrastructure.
+2025-05-09 07:14:42 [INFO] Verifying the config file.
+2025-05-09 07:14:43 [INFO] Checking jira license
+2025-05-09 07:14:43 [INFO] Testing jira license: AAAB4A0ODAoPeNqVUk1v2kAUvPtXWOqlPRitzUcw0kqFZUlpbEOAoKTi8jCPeIuxnfWahPz6+gMELQlSJV921jvzZt58GUihu7DXia0Tq2OaHcvUWX+mW8RqakwiKBFHfVBIC8Qg+WdrjvAxSnG2T9CDLVI2cl0+YcOuo/0WEmqHe74SxWvKvRmfjCfDKde8bLtEOVo/pChTaphHKv6WCLk/02kZpF2RJTJeZb6qFQcjjdfqFSTWwFdih1TJDLVptkx9KZJSrET4DsIMTueSKGcHhpFCWYFhJf0D0oC67JUNus0BWjZj73h3y+Y784VZbGVu3F7rrhvcP964WW8CnLTfn+yXZRD9CsO53CXd9f2CLujRybBPnWF/yj3DsYjdaDbqjWs+pgpkMdEawjR3gnKHMqfoPRLLsJ9GpjH02i3DGTVvtQ3u53lqhSmzRcgNadfrpvYsEaMgThKUV3IfZ9IPIMV/N3n+uowmkSI9xso9+rePD7Q+6kAfT+v4mbvVpwe3+tdiB3q1hG+Ljn7ak+aCyNEIIv//y3DRqvNBz5tyheOTdhwTt7SRfIZIpFWrHsQYVKCxOFI5P8+HDyls0gBUbSuUgvB7JpL8j5ofbyvVixlL9GK4K7EexEr4U60/10tPfzAsAhR6BoB2I0qhCILkgS7BDLcmg+PUuwIUcqbRoNrM+3cYX+g97XwvluKiI/E=X02mq 
+2025-05-09 07:14:43 [INFO] The provided license is valid
+2025-05-09 07:14:43 [INFO] Starting pre-flight checks for jira
+2025-05-09 07:14:43 [INFO] Dataset size is small
+2025-05-09 07:14:43 [INFO] Checking EBS snapshot snap-0a2e612a8f11232ef compatibility with jira version 10.3.4
+2025-05-09 07:14:45 [INFO] EBS snapshot snap-0a2e612a8f11232ef version small.10.3.4 is compatible with jira version 10.3.4
+2025-05-09 07:14:45 [INFO] Checking RDS snapshot arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-small-10-3-4 compatibility with jira version 10.3.4
+2025-05-09 07:14:45 [INFO] RDS snapshot 'arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-small-10-3-4' is compatible with jira version 10.3.4
+Initializing the backend...
+
+Successfully configured the backend "s3"! Terraform will automatically
+use this backend unless the backend configuration changes.
+Initializing modules...
+- bamboo in modules/products/bamboo
+- base-infrastructure in modules/common
+- base-infrastructure.eks in modules/AWS/eks
+Downloading registry.terraform.io/terraform-aws-modules/iam/aws 5.41.0 for base-infrastructure.eks.autoscaler_iam_role...
+- base-infrastructure.eks.autoscaler_iam_role in .terraform/modules/base-infrastructure.eks.autoscaler_iam_role/modules/iam-assumable-role-with-oidc
+Downloading registry.terraform.io/terraform-aws-modules/eks/aws 20.36.0 for base-infrastructure.eks.eks...
+- base-infrastructure.eks.eks in .terraform/modules/base-infrastructure.eks.eks
+- base-infrastructure.eks.eks.eks_managed_node_group in .terraform/modules/base-infrastructure.eks.eks/modules/eks-managed-node-group
+- base-infrastructure.eks.eks.eks_managed_node_group.user_data in .terraform/modules/base-infrastructure.eks.eks/modules/_user_data
+- base-infrastructure.eks.eks.fargate_profile in .terraform/modules/base-infrastructure.eks.eks/modules/fargate-profile
+Downloading registry.terraform.io/terraform-aws-modules/kms/aws 2.1.0 for base-infrastructure.eks.eks.kms...
+- base-infrastructure.eks.eks.kms in .terraform/modules/base-infrastructure.eks.eks.kms
+- base-infrastructure.eks.eks.self_managed_node_group in .terraform/modules/base-infrastructure.eks.eks/modules/self-managed-node-group
+- base-infrastructure.eks.eks.self_managed_node_group.user_data in .terraform/modules/base-infrastructure.eks.eks/modules/_user_data
+- base-infrastructure.eks.nodegroup_launch_template in modules/AWS/eks/nodegroup_launch_template
+- base-infrastructure.external_dns in modules/AWS/external-dns
+Downloading registry.terraform.io/terraform-aws-modules/iam/aws 4.13.2 for base-infrastructure.external_dns.external_dns_iam_role...
+- base-infrastructure.external_dns.external_dns_iam_role in .terraform/modules/base-infrastructure.external_dns.external_dns_iam_role/modules/iam-assumable-role-with-oidc
+- base-infrastructure.ingress in modules/AWS/ingress
+Downloading registry.terraform.io/terraform-aws-modules/acm/aws 2.14.0 for base-infrastructure.ingress.ingress_certificate...
+- base-infrastructure.ingress.ingress_certificate in .terraform/modules/base-infrastructure.ingress.ingress_certificate
+- base-infrastructure.vpc in modules/AWS/vpc
+Downloading registry.terraform.io/terraform-aws-modules/vpc/aws 5.9.0 for base-infrastructure.vpc.vpc...
+- base-infrastructure.vpc.vpc in .terraform/modules/base-infrastructure.vpc.vpc
+- bitbucket in modules/products/bitbucket
+- confluence in modules/products/confluence
+- crowd in modules/products/crowd
+- database in modules/AWS/rds
+Downloading registry.terraform.io/terraform-aws-modules/rds/aws 5.9.0 for database.db...
+- database.db in .terraform/modules/database.db
+- database.db.db_instance in .terraform/modules/database.db/modules/db_instance
+- database.db.db_option_group in .terraform/modules/database.db/modules/db_option_group
+- database.db.db_parameter_group in .terraform/modules/database.db/modules/db_parameter_group
+- database.db.db_subnet_group in .terraform/modules/database.db/modules/db_subnet_group
+Downloading registry.terraform.io/terraform-aws-modules/security-group/aws 5.3.0 for database.security_group...
+- database.security_group in .terraform/modules/database.security_group
+- discovery in modules/discovery
+- jira in modules/products/jira
+- nfs in modules/AWS/nfs
+Initializing provider plugins...
+- Finding hashicorp/cloudinit versions matching ">= 2.0.0"...
+- Finding hashicorp/random versions matching ">= 3.1.0, 3.6.1"...
+- Finding hashicorp/aws versions matching ">= 2.23.0, >= 2.53.0, >= 3.29.0, >= 4.0.0, >= 4.33.0, >= 4.65.0, ~> 5.0, >= 5.30.0, >= 5.95.0"...
+- Finding hashicorp/kubernetes versions matching "~> 2.7, ~> 2.31"...
+- Finding hashicorp/helm versions matching "~> 2.14"...
+- Finding hashicorp/time versions matching ">= 0.9.0"...
+- Finding hashicorp/tls versions matching ">= 3.0.0"...
+- Finding hashicorp/null versions matching ">= 3.0.0"...
+- Installing hashicorp/kubernetes v2.36.0...
+- Installed hashicorp/kubernetes v2.36.0 (signed by HashiCorp)
+- Installing hashicorp/helm v2.17.0...
+- Installed hashicorp/helm v2.17.0 (signed by HashiCorp)
+- Installing hashicorp/time v0.13.1...
+- Installed hashicorp/time v0.13.1 (signed by HashiCorp)
+- Installing hashicorp/tls v4.1.0...
+- Installed hashicorp/tls v4.1.0 (signed by HashiCorp)
+- Installing hashicorp/null v3.2.4...
+- Installed hashicorp/null v3.2.4 (signed by HashiCorp)
+- Installing hashicorp/cloudinit v2.3.7...
+- Installed hashicorp/cloudinit v2.3.7 (signed by HashiCorp)
+- Installing hashicorp/random v3.6.1...
+- Installed hashicorp/random v3.6.1 (signed by HashiCorp)
+- Installing hashicorp/aws v5.97.0...
+- Installed hashicorp/aws v5.97.0 (signed by HashiCorp)
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+Initializing the backend...
+Initializing modules...
+Initializing provider plugins...
+- Reusing previous version of hashicorp/kubernetes from the dependency lock file
+- Reusing previous version of hashicorp/helm from the dependency lock file
+- Reusing previous version of hashicorp/random from the dependency lock file
+- Reusing previous version of hashicorp/time from the dependency lock file
+- Reusing previous version of hashicorp/tls from the dependency lock file
+- Reusing previous version of hashicorp/cloudinit from the dependency lock file
+- Reusing previous version of hashicorp/null from the dependency lock file
+- Reusing previous version of hashicorp/aws from the dependency lock file
+- Using previously-installed hashicorp/time v0.13.1
+- Using previously-installed hashicorp/tls v4.1.0
+- Using previously-installed hashicorp/cloudinit v2.3.7
+- Using previously-installed hashicorp/null v3.2.4
+- Using previously-installed hashicorp/aws v5.97.0
+- Using previously-installed hashicorp/kubernetes v2.36.0
+- Using previously-installed hashicorp/helm v2.17.0
+- Using previously-installed hashicorp/random v3.6.1
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+Acquiring state lock. This may take a few moments...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_partition.current: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.vpc.data.aws_availability_zones.available: Reading...
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_partition.current: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_partition.current[0]: Reading...
+module.database[0].module.db.module.db_instance.data.aws_iam_policy_document.enhanced_monitoring: Reading...
+module.base-infrastructure.module.vpc.module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0a3253f841e937cee]
+module.base-infrastructure.module.eks.aws_iam_role.node_group: Refreshing state... [id=atlas-tmh-jira-perf-cluster20250430072315813300000001]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_partition.current: Read complete after 0s [id=aws]
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_partition.current: Read complete after 0s [id=aws]
+module.base-infrastructure.module.eks.module.eks.data.aws_partition.current[0]: Read complete after 0s [id=aws]
+module.database[0].module.db.module.db_instance.data.aws_iam_policy_document.enhanced_monitoring: Read complete after 0s [id=76086537]
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2830595799]
+module.database[0].module.db.module.db_instance.data.aws_partition.current: Reading...
+module.database[0].data.aws_db_snapshot.atlassian_db_snapshot[0]: Reading...
+module.database[0].module.db.module.db_instance.data.aws_partition.current: Read complete after 0s [id=aws]
+module.base-infrastructure.module.eks.data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_caller_identity.current[0]: Reading...
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_region.current: Reading...
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_region.current: Read complete after 0s [id=us-east-2]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role.this[0]: Refreshing state... [id=atlas-tmh-jira-perf-cluster-cluster]
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_caller_identity.current: Read complete after 0s [id=074103337776]
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.custom[0]: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.custom[0]: Read complete after 0s [id=513122117]
+module.base-infrastructure.module.eks.module.eks.aws_iam_policy.custom[0]: Refreshing state... [id=arn:aws:iam::074103337776:policy/atlas-tmh-jira-perf-cluster-cluster]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_caller_identity.current: Read complete after 0s [id=074103337776]
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.aws_launch_template.nodegroup: Refreshing state... [id=lt-09a6518cdcca70fd7]
+module.base-infrastructure.module.eks.module.eks.data.aws_caller_identity.current[0]: Read complete after 0s [id=074103337776]
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_session_context.current[0]: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_session_context.current[0]: Read complete after 0s [id=arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser]
+module.base-infrastructure.module.eks.data.aws_caller_identity.current: Read complete after 1s [id=074103337776]
+module.database[0].data.aws_db_snapshot.atlassian_db_snapshot[0]: Read complete after 1s [id=arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-small-10-3-4]
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_caller_identity.current: Read complete after 1s [id=074103337776]
+module.base-infrastructure.module.vpc.data.aws_availability_zones.available: Read complete after 1s [id=us-east-2]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster20250430072315813300000001-20250430072318627800000008]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster20250430072315813300000001-20250430072318349400000006]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster20250430072315813300000001-20250430072318550600000007]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster20250430072315813300000001-20250430072318232200000004]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster20250430072315813300000001-20250430072318298700000005]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster-cluster-2025043007231892110000000a]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.custom[0]: Refreshing state... [id=atlas-tmh-jira-perf-cluster-cluster-20250430072318728600000009]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster-cluster-2025043007231897090000000b]
+module.base-infrastructure.module.eks.data.aws_launch_template.nodes: Reading...
+module.base-infrastructure.module.eks.data.aws_launch_template.nodes: Read complete after 0s [id=lt-09a6518cdcca70fd7]
+module.base-infrastructure.module.vpc.module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0e92297ce0147468c]
+module.base-infrastructure.module.vpc.module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-09ad3a715aa3e4b61]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-025b770352e782827]
+module.base-infrastructure.module.vpc.module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-086f5b6e14f3fe733]
+module.base-infrastructure.aws_security_group.vpc: Refreshing state... [id=sg-0e121216e8224d602]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0913264819560763e]
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0a7f20f0bccb2ff3d]
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-07b71007e158e8542]
+module.base-infrastructure.module.vpc.module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-012b98bc61b63c2d8]
+module.base-infrastructure.module.eks.module.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-006657d594a836f7c]
+module.base-infrastructure.module.eks.module.eks.aws_security_group.node[0]: Refreshing state... [id=sg-082c87c0ebcfe3e76]
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-054d3d81a893216df]
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0cd677543f8f2d757]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-05fdfa19657dd2b54]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0c5de1083877c93ec]
+module.base-infrastructure.module.vpc.module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-05c380514718214c3]
+module.base-infrastructure.module.vpc.module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-025b770352e7828271080289494]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-995440032]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-4032313241]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-958025743]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-154844223]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-1595832104]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-84795097]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-2275752051]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-3808693176]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-3699297072]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-2909085648]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-28239035]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0d7b21c6360d70505]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-08401ba1c2e8df82f]
+module.base-infrastructure.module.vpc.module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0010928267d3cf27f]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_partition.current: Reading...
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_caller_identity.current: Read complete after 0s [id=074103337776]
+module.base-infrastructure.module.vpc.module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0913264819560763e1080289494]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Refreshing state... [id=atlas-tmh-jira-perf-cluster]
+module.database[0].module.security_group.aws_security_group.this_name_prefix[0]: Refreshing state... [id=sg-0c097bac698a9a4cf]
+module.database[0].module.db.module.db_subnet_group.aws_db_subnet_group.this[0]: Refreshing state... [id=atlas-tmh-jira-perf-jira-db-20250430072538064600000012]
+module.database[0].module.security_group.aws_security_group_rule.ingress_with_cidr_blocks[0]: Refreshing state... [id=sgrule-1956430727]
+module.database[0].module.db.module.db_instance.aws_db_instance.this[0]: Refreshing state... [id=db-6RB6NDBJV6ZPP3M4ARMGN6EXZQ]
+module.base-infrastructure.module.eks.module.eks.aws_eks_access_entry.this["cluster_creator"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster:arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser]
+module.base-infrastructure.module.eks.module.eks.time_sleep.this[0]: Refreshing state... [id=2025-04-30T07:32:28Z]
+module.base-infrastructure.module.eks.module.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::074103337776:oidc-provider/oidc.eks.us-east-2.amazonaws.com/id/25B6C9BB0A2D1A06C1D1D56349EC5888]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role.this[0]: Refreshing state... [id=atlas-tmh-jira-perf-cluster-autoscaler]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].module.user_data.null_resource.validate_cluster_service_cidr: Refreshing state... [id=5370308114152759318]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Refreshing state... [id=atlas-tmh-jira-perf-cluster:appNode-t3_xlarge-20250430073230996400000016]
+module.base-infrastructure.module.eks.module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster#arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser#arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy]
+module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["vpc-cni"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster:vpc-cni]
+module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["aws-ebs-csi-driver"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster:aws-ebs-csi-driver]
+module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["kube-proxy"]: Refreshing state... [id=atlas-tmh-jira-perf-cluster:kube-proxy]
+module.base-infrastructure.module.eks.data.aws_iam_policy_document.cluster_autoscaler: Reading...
+module.base-infrastructure.module.eks.data.aws_iam_policy_document.cluster_autoscaler: Read complete after 0s [id=951901166]
+module.base-infrastructure.module.eks.aws_iam_policy.cluster_autoscaler: Refreshing state... [id=arn:aws:iam::074103337776:policy/cluster-autoscaler20250430073200896400000014]
+module.base-infrastructure.module.eks.aws_autoscaling_group_tag.this["Name"]: Refreshing state... [id=eks-appNode-t3_xlarge-20250430073230996400000016-f0cb42ce-4724-1bed-b743-7b0b2e3e8eaa,Name]
+module.base-infrastructure.module.eks.helm_release.cluster-autoscaler: Refreshing state... [id=cluster-autoscaler]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role_policy_attachment.custom[0]: Refreshing state... [id=atlas-tmh-jira-perf-cluster-autoscaler-20250430073202130000000015]
+
+Note: Objects have changed outside of Terraform
+
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0] has been deleted
+  - resource "aws_eks_cluster" "this" {
+      - arn                           = "arn:aws:eks:us-east-2:074103337776:cluster/atlas-tmh-jira-perf-cluster" -> null
+      - certificate_authority         = [
+          - {
+              - data = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJSTA1ek0veFlHbUl3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBME16QXdOekl6TVRSYUZ3MHpOVEEwTWpnd056STRNVFJhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM2Zm8yZFdPckRaRGpwOGtkeGxTN2tWVDR4eHpIYXpsRjVSS09TanlyNFl3a2NiMml6WWNmT3g3MkQKQVZpTWdybG4wODQ4MEpiOWM4YzM5a04wRWsvbU9NSHNubW9jWTFsUXNWZll4OUozemlhdjVvK3NGci92eEllSQovRUVVQmwxRXlDM0tuWUU1K2YwRzRnVmlhRHRFYjExYUlCRU9MMXdobEd5Rk5UcXZRblNnSHo2YU1tUDcwQzhOCkVrbUNTVXFlenpRcjlGMGlZZ3BmMjhvL2c1dWpldzhwNWx0dHdNN3gwUDJ1Z091TnVpcjl3MlNiZlBiYmMzbVYKY3piQWplb21NdFUvenRoNFV4QmxmT2VKendERGVIak1TS24vNkZNT1U5OW9Uc1FTVjRVaVp4Z3FIcVFhOVVPSQpVWXdnc3ROZzc4VTRUVVMvci8wZU8xNVV1RmZYQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRYnBjT2EwNnVDZUl6SnkwQW5WWHRxd3hqWGxqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ1ZhMk1yODlIMwpTNmtFbm9DMXFGL0RCY3JFYUtRcG9mRytHNjByK0h1QUtqM25hK2NFZHVKRkRtcEh4N1pCajNoVDY2dXdvZEovCkp2VzdodXQzOGdmVHZ2Z2xkSW1HRVFIOUtsMkJuMkx1VTU0L2s5WmVwUVpQblhkUDB2eEhBL1c0ZmFLK1F0Zm8KZnRxYjJQdGM0YjFiMGlhNjFBTVVNMmxmMlg5Q1B2NjVBZ0kyUFJZOU11M0NVeExSRzFqc1RabGlJZlNsR3FwTAo4ME1rbVMzdDY3K25vNTA5dFhFZGNvQWxpaXNCb0VLazVqQ1dBdGcwMFJ2RzdGMWVkMUxzMkFYTjdhN3o2YVVlCjltMXJIaWJtNzVFTzkrbGUxblg0V3NSZ1BtQjhUOFlJWnZTUERzRUdQUTYvVSticlJHL0I5bTZMVVNVVGloRGoKZGorSUJiODZqZEpVCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+            },
+        ] -> null
+      - endpoint                      = "https://25B6C9BB0A2D1A06C1D1D56349EC5888.gr7.us-east-2.eks.amazonaws.com" -> null
+      - id                            = "atlas-tmh-jira-perf-cluster" -> null
+      - identity                      = [
+          - {
+              - oidc = [
+                  - {
+                      - issuer = "https://oidc.eks.us-east-2.amazonaws.com/id/25B6C9BB0A2D1A06C1D1D56349EC5888"
+                    },
+                ]
+            },
+        ] -> null
+      - name                          = "atlas-tmh-jira-perf-cluster" -> null
+      - platform_version              = "eks.9" -> null
+      - status                        = "ACTIVE" -> null
+        tags                          = {
+            "terraform-aws-modules" = "eks"
+        }
+      - version                       = "1.32" -> null
+        # (5 unchanged attributes hidden)
+
+      - kubernetes_network_config {
+          - ip_family         = "ipv4" -> null
+          - service_ipv4_cidr = "172.20.0.0/16" -> null
+            # (1 unchanged attribute hidden)
+
+          - elastic_load_balancing {
+              - enabled = false -> null
+            }
+        }
+
+      - vpc_config {
+          - cluster_security_group_id = "sg-00360578daf261813" -> null
+            # (6 unchanged attributes hidden)
+        }
+
+        # (3 unchanged blocks hidden)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0] has been deleted
+  - resource "aws_eks_node_group" "this" {
+      - arn                    = "arn:aws:eks:us-east-2:074103337776:nodegroup/atlas-tmh-jira-perf-cluster/appNode-t3_xlarge-20250430073230996400000016/f0cb42ce-4724-1bed-b743-7b0b2e3e8eaa" -> null
+      - id                     = "atlas-tmh-jira-perf-cluster:appNode-t3_xlarge-20250430073230996400000016" -> null
+      - resources              = [
+          - {
+              - autoscaling_groups              = [
+                  - {
+                      - name = "eks-appNode-t3_xlarge-20250430073230996400000016-f0cb42ce-4724-1bed-b743-7b0b2e3e8eaa"
+                    },
+                ]
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - status                 = "ACTIVE" -> null
+        tags                   = {
+            "Name" = "appNode-t3_xlarge"
+        }
+        # (12 unchanged attributes hidden)
+
+        # (4 unchanged blocks hidden)
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  ~ update in-place
+-/+ destroy and then create replacement
++/- create replacement and then destroy
+ <= read (data resources)
+
+Terraform planned the following actions, but then encountered a problem:
+
+  # module.base-infrastructure.module.eks.data.aws_eks_cluster.cluster will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_cluster" "cluster" {
+      + access_config             = (known after apply)
+      + arn                       = (known after apply)
+      + certificate_authority     = (known after apply)
+      + cluster_id                = (known after apply)
+      + compute_config            = (known after apply)
+      + created_at                = (known after apply)
+      + enabled_cluster_log_types = (known after apply)
+      + endpoint                  = (known after apply)
+      + id                        = (known after apply)
+      + identity                  = (known after apply)
+      + kubernetes_network_config = (known after apply)
+      + name                      = "atlas-tmh-jira-perf-cluster"
+      + outpost_config            = (known after apply)
+      + platform_version          = (known after apply)
+      + remote_network_config     = (known after apply)
+      + role_arn                  = (known after apply)
+      + status                    = (known after apply)
+      + storage_config            = (known after apply)
+      + tags                      = (known after apply)
+      + upgrade_policy            = (known after apply)
+      + version                   = (known after apply)
+      + vpc_config                = (known after apply)
+      + zonal_shift_config        = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.data.aws_eks_cluster_auth.cluster will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_cluster_auth" "cluster" {
+      + id    = (known after apply)
+      + name  = "atlas-tmh-jira-perf-cluster"
+      + token = (sensitive value)
+    }
+
+  # module.base-infrastructure.module.eks.aws_autoscaling_group_tag.this["Name"] will be created
+  + resource "aws_autoscaling_group_tag" "this" {
+      + autoscaling_group_name = (known after apply)
+      + id                     = (known after apply)
+
+      + tag {
+          + key                 = "Name"
+          + propagate_at_launch = true
+          + value               = "dcapt-testing-small"
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_iam_policy_document.assume_role_with_oidc[0] will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_iam_policy_document" "assume_role_with_oidc" {
+      + id            = (known after apply)
+      + json          = (known after apply)
+      + minified_json = (known after apply)
+
+      + statement (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role.this[0] will be updated in-place
+  ~ resource "aws_iam_role" "this" {
+      ~ assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRoleWithWebIdentity"
+                      - Condition = {
+                          - StringEquals = {
+                              - "oidc.eks.us-east-2.amazonaws.com/id/25B6C9BB0A2D1A06C1D1D56349EC5888:sub" = "system:serviceaccount:kube-system:cluster-autoscaler-aws-cluster-autoscaler-chart"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Federated = "arn:aws:iam::074103337776:oidc-provider/oidc.eks.us-east-2.amazonaws.com/id/25B6C9BB0A2D1A06C1D1D56349EC5888"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> (known after apply)
+        id                    = "atlas-tmh-jira-perf-cluster-autoscaler"
+        name                  = "atlas-tmh-jira-perf-cluster-autoscaler"
+        tags                  = {}
+        # (11 unchanged attributes hidden)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["aws-ebs-csi-driver"] will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_addon_version" "this" {
+      + addon_name         = "aws-ebs-csi-driver"
+      + id                 = (known after apply)
+      + kubernetes_version = "1.32"
+      + version            = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["kube-proxy"] will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_addon_version" "this" {
+      + addon_name         = "kube-proxy"
+      + id                 = (known after apply)
+      + kubernetes_version = "1.32"
+      + version            = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["vpc-cni"] will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_addon_version" "this" {
+      + addon_name         = "vpc-cni"
+      + id                 = (known after apply)
+      + kubernetes_version = "1.32"
+      + version            = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.tls_certificate.this[0] will be read during apply
+  # (config refers to values not yet known)
+ <= data "tls_certificate" "this" {
+      + certificates = (known after apply)
+      + id           = (known after apply)
+      + url          = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_access_entry.this["cluster_creator"] will be created
+  + resource "aws_eks_access_entry" "this" {
+      + access_entry_arn  = (known after apply)
+      + cluster_name      = (known after apply)
+      + created_at        = (known after apply)
+      + id                = (known after apply)
+      + kubernetes_groups = (known after apply)
+      + modified_at       = (known after apply)
+      + principal_arn     = "arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser"
+      + tags_all          = {
+          + "Name" = "dcapt-testing-small"
+        }
+      + type              = "STANDARD"
+      + user_name         = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"] will be created
+  + resource "aws_eks_access_policy_association" "this" {
+      + associated_at = (known after apply)
+      + cluster_name  = (known after apply)
+      + id            = (known after apply)
+      + modified_at   = (known after apply)
+      + policy_arn    = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+      + principal_arn = "arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser"
+
+      + access_scope {
+          + type = "cluster"
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["aws-ebs-csi-driver"] will be created
+  + resource "aws_eks_addon" "this" {
+      + addon_name                  = "aws-ebs-csi-driver"
+      + addon_version               = (known after apply)
+      + arn                         = (known after apply)
+      + cluster_name                = (known after apply)
+      + configuration_values        = jsonencode(
+            {
+              + defaultStorageClass = {
+                  + enabled = true
+                }
+            }
+        )
+      + created_at                  = (known after apply)
+      + id                          = (known after apply)
+      + modified_at                 = (known after apply)
+      + preserve                    = true
+      + resolve_conflicts_on_create = "OVERWRITE"
+      + resolve_conflicts_on_update = "OVERWRITE"
+      + tags_all                    = {
+          + "Name" = "dcapt-testing-small"
+        }
+
+      + timeouts {}
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["kube-proxy"] will be created
+  + resource "aws_eks_addon" "this" {
+      + addon_name                  = "kube-proxy"
+      + addon_version               = (known after apply)
+      + arn                         = (known after apply)
+      + cluster_name                = (known after apply)
+      + configuration_values        = (known after apply)
+      + created_at                  = (known after apply)
+      + id                          = (known after apply)
+      + modified_at                 = (known after apply)
+      + preserve                    = true
+      + resolve_conflicts_on_create = "OVERWRITE"
+      + resolve_conflicts_on_update = "OVERWRITE"
+      + tags_all                    = {
+          + "Name" = "dcapt-testing-small"
+        }
+
+      + timeouts {}
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["vpc-cni"] will be created
+  + resource "aws_eks_addon" "this" {
+      + addon_name                  = "vpc-cni"
+      + addon_version               = (known after apply)
+      + arn                         = (known after apply)
+      + cluster_name                = (known after apply)
+      + configuration_values        = (known after apply)
+      + created_at                  = (known after apply)
+      + id                          = (known after apply)
+      + modified_at                 = (known after apply)
+      + preserve                    = true
+      + resolve_conflicts_on_create = "OVERWRITE"
+      + resolve_conflicts_on_update = "OVERWRITE"
+      + tags_all                    = {
+          + "Name" = "dcapt-testing-small"
+        }
+
+      + timeouts {}
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0] will be created
+  + resource "aws_eks_cluster" "this" {
+      + arn                           = (known after apply)
+      + bootstrap_self_managed_addons = true
+      + certificate_authority         = (known after apply)
+      + cluster_id                    = (known after apply)
+      + created_at                    = (known after apply)
+      + enabled_cluster_log_types     = [
+          + "api",
+          + "audit",
+          + "authenticator",
+        ]
+      + endpoint                      = (known after apply)
+      + id                            = (known after apply)
+      + identity                      = (known after apply)
+      + name                          = "atlas-tmh-jira-perf-cluster"
+      + platform_version              = (known after apply)
+      + role_arn                      = "arn:aws:iam::074103337776:role/atlas-tmh-jira-perf-cluster-cluster"
+      + status                        = (known after apply)
+      + tags                          = {
+          + "terraform-aws-modules" = "eks"
+        }
+      + tags_all                      = {
+          + "Name"                  = "dcapt-testing-small"
+          + "terraform-aws-modules" = "eks"
+        }
+      + version                       = "1.32"
+
+      + access_config {
+          + authentication_mode                         = "API_AND_CONFIG_MAP"
+          + bootstrap_cluster_creator_admin_permissions = false
+        }
+
+      + kubernetes_network_config {
+          + ip_family         = "ipv4"
+          + service_ipv4_cidr = "172.20.0.0/16"
+          + service_ipv6_cidr = (known after apply)
+
+          + elastic_load_balancing (known after apply)
+        }
+
+      + timeouts {}
+
+      + upgrade_policy (known after apply)
+
+      + vpc_config {
+          + cluster_security_group_id = (known after apply)
+          + endpoint_private_access   = true
+          + endpoint_public_access    = true
+          + public_access_cidrs       = [
+              + "0.0.0.0/0",
+            ]
+          + security_group_ids        = [
+              + "sg-006657d594a836f7c",
+            ]
+          + subnet_ids                = [
+              + "subnet-054d3d81a893216df",
+              + "subnet-0cd677543f8f2d757",
+            ]
+          + vpc_id                    = (known after apply)
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_iam_openid_connect_provider.oidc_provider[0] must be replaced
++/- resource "aws_iam_openid_connect_provider" "oidc_provider" {
+      ~ arn             = "arn:aws:iam::074103337776:oidc-provider/oidc.eks.us-east-2.amazonaws.com/id/25B6C9BB0A2D1A06C1D1D56349EC5888" -> (known after apply)
+      ~ id              = "arn:aws:iam::074103337776:oidc-provider/oidc.eks.us-east-2.amazonaws.com/id/25B6C9BB0A2D1A06C1D1D56349EC5888" -> (known after apply)
+        tags            = {
+            "Name" = "atlas-tmh-jira-perf-cluster-eks-irsa"
+        }
+      ~ thumbprint_list = [
+          - "06b25927c42a721631c1efd9431e648fa62e1e39",
+        ] -> (known after apply)
+      ~ url             = "oidc.eks.us-east-2.amazonaws.com/id/25B6C9BB0A2D1A06C1D1D56349EC5888" -> (known after apply) # forces replacement
+        # (2 unchanged attributes hidden)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.time_sleep.this[0] must be replaced
++/- resource "time_sleep" "this" {
+      ~ id              = "2025-04-30T07:32:28Z" -> (known after apply)
+      ~ triggers        = { # forces replacement
+          ~ "cluster_certificate_authority_data" = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJSTA1ek0veFlHbUl3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBME16QXdOekl6TVRSYUZ3MHpOVEEwTWpnd056STRNVFJhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM2Zm8yZFdPckRaRGpwOGtkeGxTN2tWVDR4eHpIYXpsRjVSS09TanlyNFl3a2NiMml6WWNmT3g3MkQKQVZpTWdybG4wODQ4MEpiOWM4YzM5a04wRWsvbU9NSHNubW9jWTFsUXNWZll4OUozemlhdjVvK3NGci92eEllSQovRUVVQmwxRXlDM0tuWUU1K2YwRzRnVmlhRHRFYjExYUlCRU9MMXdobEd5Rk5UcXZRblNnSHo2YU1tUDcwQzhOCkVrbUNTVXFlenpRcjlGMGlZZ3BmMjhvL2c1dWpldzhwNWx0dHdNN3gwUDJ1Z091TnVpcjl3MlNiZlBiYmMzbVYKY3piQWplb21NdFUvenRoNFV4QmxmT2VKendERGVIak1TS24vNkZNT1U5OW9Uc1FTVjRVaVp4Z3FIcVFhOVVPSQpVWXdnc3ROZzc4VTRUVVMvci8wZU8xNVV1RmZYQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRYnBjT2EwNnVDZUl6SnkwQW5WWHRxd3hqWGxqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ1ZhMk1yODlIMwpTNmtFbm9DMXFGL0RCY3JFYUtRcG9mRytHNjByK0h1QUtqM25hK2NFZHVKRkRtcEh4N1pCajNoVDY2dXdvZEovCkp2VzdodXQzOGdmVHZ2Z2xkSW1HRVFIOUtsMkJuMkx1VTU0L2s5WmVwUVpQblhkUDB2eEhBL1c0ZmFLK1F0Zm8KZnRxYjJQdGM0YjFiMGlhNjFBTVVNMmxmMlg5Q1B2NjVBZ0kyUFJZOU11M0NVeExSRzFqc1RabGlJZlNsR3FwTAo4ME1rbVMzdDY3K25vNTA5dFhFZGNvQWxpaXNCb0VLazVqQ1dBdGcwMFJ2RzdGMWVkMUxzMkFYTjdhN3o2YVVlCjltMXJIaWJtNzVFTzkrbGUxblg0V3NSZ1BtQjhUOFlJWnZTUERzRUdQUTYvVSticlJHL0I5bTZMVVNVVGloRGoKZGorSUJiODZqZEpVCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K" -> (known after apply)
+          ~ "cluster_endpoint"                   = "https://25B6C9BB0A2D1A06C1D1D56349EC5888.gr7.us-east-2.eks.amazonaws.com" -> (known after apply)
+          ~ "cluster_name"                       = "atlas-tmh-jira-perf-cluster" -> (known after apply)
+          ~ "cluster_service_cidr"               = "172.20.0.0/16" -> (known after apply)
+            # (1 unchanged element hidden)
+        }
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_default_network_acl.this[0] will be updated in-place
+  ~ resource "aws_default_network_acl" "this" {
+        id                     = "acl-086f5b6e14f3fe733"
+      ~ tags                   = {
+          + "Name" = "atlas-tmh-jira-perf-vpc-default"
+        }
+      ~ tags_all               = {
+          ~ "Name" = "dcapt-testing-small" -> "atlas-tmh-jira-perf-vpc-default"
+        }
+        # (5 unchanged attributes hidden)
+
+        # (4 unchanged blocks hidden)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_default_route_table.default[0] will be updated in-place
+  ~ resource "aws_default_route_table" "default" {
+        id                     = "rtb-09ad3a715aa3e4b61"
+      ~ tags                   = {
+          + "Name" = "atlas-tmh-jira-perf-vpc-default"
+        }
+      ~ tags_all               = {
+          ~ "Name" = "dcapt-testing-small" -> "atlas-tmh-jira-perf-vpc-default"
+        }
+        # (6 unchanged attributes hidden)
+
+        # (1 unchanged block hidden)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table.private[0] will be updated in-place
+  ~ resource "aws_route_table" "private" {
+        id               = "rtb-0913264819560763e"
+      ~ tags             = {
+          + "Name" = "atlas-tmh-jira-perf-vpc-private-subnet"
+        }
+      ~ tags_all         = {
+          ~ "Name" = "dcapt-testing-small" -> "atlas-tmh-jira-perf-vpc-private-subnet"
+        }
+        # (5 unchanged attributes hidden)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table.public[0] will be updated in-place
+  ~ resource "aws_route_table" "public" {
+        id               = "rtb-025b770352e782827"
+      ~ tags             = {
+          + "Name" = "atlas-tmh-jira-perf-vpc-public-subnet"
+        }
+      ~ tags_all         = {
+          ~ "Name" = "dcapt-testing-small" -> "atlas-tmh-jira-perf-vpc-public-subnet"
+        }
+        # (5 unchanged attributes hidden)
+    }
+
+  # module.database[0].module.db.module.db_instance.aws_db_instance.this[0] must be replaced
+-/+ resource "aws_db_instance" "this" {
+      ~ address                               = "atlas-tmh-jira-perf-jira-db.cj7vklqhywl4.us-east-2.rds.amazonaws.com" -> (known after apply)
+      ~ arn                                   = "arn:aws:rds:us-east-2:074103337776:db:atlas-tmh-jira-perf-jira-db" -> (known after apply)
+      ~ availability_zone                     = "us-east-2b" -> (known after apply)
+      ~ backup_target                         = "region" -> (known after apply)
+      ~ ca_cert_identifier                    = "rds-ca-rsa2048-g1" -> (known after apply)
+      + character_set_name                    = (known after apply)
+      - customer_owned_ip_enabled             = false -> null
+      ~ database_insights_mode                = "standard" -> (known after apply)
+      - domain_dns_ips                        = [] -> null
+      + domain_fqdn                           = (known after apply)
+      - enabled_cloudwatch_logs_exports       = [] -> null
+      ~ endpoint                              = "atlas-tmh-jira-perf-jira-db.cj7vklqhywl4.us-east-2.rds.amazonaws.com:5432" -> (known after apply)
+      ~ engine_lifecycle_support              = "open-source-rds-extended-support" -> (known after apply)
+      ~ engine_version_actual                 = "14.15" -> (known after apply)
+      ~ hosted_zone_id                        = "Z2XHWR1WZ565X2" -> (known after apply)
+      ~ id                                    = "db-6RB6NDBJV6ZPP3M4ARMGN6EXZQ" -> (known after apply)
+      + identifier_prefix                     = (known after apply)
+      + kms_key_id                            = (known after apply)
+      + latest_restorable_time                = (known after apply)
+      ~ license_model                         = "postgresql-license" -> (known after apply)
+      ~ listener_endpoint                     = [] -> (known after apply)
+      ~ master_user_secret                    = [] -> (known after apply)
+      + master_user_secret_kms_key_id         = (known after apply)
+      + monitoring_role_arn                   = (known after apply)
+      + nchar_character_set_name              = (known after apply)
+      ~ network_type                          = "IPV4" -> (known after apply)
+      ~ option_group_name                     = "default:postgres-14" -> (known after apply)
+      ~ parameter_group_name                  = "default.postgres14" -> (known after apply)
+      + performance_insights_kms_key_id       = (known after apply)
+      ~ performance_insights_retention_period = 0 -> (known after apply)
+      + replica_mode                          = (known after apply)
+      ~ replicas                              = [] -> (known after apply)
+      ~ resource_id                           = "db-6RB6NDBJV6ZPP3M4ARMGN6EXZQ" -> (known after apply)
+      ~ snapshot_identifier                   = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-small-10-3-0" -> "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-small-10-3-4" # forces replacement
+      ~ status                                = "available" -> (known after apply)
+      ~ storage_throughput                    = 0 -> (known after apply)
+      ~ storage_type                          = "io1" -> (known after apply)
+      - tags                                  = {
+          - "Scheduled-for-Deletion" = "2025-05-05"
+        } -> null
+      ~ tags_all                              = {
+          - "Scheduled-for-Deletion" = "2025-05-05" -> null
+            # (1 unchanged element hidden)
+        }
+      + timezone                              = (known after apply)
+        # (37 unchanged attributes hidden)
+
+        # (1 unchanged block hidden)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0] will be created
+  + resource "aws_eks_node_group" "this" {
+      + ami_type               = "AL2_x86_64"
+      + arn                    = (known after apply)
+      + capacity_type          = "ON_DEMAND"
+      + cluster_name           = (known after apply)
+      + disk_size              = (known after apply)
+      + id                     = (known after apply)
+      + instance_types         = (known after apply)
+      + node_group_name        = (known after apply)
+      + node_group_name_prefix = "appNode-t3_xlarge-"
+      + node_role_arn          = "arn:aws:iam::074103337776:role/atlas-tmh-jira-perf-cluster20250430072315813300000001"
+      + release_version        = (known after apply)
+      + resources              = (known after apply)
+      + status                 = (known after apply)
+      + subnet_ids             = [
+          + "subnet-054d3d81a893216df",
+        ]
+      + tags                   = {
+          + "Name" = "appNode-t3_xlarge"
+        }
+      + tags_all               = {
+          + "Name" = "appNode-t3_xlarge"
+        }
+      + version                = "1.32"
+
+      + launch_template {
+          + id      = "lt-09a6518cdcca70fd7"
+          + name    = (known after apply)
+          + version = "1"
+        }
+
+      + node_repair_config (known after apply)
+
+      + scaling_config {
+          + desired_size = 1
+          + max_size     = 2
+          + min_size     = 1
+        }
+
+      + timeouts {}
+
+      + update_config {
+          + max_unavailable_percentage = 33
+        }
+    }
+
+Plan: 11 to add, 5 to change, 3 to destroy.
+
+Changes to Outputs:
+  ~ bitbucket_ebs_snapshot              = "snap-08f182f7d6b2f506b" -> "snap-0530f70c6916d8329"
+  ~ bitbucket_rds_snapshot              = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-bitbucket-small-9-4-1" -> "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-bitbucket-small-9-4-4"
+  ~ confluence_ebs_snapshot             = "snap-03bd9289ff7b87051" -> "snap-0cd3a211ef6d9c1d4"
+  ~ confluence_rds_snapshot             = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-confluence-small-9-2-0" -> "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-confluence-small-9-2-2"
+  ~ jira_ebs_snapshot                   = "snap-01028de0f83e60d8f" -> "snap-0a2e612a8f11232ef"
+  ~ jira_rds_snapshot                   = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-small-10-3-0" -> "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-small-10-3-4"
+Releasing state lock. This may take a few moments...
