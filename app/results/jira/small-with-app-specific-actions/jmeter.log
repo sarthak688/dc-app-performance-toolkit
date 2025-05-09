@@ -1,0 +1,558 @@
+2025-05-09 11:34:22,064 INFO o.a.j.u.JMeterUtils: Setting Locale to en
+2025-05-09 11:34:22,115 INFO o.a.j.JMeter: Loading user properties from: /root/.bzt/jmeter-taurus/5.6.3/bin/user.properties
+2025-05-09 11:34:22,116 INFO o.a.j.JMeter: Loading system properties from: /root/.bzt/jmeter-taurus/5.6.3/bin/system.properties
+2025-05-09 11:34:22,118 INFO o.a.j.JMeter: Loading additional properties from: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_11-34-09/jmeter-bzt.properties
+2025-05-09 11:34:22,120 INFO o.a.j.JMeter: Setting System properties from file: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_11-34-09/system.properties
+2025-05-09 11:34:22,139 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-05-09 11:34:22,140 INFO o.a.j.JMeter: Version 5.6.3
+2025-05-09 11:34:22,140 INFO o.a.j.JMeter: java.version=17.0.15
+2025-05-09 11:34:22,140 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-05-09 11:34:22,140 INFO o.a.j.JMeter: os.name=Linux
+2025-05-09 11:34:22,140 INFO o.a.j.JMeter: os.arch=amd64
+2025-05-09 11:34:22,140 INFO o.a.j.JMeter: os.version=6.8.0-1024-aws
+2025-05-09 11:34:22,141 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-05-09 11:34:22,141 INFO o.a.j.JMeter: java.awt.headless=true
+2025-05-09 11:34:22,142 INFO o.a.j.JMeter: Max memory     =8589934592
+2025-05-09 11:34:22,142 INFO o.a.j.JMeter: Available Processors =4
+2025-05-09 11:34:22,160 INFO o.a.j.JMeter: Default Locale=English
+2025-05-09 11:34:22,160 INFO o.a.j.JMeter: JMeter  Locale=English
+2025-05-09 11:34:22,160 INFO o.a.j.JMeter: JMeterHome=/root/.bzt/jmeter-taurus/5.6.3
+2025-05-09 11:34:22,160 INFO o.a.j.JMeter: user.dir  =/root/dc-app-performance-toolkit/app
+2025-05-09 11:34:22,161 INFO o.a.j.JMeter: PWD       =/root/dc-app-performance-toolkit/app
+2025-05-09 11:34:22,163 INFO o.a.j.JMeter: IP: 172.31.23.112 Name: ip-172-31-23-112 FullName: ip-172-31-23-112.us-east-2.compute.internal
+2025-05-09 11:34:22,164 INFO o.a.j.JMeter: user.classpath=/root/dc-app-performance-toolkit/app/results/jira/2025-05-09_11-34-09:/root/dc-app-performance-toolkit/app/jmeter
+2025-05-09 11:34:22,164 INFO o.a.j.JMeter: Adding to classpath and loader: /root/dc-app-performance-toolkit/app/results/jira/2025-05-09_11-34-09
+2025-05-09 11:34:22,165 INFO o.a.j.JMeter: Adding to classpath and loader: /root/dc-app-performance-toolkit/app/jmeter
+2025-05-09 11:34:22,204 INFO o.a.j.s.FileServer: Default base='/root/dc-app-performance-toolkit/app'
+2025-05-09 11:34:22,206 INFO o.a.j.s.FileServer: Set new base='/root/dc-app-performance-toolkit/app/jmeter'
+2025-05-09 11:34:22,646 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-05-09 11:34:22,695 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-05-09 11:34:22,700 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-05-09 11:34:22,708 INFO o.a.j.s.SaveService: Loading file: /root/dc-app-performance-toolkit/app/jmeter/modified_jira.jmx
+2025-05-09 11:34:22,789 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2025-05-09 11:34:22,951 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 11:34:22,951 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 11:34:22,951 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 11:34:22,951 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-09 11:34:22,951 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-05-09 11:34:22,952 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-05-09 11:34:23,721 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-05-09 11:34:23,722 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-05-09 11:34:23,722 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-05-09 11:34:23,730 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-05-09 11:34:23,730 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-05-09 11:34:23,799 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-fifo-0.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,808 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-json-2.7.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,814 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-random-csv-data-set-0.8.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,817 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,825 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-ffw-2.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,827 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-tst-2.6.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,831 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-functions-2.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,838 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-casutg-2.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,848 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-manager-1.7.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,968 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-dummy-0.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:23,972 INFO o.a.j.r.ClassFinder: Will scan jar /root/.bzt/jmeter-taurus/5.6.3/lib/ext/jmeter-plugins-prmctl-0.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-05-09 11:34:24,437 INFO c.b.c.RandomCSVReader: Start reading the file: /root/dc-app-performance-toolkit/app/datasets/jira/issues.csv
+2025-05-09 11:34:24,448 INFO c.b.c.RandomCSVReader: Reading finished. Found 122 records in your csv file
+2025-05-09 11:34:24,449 INFO c.b.c.RandomCSVReader: Start reading the file: /root/dc-app-performance-toolkit/app/datasets/jira/scrum-boards.csv
+2025-05-09 11:34:24,449 INFO c.b.c.RandomCSVReader: Reading finished. Found 1 records in your csv file
+2025-05-09 11:34:24,449 INFO c.b.c.RandomCSVReader: Start reading the file: /root/dc-app-performance-toolkit/app/datasets/jira/kanban-boards.csv
+2025-05-09 11:34:24,449 INFO c.b.c.RandomCSVReader: Reading finished. Found 1 records in your csv file
+2025-05-09 11:34:24,450 INFO c.b.c.RandomCSVReader: Start reading the file: /root/dc-app-performance-toolkit/app/datasets/jira/projects.csv
+2025-05-09 11:34:24,450 INFO c.b.c.RandomCSVReader: Reading finished. Found 2 records in your csv file
+2025-05-09 11:34:24,458 INFO o.a.j.JMeter: Running test (1746790464457)
+2025-05-09 11:34:24,461 INFO o.a.j.e.StandardJMeterEngine: Starting setUp thread groups
+2025-05-09 11:34:24,461 INFO o.a.j.e.StandardJMeterEngine: Starting setUp ThreadGroup: 1 : setUp Thread Group 
+2025-05-09 11:34:24,461 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group setUp Thread Group.
+2025-05-09 11:34:24,461 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-05-09 11:34:24,461 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-05-09 11:34:24,469 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-05-09 11:34:24,469 INFO o.a.j.e.StandardJMeterEngine: Waiting for all setup thread groups to exit
+2025-05-09 11:34:24,471 INFO o.a.j.t.JMeterThread: Thread started: setUp Thread Group 1-1
+2025-05-09 11:34:24,487 INFO o.a.j.t.JMeterThread: Thread is done: setUp Thread Group 1-1
+2025-05-09 11:34:24,487 INFO o.a.j.t.JMeterThread: Thread finished: setUp Thread Group 1-1
+2025-05-09 11:34:24,487 INFO o.a.j.e.StandardJMeterEngine: All Setup Threads have ended
+2025-05-09 11:34:24,562 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Jira
+2025-05-09 11:34:24,562 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group Jira.
+2025-05-09 11:34:24,563 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-05-09 11:34:24,596 INFO c.b.j.t.c.ConcurrencyThreadStarter: Start supplying threads
+2025-05-09 11:34:24,597 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-05-09 11:34:25,363 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-05-09 11:34:25,363 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-05-09 11:34:25,363 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-05-09 11:34:25,366 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-05-09 11:34:25,404 INFO o.a.j.t.JMeterThread: Thread started: Jira-ThreadStarter 1-1
+2025-05-09 11:34:25,408 INFO o.a.j.s.FileServer: Stored: datasets/jira/users.csv
+2025-05-09 11:34:25,442 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = ip-172-31-23-112
+2025-05-09 11:34:25,447 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-05-09 11:34:26,675 INFO o.a.j.e.J.set legacy form type: 2sv flow detected
+2025-05-09 11:34:26,714 INFO o.a.j.e.J.Logger: Legacy login flow: false
+2025-05-09 11:34:27,422 INFO o.a.j.t.JMeterThread: Thread started: Jira-ThreadStarter 1-2
+2025-05-09 11:34:27,531 INFO o.a.j.e.J.set legacy form type: 2sv flow detected
+2025-05-09 11:34:27,536 INFO o.a.j.e.J.Logger: Legacy login flow: false
+2025-05-09 11:34:27,631 INFO o.a.j.s.FileServer: Stored: datasets/jira/jqls.csv
+2025-05-09 11:34:28,881 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 541, jmeter_view_issue action_time: 780
+2025-05-09 11:34:29,086 INFO o.a.j.s.FileServer: Stored: performance_profile.png
+2025-05-09 11:34:29,516 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: -511, jmeter_standalone_extension action_time: 1832
+2025-05-09 11:34:29,847 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 996, jmeter_browse_projects action_time: 325
+2025-05-09 11:34:30,412 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 334, jmeter_search_jql action_time: 987
+2025-05-09 11:34:31,105 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 966, jmeter_view_dashboard action_time: 355
+2025-05-09 11:34:31,575 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 593, jmeter_view_scrum_board action_time: 728
+2025-05-09 11:34:32,794 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 699, jmeter_view_kanban_board action_time: 622
+2025-05-09 11:34:32,999 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 395, jmeter_standalone_extension action_time: 926
+2025-05-09 11:34:33,968 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 750, jmeter_view_backlog action_time: 571
+2025-05-09 11:34:34,391 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 424, jmeter_standalone_extension action_time: 897
+2025-05-09 11:34:35,108 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 932, jmeter_view_issue action_time: 389
+2025-05-09 11:34:35,468 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 670, jmeter_edit_issue action_time: 651
+2025-05-09 11:34:36,786 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 677, jmeter_search_jql action_time: 644
+2025-05-09 11:34:36,862 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 500, jmeter_standalone_extension action_time: 821
+2025-05-09 11:34:37,839 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 846, jmeter_create_issue action_time: 475
+2025-05-09 11:34:38,280 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 511, jmeter_standalone_extension action_time: 810
+2025-05-09 11:34:38,901 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1106, jmeter_view_dashboard action_time: 215
+2025-05-09 11:34:38,907 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1209, jmeter_browse_projects action_time: 112
+2025-05-09 11:34:40,477 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 854, jmeter_view_issue action_time: 467
+2025-05-09 11:34:41,047 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 392, jmeter_standalone_extension action_time: 929
+2025-05-09 11:34:41,603 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1052, jmeter_view_scrum_board action_time: 269
+2025-05-09 11:34:41,832 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 932, jmeter_search_jql action_time: 389
+2025-05-09 11:34:43,060 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1026, jmeter_view_project_summary action_time: 295
+2025-05-09 11:34:43,397 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 580, jmeter_standalone_extension action_time: 741
+2025-05-09 11:34:44,855 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 446, jmeter_view_issue action_time: 875
+2025-05-09 11:34:45,498 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: -89, jmeter_add_comment action_time: 1410
+2025-05-09 11:34:45,604 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1019, jmeter_view_dashboard action_time: 302
+2025-05-09 11:34:45,817 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1003, jmeter_view_kanban_board action_time: 318
+2025-05-09 11:34:47,649 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 298, jmeter_standalone_extension action_time: 1023
+2025-05-09 11:34:47,727 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 415, jmeter_standalone_extension action_time: 906
+2025-05-09 11:34:48,457 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1009, jmeter_browse_projects action_time: 312
+2025-05-09 11:34:48,486 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 784, jmeter_view_backlog action_time: 537
+2025-05-09 11:34:49,560 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1033, jmeter_view_issue action_time: 288
+2025-05-09 11:34:50,160 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 629, jmeter_standalone_extension action_time: 692
+2025-05-09 11:34:51,321 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 596, jmeter_search_jql action_time: 725
+2025-05-09 11:34:51,689 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 423, jmeter_edit_issue action_time: 898
+2025-05-09 11:34:52,339 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 900, jmeter_view_scrum_board action_time: 421
+2025-05-09 11:34:52,423 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1013, jmeter_view_dashboard action_time: 308
+2025-05-09 11:34:53,927 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 635, jmeter_standalone_extension action_time: 686
+2025-05-09 11:34:54,083 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 676, jmeter_standalone_extension action_time: 645
+2025-05-09 11:34:54,817 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1068, jmeter_view_kanban_board action_time: 253
+2025-05-09 11:34:55,042 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1040, jmeter_view_issue action_time: 281
+2025-05-09 11:34:56,227 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1180, jmeter_browse_projects action_time: 141
+2025-05-09 11:34:56,548 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 659, jmeter_standalone_extension action_time: 662
+2025-05-09 11:34:57,624 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 906, jmeter_search_jql action_time: 415
+2025-05-09 11:34:58,046 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 684, jmeter_standalone_extension action_time: 637
+2025-05-09 11:34:58,975 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1078, jmeter_create_issue action_time: 243
+2025-05-09 11:34:59,217 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 635, jmeter_standalone_extension action_time: 686
+2025-05-09 11:35:00,518 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 858, jmeter_view_issue action_time: 463
+2025-05-09 11:35:00,759 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 418, jmeter_standalone_extension action_time: 903
+2025-05-09 11:35:01,623 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1075, jmeter_view_dashboard action_time: 246
+2025-05-09 11:35:01,703 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 797, jmeter_search_jql action_time: 524
+2025-05-09 11:35:03,190 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 830, jmeter_view_scrum_board action_time: 491
+2025-05-09 11:35:03,568 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 255, jmeter_standalone_extension action_time: 1066
+2025-05-09 11:35:03,944 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1205, jmeter_browse_projects action_time: 116
+2025-05-09 11:35:04,264 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1078, jmeter_view_backlog action_time: 243
+2025-05-09 11:35:05,498 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 975, jmeter_view_issue action_time: 346
+2025-05-09 11:35:05,525 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1140, jmeter_browse_boards action_time: 181
+2025-05-09 11:35:06,707 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1089, jmeter_view_kanban_board action_time: 232
+2025-05-09 11:35:06,908 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1080, jmeter_view_dashboard action_time: 241
+2025-05-09 11:35:08,639 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 479, jmeter_standalone_extension action_time: 842
+2025-05-09 11:35:08,837 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 474, jmeter_standalone_extension action_time: 847
+2025-05-09 11:35:09,599 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 842, jmeter_edit_issue action_time: 479
+2025-05-09 11:35:09,611 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1023, jmeter_view_scrum_board action_time: 298
+2025-05-09 11:35:10,764 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1198, jmeter_browse_projects action_time: 123
+2025-05-09 11:35:10,856 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 907, jmeter_search_jql action_time: 414
+2025-05-09 11:35:12,078 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1008, jmeter_view_issue action_time: 313
+2025-05-09 11:35:12,641 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 646, jmeter_standalone_extension action_time: 675
+2025-05-09 11:35:13,612 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1001, jmeter_view_backlog action_time: 320
+2025-05-09 11:35:13,835 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 574, jmeter_standalone_extension action_time: 747
+2025-05-09 11:35:14,906 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1030, jmeter_view_dashboard action_time: 291
+2025-05-09 11:35:15,331 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 401, jmeter_standalone_extension action_time: 920
+2025-05-09 11:35:16,094 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 961, jmeter_view_issue action_time: 360
+2025-05-09 11:35:16,392 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 869, jmeter_search_jql action_time: 452
+2025-05-09 11:35:17,335 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1043, jmeter_view_scrum_board action_time: 278
+2025-05-09 11:35:17,454 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1129, jmeter_view_project_summary action_time: 192
+2025-05-09 11:35:19,107 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 798, jmeter_add_comment action_time: 523
+2025-05-09 11:35:19,154 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 546, jmeter_standalone_extension action_time: 775
+2025-05-09 11:35:20,001 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1023, jmeter_view_issue action_time: 298
+2025-05-09 11:35:20,178 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1049, jmeter_view_kanban_board action_time: 272
+2025-05-09 11:35:21,145 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1203, jmeter_browse_projects action_time: 118
+2025-05-09 11:35:21,957 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 593, jmeter_standalone_extension action_time: 728
+2025-05-09 11:35:22,877 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 996, jmeter_create_issue action_time: 325
+2025-05-09 11:35:23,114 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 558, jmeter_standalone_extension action_time: 763
+2025-05-09 11:35:24,123 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 872, jmeter_search_jql action_time: 449
+2025-05-09 11:35:24,155 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1040, jmeter_view_dashboard action_time: 281
+2025-05-09 11:35:25,698 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 629, jmeter_standalone_extension action_time: 692
+2025-05-09 11:35:25,789 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 729, jmeter_edit_issue action_time: 592
+2025-05-09 11:35:26,629 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1020, jmeter_view_issue action_time: 301
+2025-05-09 11:35:26,788 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1053, jmeter_view_backlog action_time: 268
+2025-05-09 11:35:28,094 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1070, jmeter_view_kanban_board action_time: 251
+2025-05-09 11:35:28,386 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 585, jmeter_standalone_extension action_time: 736
+2025-05-09 11:35:29,251 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1043, jmeter_view_scrum_board action_time: 278
+2025-05-09 11:35:30,132 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 354, jmeter_standalone_extension action_time: 967
+2025-05-09 11:35:30,433 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1186, jmeter_browse_projects action_time: 135
+2025-05-09 11:35:30,726 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1084, jmeter_view_dashboard action_time: 237
+2025-05-09 11:35:32,066 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 877, jmeter_search_jql action_time: 444
+2025-05-09 11:35:32,202 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 930, jmeter_view_issue action_time: 391
+2025-05-09 11:35:33,716 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 549, jmeter_standalone_extension action_time: 772
+2025-05-09 11:35:33,886 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 569, jmeter_standalone_extension action_time: 752
+2025-05-09 11:35:34,788 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 991, jmeter_view_issue action_time: 330
+2025-05-09 11:35:34,982 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 605, jmeter_standalone_extension action_time: 716
+2025-05-09 11:35:35,900 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1202, jmeter_browse_projects action_time: 119
+2025-05-09 11:35:35,999 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 911, jmeter_search_jql action_time: 410
+2025-05-09 11:35:37,101 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1130, jmeter_view_dashboard action_time: 191
+2025-05-09 11:35:37,428 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 996, jmeter_view_scrum_board action_time: 325
+2025-05-09 11:35:38,653 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1093, jmeter_view_kanban_board action_time: 228
+2025-05-09 11:35:38,897 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 656, jmeter_standalone_extension action_time: 665
+2025-05-09 11:35:39,834 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1043, jmeter_view_backlog action_time: 278
+2025-05-09 11:35:40,345 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 723, jmeter_standalone_extension action_time: 598
+2025-05-09 11:35:41,167 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1033, jmeter_view_issue action_time: 288
+2025-05-09 11:35:41,571 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 821, jmeter_edit_issue action_time: 500
+2025-05-09 11:35:42,874 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 840, jmeter_search_jql action_time: 481
+2025-05-09 11:35:42,947 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 577, jmeter_standalone_extension action_time: 744
+2025-05-09 11:35:43,737 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1109, jmeter_create_issue action_time: 212
+2025-05-09 11:35:44,307 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 729, jmeter_standalone_extension action_time: 592
+2025-05-09 11:35:45,155 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1013, jmeter_view_dashboard action_time: 308
+2025-05-09 11:35:45,184 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1176, jmeter_browse_projects action_time: 145
+2025-05-09 11:35:46,522 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 968, jmeter_view_issue action_time: 353
+2025-05-09 11:35:47,062 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 620, jmeter_standalone_extension action_time: 701
+2025-05-09 11:35:47,794 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1020, jmeter_view_scrum_board action_time: 301
+2025-05-09 11:35:48,093 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 914, jmeter_search_jql action_time: 407
+2025-05-09 11:35:49,229 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1100, jmeter_view_project_summary action_time: 221
+2025-05-09 11:35:49,558 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 578, jmeter_standalone_extension action_time: 743
+2025-05-09 11:35:50,414 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1045, jmeter_view_issue action_time: 276
+2025-05-09 11:35:50,836 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 817, jmeter_add_comment action_time: 504
+2025-05-09 11:35:51,661 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1120, jmeter_view_dashboard action_time: 201
+2025-05-09 11:35:51,890 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1085, jmeter_view_kanban_board action_time: 236
+2025-05-09 11:35:53,387 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 719, jmeter_standalone_extension action_time: 602
+2025-05-09 11:35:53,609 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 692, jmeter_standalone_extension action_time: 629
+2025-05-09 11:35:54,375 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1054, jmeter_view_backlog action_time: 267
+2025-05-09 11:35:54,422 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1203, jmeter_browse_projects action_time: 118
+2025-05-09 11:35:55,720 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1032, jmeter_view_issue action_time: 289
+2025-05-09 11:35:56,266 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 687, jmeter_standalone_extension action_time: 634
+2025-05-09 11:35:57,178 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 897, jmeter_search_jql action_time: 424
+2025-05-09 11:35:57,338 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 938, jmeter_edit_issue action_time: 383
+2025-05-09 11:35:58,317 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1081, jmeter_view_scrum_board action_time: 240
+2025-05-09 11:35:58,494 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1106, jmeter_view_dashboard action_time: 215
+2025-05-09 11:36:00,263 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 457, jmeter_standalone_extension action_time: 864
+2025-05-09 11:36:00,512 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 409, jmeter_standalone_extension action_time: 912
+2025-05-09 11:36:01,057 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 985, jmeter_view_kanban_board action_time: 336
+2025-05-09 11:36:01,391 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 852, jmeter_view_issue action_time: 469
+2025-05-09 11:36:02,386 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1180, jmeter_browse_projects action_time: 141
+2025-05-09 11:36:03,023 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 342, jmeter_standalone_extension action_time: 979
+2025-05-09 11:36:03,827 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 861, jmeter_search_jql action_time: 460
+2025-05-09 11:36:04,304 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 584, jmeter_standalone_extension action_time: 737
+2025-05-09 11:36:05,188 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1024, jmeter_create_issue action_time: 297
+2025-05-09 11:36:05,419 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 591, jmeter_standalone_extension action_time: 730
+2025-05-09 11:36:06,520 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1015, jmeter_view_issue action_time: 306
+2025-05-09 11:36:06,720 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 612, jmeter_standalone_extension action_time: 709
+2025-05-09 11:36:07,773 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1083, jmeter_view_dashboard action_time: 238
+2025-05-09 11:36:07,793 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 862, jmeter_search_jql action_time: 459
+2025-05-09 11:36:09,238 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 940, jmeter_view_scrum_board action_time: 381
+2025-05-09 11:36:09,452 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 529, jmeter_standalone_extension action_time: 792
+2025-05-09 11:36:10,122 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1182, jmeter_browse_projects action_time: 139
+2025-05-09 11:36:10,455 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1045, jmeter_view_backlog action_time: 276
+2025-05-09 11:36:11,635 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1186, jmeter_browse_boards action_time: 135
+2025-05-09 11:36:11,642 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1002, jmeter_view_issue action_time: 319
+2025-05-09 11:36:12,866 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1101, jmeter_view_kanban_board action_time: 220
+2025-05-09 11:36:13,011 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1133, jmeter_view_dashboard action_time: 188
+2025-05-09 11:36:14,751 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 538, jmeter_standalone_extension action_time: 783
+2025-05-09 11:36:14,960 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 506, jmeter_standalone_extension action_time: 815
+2025-05-09 11:36:15,801 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 988, jmeter_view_scrum_board action_time: 333
+2025-05-09 11:36:16,017 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 596, jmeter_edit_issue action_time: 725
+2025-05-09 11:36:16,896 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1217, jmeter_browse_projects action_time: 104
+2025-05-09 11:36:17,028 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 908, jmeter_search_jql action_time: 413
+2025-05-09 11:36:18,300 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 958, jmeter_view_issue action_time: 363
+2025-05-09 11:36:18,952 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 483, jmeter_standalone_extension action_time: 838
+2025-05-09 11:36:19,787 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 971, jmeter_view_backlog action_time: 350
+2025-05-09 11:36:20,041 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 540, jmeter_standalone_extension action_time: 781
+2025-05-09 11:36:20,972 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1108, jmeter_view_dashboard action_time: 213
+2025-05-09 11:36:21,319 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 584, jmeter_standalone_extension action_time: 737
+2025-05-09 11:36:22,210 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1016, jmeter_view_issue action_time: 305
+2025-05-09 11:36:22,648 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 754, jmeter_search_jql action_time: 567
+2025-05-09 11:36:23,494 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1055, jmeter_view_scrum_board action_time: 266
+2025-05-09 11:36:23,583 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1141, jmeter_view_project_summary action_time: 180
+2025-05-09 11:36:25,212 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 659, jmeter_standalone_extension action_time: 662
+2025-05-09 11:36:25,244 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 803, jmeter_add_comment action_time: 518
+2025-05-09 11:36:26,205 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 989, jmeter_view_issue action_time: 332
+2025-05-09 11:36:26,292 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1077, jmeter_view_kanban_board action_time: 244
+2025-05-09 11:36:27,306 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1211, jmeter_browse_projects action_time: 110
+2025-05-09 11:36:28,015 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 677, jmeter_standalone_extension action_time: 644
+2025-05-09 11:36:28,964 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1053, jmeter_create_issue action_time: 268
+2025-05-09 11:36:29,233 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 606, jmeter_standalone_extension action_time: 715
+2025-05-09 11:36:30,331 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1008, jmeter_view_dashboard action_time: 313
+2025-05-09 11:36:30,392 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 770, jmeter_search_jql action_time: 551
+2025-05-09 11:36:31,938 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 724, jmeter_edit_issue action_time: 597
+2025-05-09 11:36:32,045 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 439, jmeter_standalone_extension action_time: 882
+2025-05-09 11:36:32,878 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 928, jmeter_view_issue action_time: 393
+2025-05-09 11:36:33,031 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 953, jmeter_view_backlog action_time: 368
+2025-05-09 11:36:34,336 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 971, jmeter_view_kanban_board action_time: 350
+2025-05-09 11:36:34,665 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 464, jmeter_standalone_extension action_time: 857
+2025-05-09 11:36:35,439 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1012, jmeter_view_scrum_board action_time: 309
+2025-05-09 11:36:35,979 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 651, jmeter_standalone_extension action_time: 670
+2025-05-09 11:36:36,559 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1216, jmeter_browse_projects action_time: 105
+2025-05-09 11:36:36,847 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1105, jmeter_view_dashboard action_time: 216
+2025-05-09 11:36:38,259 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 839, jmeter_search_jql action_time: 482
+2025-05-09 11:36:38,330 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 945, jmeter_view_issue action_time: 376
+2025-05-09 11:36:39,958 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 461, jmeter_standalone_extension action_time: 860
+2025-05-09 11:36:40,134 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 463, jmeter_standalone_extension action_time: 858
+2025-05-09 11:36:40,938 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 982, jmeter_view_issue action_time: 339
+2025-05-09 11:36:41,082 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 661, jmeter_standalone_extension action_time: 660
+2025-05-09 11:36:42,029 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1214, jmeter_browse_projects action_time: 107
+2025-05-09 11:36:42,173 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 893, jmeter_search_jql action_time: 428
+2025-05-09 11:36:43,302 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1086, jmeter_view_dashboard action_time: 235
+2025-05-09 11:36:43,510 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1056, jmeter_view_scrum_board action_time: 265
+2025-05-09 11:36:44,848 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1040, jmeter_view_kanban_board action_time: 281
+2025-05-09 11:36:45,317 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 393, jmeter_standalone_extension action_time: 928
+2025-05-09 11:36:46,001 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1033, jmeter_view_backlog action_time: 288
+2025-05-09 11:36:46,687 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 523, jmeter_standalone_extension action_time: 798
+2025-05-09 11:36:47,321 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1035, jmeter_view_issue action_time: 286
+2025-05-09 11:36:47,829 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 703, jmeter_edit_issue action_time: 618
+2025-05-09 11:36:49,034 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 821, jmeter_search_jql action_time: 500
+2025-05-09 11:36:49,181 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 497, jmeter_standalone_extension action_time: 824
+2025-05-09 11:36:49,921 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1079, jmeter_create_issue action_time: 242
+2025-05-09 11:36:50,587 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 590, jmeter_standalone_extension action_time: 731
+2025-05-09 11:36:51,213 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1109, jmeter_view_dashboard action_time: 212
+2025-05-09 11:36:51,293 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1207, jmeter_browse_projects action_time: 114
+2025-05-09 11:36:52,612 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1032, jmeter_view_issue action_time: 289
+2025-05-09 11:36:53,212 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 610, jmeter_standalone_extension action_time: 711
+2025-05-09 11:36:53,927 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1041, jmeter_view_scrum_board action_time: 280
+2025-05-09 11:36:54,222 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 923, jmeter_search_jql action_time: 398
+2025-05-09 11:36:55,477 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 990, jmeter_view_project_summary action_time: 331
+2025-05-09 11:36:55,739 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 550, jmeter_standalone_extension action_time: 771
+2025-05-09 11:36:56,562 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1050, jmeter_view_issue action_time: 271
+2025-05-09 11:36:56,944 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 845, jmeter_add_comment action_time: 476
+2025-05-09 11:36:57,806 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1128, jmeter_view_dashboard action_time: 193
+2025-05-09 11:36:57,997 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1113, jmeter_view_kanban_board action_time: 208
+2025-05-09 11:36:59,667 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 591, jmeter_standalone_extension action_time: 730
+2025-05-09 11:36:59,826 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 606, jmeter_standalone_extension action_time: 715
+2025-05-09 11:37:00,545 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1213, jmeter_browse_projects action_time: 108
+2025-05-09 11:37:00,572 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1008, jmeter_view_backlog action_time: 313
+2025-05-09 11:37:01,984 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 919, jmeter_view_issue action_time: 402
+2025-05-09 11:37:02,822 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 258, jmeter_standalone_extension action_time: 1063
+2025-05-09 11:37:03,326 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 899, jmeter_search_jql action_time: 422
+2025-05-09 11:37:03,512 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 891, jmeter_edit_issue action_time: 430
+2025-05-09 11:37:04,507 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1040, jmeter_view_scrum_board action_time: 281
+2025-05-09 11:37:04,628 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1096, jmeter_view_dashboard action_time: 225
+2025-05-09 11:37:06,217 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 652, jmeter_standalone_extension action_time: 669
+2025-05-09 11:37:06,391 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 655, jmeter_standalone_extension action_time: 666
+2025-05-09 11:37:07,093 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1098, jmeter_view_kanban_board action_time: 223
+2025-05-09 11:37:07,338 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1030, jmeter_view_issue action_time: 291
+2025-05-09 11:37:08,483 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1209, jmeter_browse_projects action_time: 112
+2025-05-09 11:37:08,827 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 687, jmeter_standalone_extension action_time: 634
+2025-05-09 11:37:09,888 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 948, jmeter_search_jql action_time: 373
+2025-05-09 11:37:10,366 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 649, jmeter_standalone_extension action_time: 672
+2025-05-09 11:37:11,247 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1091, jmeter_create_issue action_time: 230
+2025-05-09 11:37:11,471 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 687, jmeter_standalone_extension action_time: 634
+2025-05-09 11:37:12,667 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 993, jmeter_view_issue action_time: 328
+2025-05-09 11:37:12,833 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 647, jmeter_standalone_extension action_time: 674
+2025-05-09 11:37:13,870 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1113, jmeter_view_dashboard action_time: 208
+2025-05-09 11:37:13,917 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 885, jmeter_search_jql action_time: 436
+2025-05-09 11:37:15,377 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 927, jmeter_view_scrum_board action_time: 394
+2025-05-09 11:37:15,617 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 507, jmeter_standalone_extension action_time: 814
+2025-05-09 11:37:16,268 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1180, jmeter_browse_projects action_time: 141
+2025-05-09 11:37:16,589 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1037, jmeter_view_backlog action_time: 284
+2025-05-09 11:37:17,733 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1037, jmeter_view_issue action_time: 284
+2025-05-09 11:37:17,745 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1203, jmeter_browse_boards action_time: 118
+2025-05-09 11:37:19,003 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1089, jmeter_view_kanban_board action_time: 232
+2025-05-09 11:37:19,146 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1124, jmeter_view_dashboard action_time: 197
+2025-05-09 11:37:20,789 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 625, jmeter_standalone_extension action_time: 696
+2025-05-09 11:37:20,982 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 623, jmeter_standalone_extension action_time: 698
+2025-05-09 11:37:21,899 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1028, jmeter_view_scrum_board action_time: 293
+2025-05-09 11:37:21,966 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 770, jmeter_edit_issue action_time: 551
+2025-05-09 11:37:23,044 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1206, jmeter_browse_projects action_time: 115
+2025-05-09 11:37:23,172 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 887, jmeter_search_jql action_time: 434
+2025-05-09 11:37:24,334 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1046, jmeter_view_issue action_time: 275
+2025-05-09 11:37:24,902 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 670, jmeter_standalone_extension action_time: 651
+2025-05-09 11:37:25,937 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 957, jmeter_view_backlog action_time: 364
+2025-05-09 11:37:26,102 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 601, jmeter_standalone_extension action_time: 720
+2025-05-09 11:37:27,103 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1113, jmeter_view_dashboard action_time: 208
+2025-05-09 11:37:27,347 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 678, jmeter_standalone_extension action_time: 643
+2025-05-09 11:37:28,338 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1012, jmeter_view_issue action_time: 309
+2025-05-09 11:37:28,645 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 893, jmeter_search_jql action_time: 428
+2025-05-09 11:37:29,618 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1054, jmeter_view_scrum_board action_time: 267
+2025-05-09 11:37:29,718 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1142, jmeter_view_project_summary action_time: 179
+2025-05-09 11:37:31,435 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 559, jmeter_standalone_extension action_time: 762
+2025-05-09 11:37:31,438 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 744, jmeter_add_comment action_time: 577
+2025-05-09 11:37:32,486 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 830, jmeter_view_issue action_time: 491
+2025-05-09 11:37:32,519 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 985, jmeter_view_kanban_board action_time: 336
+2025-05-09 11:37:33,422 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1217, jmeter_browse_projects action_time: 104
+2025-05-09 11:37:34,162 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 664, jmeter_standalone_extension action_time: 657
+2025-05-09 11:37:35,065 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1083, jmeter_create_issue action_time: 238
+2025-05-09 11:37:35,337 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 625, jmeter_standalone_extension action_time: 696
+2025-05-09 11:37:36,382 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1090, jmeter_view_dashboard action_time: 231
+2025-05-09 11:37:36,475 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 809, jmeter_search_jql action_time: 512
+2025-05-09 11:37:37,879 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 915, jmeter_edit_issue action_time: 406
+2025-05-09 11:37:37,910 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 695, jmeter_standalone_extension action_time: 626
+2025-05-09 11:37:38,998 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 929, jmeter_view_issue action_time: 392
+2025-05-09 11:37:39,094 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1022, jmeter_view_backlog action_time: 299
+2025-05-09 11:37:40,392 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1046, jmeter_view_kanban_board action_time: 275
+2025-05-09 11:37:40,633 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 620, jmeter_standalone_extension action_time: 701
+2025-05-09 11:37:41,536 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1039, jmeter_view_scrum_board action_time: 282
+2025-05-09 11:37:42,040 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 720, jmeter_standalone_extension action_time: 601
+2025-05-09 11:37:42,699 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1200, jmeter_browse_projects action_time: 121
+2025-05-09 11:37:43,044 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1038, jmeter_view_dashboard action_time: 283
+2025-05-09 11:37:44,304 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 918, jmeter_search_jql action_time: 403
+2025-05-09 11:37:44,367 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1037, jmeter_view_issue action_time: 284
+2025-05-09 11:37:45,984 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 560, jmeter_standalone_extension action_time: 761
+2025-05-09 11:37:46,206 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 521, jmeter_standalone_extension action_time: 800
+2025-05-09 11:37:47,025 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1024, jmeter_view_issue action_time: 297
+2025-05-09 11:37:47,187 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 679, jmeter_standalone_extension action_time: 642
+2025-05-09 11:37:48,150 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1222, jmeter_browse_projects action_time: 99
+2025-05-09 11:37:48,330 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 858, jmeter_search_jql action_time: 463
+2025-05-09 11:37:49,423 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1087, jmeter_view_dashboard action_time: 234
+2025-05-09 11:37:49,653 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1041, jmeter_view_scrum_board action_time: 280
+2025-05-09 11:37:51,094 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 922, jmeter_view_kanban_board action_time: 399
+2025-05-09 11:37:51,453 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 379, jmeter_standalone_extension action_time: 942
+2025-05-09 11:37:52,188 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 968, jmeter_view_backlog action_time: 353
+2025-05-09 11:37:52,667 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 671, jmeter_standalone_extension action_time: 650
+2025-05-09 11:37:53,453 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1027, jmeter_view_issue action_time: 294
+2025-05-09 11:37:53,760 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 900, jmeter_edit_issue action_time: 421
+2025-05-09 11:37:55,140 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 846, jmeter_search_jql action_time: 475
+2025-05-09 11:37:55,229 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 572, jmeter_standalone_extension action_time: 749
+2025-05-09 11:37:56,077 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1046, jmeter_create_issue action_time: 275
+2025-05-09 11:37:56,749 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 558, jmeter_standalone_extension action_time: 763
+2025-05-09 11:37:57,317 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1128, jmeter_view_dashboard action_time: 193
+2025-05-09 11:37:57,420 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1210, jmeter_browse_projects action_time: 111
+2025-05-09 11:37:58,730 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1038, jmeter_view_issue action_time: 283
+2025-05-09 11:37:59,369 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 583, jmeter_standalone_extension action_time: 738
+2025-05-09 11:38:00,137 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 956, jmeter_view_scrum_board action_time: 365
+2025-05-09 11:38:00,514 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 762, jmeter_search_jql action_time: 559
+2025-05-09 11:38:01,525 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1073, jmeter_view_project_summary action_time: 248
+2025-05-09 11:38:02,301 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 115, jmeter_standalone_extension action_time: 1206
+2025-05-09 11:38:02,754 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 984, jmeter_view_issue action_time: 337
+2025-05-09 11:38:03,134 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 786, jmeter_add_comment action_time: 535
+2025-05-09 11:38:03,939 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1121, jmeter_view_dashboard action_time: 200
+2025-05-09 11:38:04,139 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1103, jmeter_view_kanban_board action_time: 218
+2025-05-09 11:38:05,796 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 586, jmeter_standalone_extension action_time: 735
+2025-05-09 11:38:06,030 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 534, jmeter_standalone_extension action_time: 787
+2025-05-09 11:38:06,684 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1203, jmeter_browse_projects action_time: 118
+2025-05-09 11:38:06,690 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1014, jmeter_view_backlog action_time: 307
+2025-05-09 11:38:08,039 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 989, jmeter_view_issue action_time: 332
+2025-05-09 11:38:08,585 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 624, jmeter_standalone_extension action_time: 697
+2025-05-09 11:38:09,436 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 914, jmeter_search_jql action_time: 407
+2025-05-09 11:38:09,824 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 707, jmeter_edit_issue action_time: 614
+2025-05-09 11:38:10,739 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 934, jmeter_view_scrum_board action_time: 387
+2025-05-09 11:38:10,831 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1022, jmeter_view_dashboard action_time: 299
+2025-05-09 11:38:12,326 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 670, jmeter_standalone_extension action_time: 651
+2025-05-09 11:38:12,467 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 708, jmeter_standalone_extension action_time: 613
+2025-05-09 11:38:13,228 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1091, jmeter_view_kanban_board action_time: 230
+2025-05-09 11:38:13,463 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1034, jmeter_view_issue action_time: 287
+2025-05-09 11:38:14,606 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1213, jmeter_browse_projects action_time: 108
+2025-05-09 11:38:14,984 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 656, jmeter_standalone_extension action_time: 665
+2025-05-09 11:38:16,276 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 689, jmeter_search_jql action_time: 632
+2025-05-09 11:38:16,747 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 394, jmeter_standalone_extension action_time: 927
+2025-05-09 11:38:17,402 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1061, jmeter_create_issue action_time: 260
+2025-05-09 11:38:17,635 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 651, jmeter_standalone_extension action_time: 670
+2025-05-09 11:38:18,771 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1013, jmeter_view_issue action_time: 308
+2025-05-09 11:38:18,970 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 638, jmeter_standalone_extension action_time: 683
+2025-05-09 11:38:20,032 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1079, jmeter_view_dashboard action_time: 242
+2025-05-09 11:38:20,068 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 863, jmeter_search_jql action_time: 458
+2025-05-09 11:38:21,411 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1022, jmeter_view_scrum_board action_time: 299
+2025-05-09 11:38:21,628 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 625, jmeter_standalone_extension action_time: 696
+2025-05-09 11:38:22,379 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1197, jmeter_browse_projects action_time: 124
+2025-05-09 11:38:22,695 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1060, jmeter_view_backlog action_time: 261
+2025-05-09 11:38:23,876 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1024, jmeter_view_issue action_time: 297
+2025-05-09 11:38:23,885 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1192, jmeter_browse_boards action_time: 129
+2025-05-09 11:38:25,258 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 964, jmeter_view_kanban_board action_time: 357
+2025-05-09 11:38:25,279 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1121, jmeter_view_dashboard action_time: 200
+2025-05-09 11:38:26,957 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 587, jmeter_standalone_extension action_time: 734
+2025-05-09 11:38:27,147 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 575, jmeter_standalone_extension action_time: 746
+2025-05-09 11:38:28,041 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1003, jmeter_view_scrum_board action_time: 318
+2025-05-09 11:38:28,177 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 689, jmeter_edit_issue action_time: 632
+2025-05-09 11:38:29,141 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1227, jmeter_browse_projects action_time: 94
+2025-05-09 11:38:29,234 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 954, jmeter_search_jql action_time: 367
+2025-05-09 11:38:30,483 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1027, jmeter_view_issue action_time: 294
+2025-05-09 11:38:31,047 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 643, jmeter_standalone_extension action_time: 678
+2025-05-09 11:38:32,030 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 982, jmeter_view_backlog action_time: 339
+2025-05-09 11:38:32,353 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 479, jmeter_standalone_extension action_time: 842
+2025-05-09 11:38:33,264 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1070, jmeter_view_dashboard action_time: 251
+2025-05-09 11:38:33,496 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 667, jmeter_standalone_extension action_time: 654
+2025-05-09 11:38:34,450 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1035, jmeter_view_issue action_time: 286
+2025-05-09 11:38:34,781 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 876, jmeter_search_jql action_time: 445
+2025-05-09 11:38:35,737 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1070, jmeter_view_scrum_board action_time: 251
+2025-05-09 11:38:35,834 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1144, jmeter_view_project_summary action_time: 177
+2025-05-09 11:38:37,433 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 695, jmeter_standalone_extension action_time: 626
+2025-05-09 11:38:37,479 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 822, jmeter_add_comment action_time: 499
+2025-05-09 11:38:38,407 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1043, jmeter_view_issue action_time: 278
+2025-05-09 11:38:38,524 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1099, jmeter_view_kanban_board action_time: 222
+2025-05-09 11:38:39,545 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1228, jmeter_browse_projects action_time: 93
+2025-05-09 11:38:40,291 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 653, jmeter_standalone_extension action_time: 668
+2025-05-09 11:38:41,211 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1056, jmeter_create_issue action_time: 265
+2025-05-09 11:38:41,447 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 648, jmeter_standalone_extension action_time: 673
+2025-05-09 11:38:42,458 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1131, jmeter_view_dashboard action_time: 190
+2025-05-09 11:38:42,571 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 846, jmeter_search_jql action_time: 475
+2025-05-09 11:38:44,201 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 537, jmeter_standalone_extension action_time: 784
+2025-05-09 11:38:44,248 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 663, jmeter_edit_issue action_time: 658
+2025-05-09 11:38:45,128 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 933, jmeter_view_issue action_time: 388
+2025-05-09 11:38:45,247 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 987, jmeter_view_backlog action_time: 334
+2025-05-09 11:38:46,510 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1046, jmeter_view_kanban_board action_time: 275
+2025-05-09 11:38:46,905 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 477, jmeter_standalone_extension action_time: 844
+2025-05-09 11:38:47,708 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 997, jmeter_view_scrum_board action_time: 324
+2025-05-09 11:38:48,441 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 438, jmeter_standalone_extension action_time: 883
+2025-05-09 11:38:48,826 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1204, jmeter_browse_projects action_time: 117
+2025-05-09 11:38:49,066 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1135, jmeter_view_dashboard action_time: 186
+2025-05-09 11:38:50,488 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 864, jmeter_search_jql action_time: 457
+2025-05-09 11:38:50,543 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 981, jmeter_view_issue action_time: 340
+2025-05-09 11:38:52,273 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 401, jmeter_standalone_extension action_time: 920
+2025-05-09 11:38:52,372 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 474, jmeter_standalone_extension action_time: 847
+2025-05-09 11:38:53,161 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1007, jmeter_view_issue action_time: 314
+2025-05-09 11:38:53,412 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 585, jmeter_standalone_extension action_time: 736
+2025-05-09 11:38:54,265 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1225, jmeter_browse_projects action_time: 96
+2025-05-09 11:38:54,379 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 940, jmeter_search_jql action_time: 381
+2025-05-09 11:38:55,626 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1015, jmeter_view_dashboard action_time: 306
+2025-05-09 11:38:55,779 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1033, jmeter_view_scrum_board action_time: 288
+2025-05-09 11:38:57,063 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1071, jmeter_view_kanban_board action_time: 250
+2025-05-09 11:38:57,350 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 613, jmeter_standalone_extension action_time: 708
+2025-05-09 11:38:58,234 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1052, jmeter_view_backlog action_time: 269
+2025-05-09 11:38:58,823 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 632, jmeter_standalone_extension action_time: 689
+2025-05-09 11:38:59,621 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 987, jmeter_view_issue action_time: 334
+2025-05-09 11:39:00,295 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 482, jmeter_edit_issue action_time: 839
+2025-05-09 11:39:01,425 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 678, jmeter_search_jql action_time: 643
+2025-05-09 11:39:01,501 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 429, jmeter_standalone_extension action_time: 892
+2025-05-09 11:39:02,386 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 868, jmeter_create_issue action_time: 453
+2025-05-09 11:39:03,060 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 365, jmeter_standalone_extension action_time: 956
+2025-05-09 11:39:03,464 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1112, jmeter_view_dashboard action_time: 209
+2025-05-09 11:39:03,532 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1216, jmeter_browse_projects action_time: 105
+2025-05-09 11:39:04,905 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 994, jmeter_view_issue action_time: 327
+2025-05-09 11:39:05,567 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 503, jmeter_standalone_extension action_time: 818
+2025-05-09 11:39:06,197 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1025, jmeter_view_scrum_board action_time: 296
+2025-05-09 11:39:06,507 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 885, jmeter_search_jql action_time: 436
+2025-05-09 11:39:07,642 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1072, jmeter_view_project_summary action_time: 249
+2025-05-09 11:39:07,891 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 652, jmeter_standalone_extension action_time: 669
+2025-05-09 11:39:08,934 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 931, jmeter_view_issue action_time: 390
+2025-05-09 11:39:09,212 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 824, jmeter_add_comment action_time: 497
+2025-05-09 11:39:10,060 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1127, jmeter_view_dashboard action_time: 194
+2025-05-09 11:39:10,273 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1085, jmeter_view_kanban_board action_time: 236
+2025-05-09 11:39:11,906 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 603, jmeter_standalone_extension action_time: 718
+2025-05-09 11:39:12,090 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 590, jmeter_standalone_extension action_time: 731
+2025-05-09 11:39:12,790 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1042, jmeter_view_backlog action_time: 279
+2025-05-09 11:39:12,795 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1208, jmeter_browse_projects action_time: 113
+2025-05-09 11:39:14,110 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1044, jmeter_view_issue action_time: 277
+2025-05-09 11:39:14,754 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 570, jmeter_standalone_extension action_time: 751
+2025-05-09 11:39:15,569 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 908, jmeter_search_jql action_time: 413
+2025-05-09 11:39:15,739 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 912, jmeter_edit_issue action_time: 409
+2025-05-09 11:39:16,849 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 950, jmeter_view_scrum_board action_time: 371
+2025-05-09 11:39:16,930 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1043, jmeter_view_dashboard action_time: 278
+2025-05-09 11:39:18,510 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 611, jmeter_standalone_extension action_time: 710
+2025-05-09 11:39:18,720 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 574, jmeter_standalone_extension action_time: 747
+2025-05-09 11:39:19,358 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1085, jmeter_view_kanban_board action_time: 236
+2025-05-09 11:39:19,579 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1037, jmeter_view_issue action_time: 284
+2025-05-09 11:39:20,752 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1187, jmeter_browse_projects action_time: 134
+2025-05-09 11:39:21,112 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 653, jmeter_standalone_extension action_time: 668
+2025-05-09 11:39:22,221 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 866, jmeter_search_jql action_time: 455
+2025-05-09 11:39:22,639 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 622, jmeter_standalone_extension action_time: 699
+2025-05-09 11:39:23,514 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1070, jmeter_create_issue action_time: 251
+2025-05-09 11:39:23,735 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 674, jmeter_standalone_extension action_time: 647
+2025-05-09 11:39:25,020 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 886, jmeter_view_issue action_time: 435
+2025-05-09 11:39:25,191 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 541, jmeter_standalone_extension action_time: 780
+2025-05-09 11:39:26,118 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1110, jmeter_view_dashboard action_time: 211
+2025-05-09 11:39:26,149 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 905, jmeter_search_jql action_time: 416
+2025-05-09 11:39:27,546 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1004, jmeter_view_scrum_board action_time: 317
+2025-05-09 11:39:27,753 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 622, jmeter_standalone_extension action_time: 699
+2025-05-09 11:39:28,477 INFO o.a.j.t.J.pacing timer: concurrency: 2, delay_between_transactions: 1321.1009174311926, thread_sleep: 1221, jmeter_browse_projects action_time: 100
+2025-05-09 11:39:28,556 INFO c.b.j.t.c.ConcurrencyThreadStarter: Done supplying threads
+2025-05-09 11:39:28,638 INFO o.a.j.t.JMeterThread: Thread is done: Jira-ThreadStarter 1-1
+2025-05-09 11:39:28,638 INFO o.a.j.t.JMeterThread: Thread finished: Jira-ThreadStarter 1-1
+2025-05-09 11:39:29,698 INFO o.a.j.t.JMeterThread: Thread is done: Jira-ThreadStarter 1-2
+2025-05-09 11:39:29,698 INFO o.a.j.t.JMeterThread: Thread finished: Jira-ThreadStarter 1-2
+2025-05-09 11:39:29,699 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-05-09 11:39:29,700 INFO o.a.j.s.FileServer: Close: datasets/jira/jqls.csv
+2025-05-09 11:39:29,700 INFO o.a.j.s.FileServer: Close: datasets/jira/users.csv
+2025-05-09 11:39:29,704 INFO o.a.j.e.StandardJMeterEngine: Forced JVM shutdown requested at end of test
