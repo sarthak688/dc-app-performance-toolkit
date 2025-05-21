@@ -1,0 +1,16 @@
+{
+    "Activities": [
+        {
+            "ActivityId": "5a265bc6-92de-a241-90ca-b6824f020438",
+            "AutoScalingGroupName": "eks-appNode-m5_2xlarge-20250521065942759100000014-bacb78d2-087c-2a4f-8841-ba57060f20b8",
+            "Description": "Launching a new EC2 instance: i-000317f60a16e60b1",
+            "Cause": "At 2025-05-21T07:00:21Z a user request created an AutoScalingGroup changing the desired capacity from 0 to 1.  At 2025-05-21T07:00:24Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 1.",
+            "StartTime": "2025-05-21T07:00:26.152000+00:00",
+            "EndTime": "2025-05-21T07:00:32+00:00",
+            "StatusCode": "Successful",
+            "Progress": 100,
+            "Details": "{\"Subnet ID\":\"subnet-08a2c63e41e5a4821\",\"Availability Zone\":\"us-east-2a\"}",
+            "AutoScalingGroupARN": "arn:aws:autoscaling:us-east-2:074103337776:autoScalingGroup:ae8f5a7b-7443-4333-9c0f-3598b86d2080:autoScalingGroupName/eks-appNode-m5_2xlarge-20250521065942759100000014-bacb78d2-087c-2a4f-8841-ba57060f20b8"
+        }
+    ]
+}

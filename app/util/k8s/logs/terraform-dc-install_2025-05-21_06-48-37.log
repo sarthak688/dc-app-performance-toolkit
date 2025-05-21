@@ -1,0 +1,2992 @@
+2025-05-21 06:48:37 [INFO] Terraform will use '/data-center-terraform/conf.tfvars' to install the infrastructure.
+2025-05-21 06:48:37 [INFO] Verifying the config file.
+2025-05-21 06:48:37 [INFO] Checking jira license
+2025-05-21 06:48:37 [INFO] Testing jira license: AAAB4A0ODAoPeNqVUk1v2kAUvPtXWOqlPRitzUcw0kqFZUlpbEOAoKTi8jCPeIuxnfWahPz6+gMELQlSJV921jvzZt58GUihu7DXia0Tq2OaHcvUWX+mW8RqakwiKBFHfVBIC8Qg+WdrjvAxSnG2T9CDLVI2cl0+YcOuo/0WEmqHe74SxWvKvRmfjCfDKde8bLtEOVo/pChTaphHKv6WCLk/02kZpF2RJTJeZb6qFQcjjdfqFSTWwFdih1TJDLVptkx9KZJSrET4DsIMTueSKGcHhpFCWYFhJf0D0oC67JUNus0BWjZj73h3y+Y784VZbGVu3F7rrhvcP964WW8CnLTfn+yXZRD9CsO53CXd9f2CLujRybBPnWF/yj3DsYjdaDbqjWs+pgpkMdEawjR3gnKHMqfoPRLLsJ9GpjH02i3DGTVvtQ3u53lqhSmzRcgNadfrpvYsEaMgThKUV3IfZ9IPIMV/N3n+uowmkSI9xso9+rePD7Q+6kAfT+v4mbvVpwe3+tdiB3q1hG+Ljn7ak+aCyNEIIv//y3DRqvNBz5tyheOTdhwTt7SRfIZIpFWrHsQYVKCxOFI5P8+HDyls0gBUbSuUgvB7JpL8j5ofbyvVixlL9GK4K7EexEr4U60/10tPfzAsAhR6BoB2I0qhCILkgS7BDLcmg+PUuwIUcqbRoNrM+3cYX+g97XwvluKiI/E=X02mq 
+2025-05-21 06:48:37 [INFO] The provided license is valid
+2025-05-21 06:48:37 [INFO] Starting pre-flight checks for jira
+2025-05-21 06:48:37 [INFO] Dataset size is large
+2025-05-21 06:48:37 [INFO] Checking EBS snapshot snap-084486021b02f0ef8 compatibility with jira version 10.3.4
+2025-05-21 06:48:39 [INFO] EBS snapshot snap-084486021b02f0ef8 version 10.3.4 is compatible with jira version 10.3.4
+2025-05-21 06:48:39 [INFO] Checking RDS snapshot arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-10-3-4 compatibility with jira version 10.3.4
+2025-05-21 06:48:39 [INFO] RDS snapshot 'arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-10-3-4' is compatible with jira version 10.3.4
+Initializing the backend...
+Initializing modules...
+- tfstate-bucket in ../AWS/s3
+- tfstate-table in ../AWS/dynamodb
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "~> 5.0"...
+- Finding hashicorp/kubernetes versions matching "~> 2.7, ~> 2.31"...
+- Finding hashicorp/helm versions matching "~> 2.14"...
+- Installing hashicorp/helm v2.17.0...
+- Installed hashicorp/helm v2.17.0 (signed by HashiCorp)
+- Installing hashicorp/aws v5.98.0...
+- Installed hashicorp/aws v5.98.0 (signed by HashiCorp)
+- Installing hashicorp/kubernetes v2.37.0...
+- Installed hashicorp/kubernetes v2.37.0 (signed by HashiCorp)
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+[0m[1mmodule.tfstate-bucket.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.tfstate-bucket.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.tfstate-bucket.data.aws_region.current: Read complete after 0s [id=us-east-2][0m
+[0m[1mmodule.tfstate-bucket.data.aws_caller_identity.current: Read complete after 0s [id=074103337776][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.tfstate-bucket.aws_s3_bucket.terraform_state[0m will be created
+[0m  [32m+[0m[0m resource "aws_s3_bucket" "terraform_state" {
+      [32m+[0m[0m acceleration_status         = (known after apply)
+      [32m+[0m[0m acl                         = "private"
+      [32m+[0m[0m arn                         = (known after apply)
+      [32m+[0m[0m bucket                      = "atl-dc-tmh-jira-perf-large-us-east-2-074103337776-tfstate"
+      [32m+[0m[0m bucket_domain_name          = (known after apply)
+      [32m+[0m[0m bucket_prefix               = (known after apply)
+      [32m+[0m[0m bucket_regional_domain_name = (known after apply)
+      [32m+[0m[0m force_destroy               = true
+      [32m+[0m[0m hosted_zone_id              = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m object_lock_enabled         = (known after apply)
+      [32m+[0m[0m policy                      = (known after apply)
+      [32m+[0m[0m region                      = (known after apply)
+      [32m+[0m[0m request_payer               = (known after apply)
+      [32m+[0m[0m tags                        = {
+          [32m+[0m[0m "Name" = "atl-dc-tmh-jira-perf-large-us-east-2-074103337776-tfstate"
+        }
+      [32m+[0m[0m tags_all                    = {
+          [32m+[0m[0m "Name" = "atl-dc-tmh-jira-perf-large-us-east-2-074103337776-tfstate"
+        }
+      [32m+[0m[0m website_domain              = (known after apply)
+      [32m+[0m[0m website_endpoint            = (known after apply)
+
+      [32m+[0m[0m cors_rule (known after apply)
+
+      [32m+[0m[0m grant (known after apply)
+
+      [32m+[0m[0m lifecycle_rule {
+          [32m+[0m[0m abort_incomplete_multipart_upload_days = 7
+          [32m+[0m[0m enabled                                = true
+          [32m+[0m[0m id                                     = "atlassian-policy-incomplete-mpu"
+        }
+
+      [32m+[0m[0m logging (known after apply)
+
+      [32m+[0m[0m object_lock_configuration (known after apply)
+
+      [32m+[0m[0m replication_configuration (known after apply)
+
+      [32m+[0m[0m server_side_encryption_configuration {
+          [32m+[0m[0m rule {
+              [32m+[0m[0m apply_server_side_encryption_by_default {
+                  [32m+[0m[0m sse_algorithm = "AES256"
+                }
+            }
+        }
+
+      [32m+[0m[0m versioning {
+          [32m+[0m[0m enabled    = true
+          [32m+[0m[0m mfa_delete = false
+        }
+
+      [32m+[0m[0m website (known after apply)
+    }
+
+[1m  # module.tfstate-table.aws_dynamodb_table.terraform_statelock[0m will be created
+[0m  [32m+[0m[0m resource "aws_dynamodb_table" "terraform_statelock" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m billing_mode     = "PROVISIONED"
+      [32m+[0m[0m hash_key         = "LockID"
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m name             = "atl_dc_tmh_jira_perf_large_us_east_2_074103337776_tf_lock"
+      [32m+[0m[0m read_capacity    = 20
+      [32m+[0m[0m stream_arn       = (known after apply)
+      [32m+[0m[0m stream_label     = (known after apply)
+      [32m+[0m[0m stream_view_type = (known after apply)
+      [32m+[0m[0m tags             = {
+          [32m+[0m[0m "Name" = "atl_dc_tmh_jira_perf_large_us_east_2_074103337776_tf_lock"
+        }
+      [32m+[0m[0m tags_all         = {
+          [32m+[0m[0m "Name" = "atl_dc_tmh_jira_perf_large_us_east_2_074103337776_tf_lock"
+        }
+      [32m+[0m[0m write_capacity   = 20
+
+      [32m+[0m[0m attribute {
+          [32m+[0m[0m name = "LockID"
+          [32m+[0m[0m type = "S"
+        }
+
+      [32m+[0m[0m point_in_time_recovery (known after apply)
+
+      [32m+[0m[0m server_side_encryption (known after apply)
+
+      [32m+[0m[0m ttl (known after apply)
+    }
+
+[1mPlan:[0m 2 to add, 0 to change, 0 to destroy.
+[0m[0m[1mmodule.tfstate-table.aws_dynamodb_table.terraform_statelock: Creating...[0m[0m
+[0m[1mmodule.tfstate-bucket.aws_s3_bucket.terraform_state: Creating...[0m[0m
+[0m[1mmodule.tfstate-table.aws_dynamodb_table.terraform_statelock: Creation complete after 8s [id=atl_dc_tmh_jira_perf_large_us_east_2_074103337776_tf_lock][0m
+[0m[1mmodule.tfstate-bucket.aws_s3_bucket.terraform_state: Creation complete after 8s [id=atl-dc-tmh-jira-perf-large-us-east-2-074103337776-tfstate][0m
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mArgument is deprecated[0m
+[33m│[0m [0m
+[33m│[0m [0m[0m  with module.tfstate-bucket.aws_s3_bucket.terraform_state,
+[33m│[0m [0m  on ../AWS/s3/main.tf line 4, in resource "aws_s3_bucket" "terraform_state":
+[33m│[0m [0m   4: resource "aws_s3_bucket" "terraform_state" [4m{[0m[0m
+[33m│[0m [0m
+[33m│[0m [0mserver_side_encryption_configuration is deprecated. Use the
+[33m│[0m [0maws_s3_bucket_server_side_encryption_configuration resource instead.
+[33m│[0m [0m
+[33m│[0m [0m(and 11 more similar warnings elsewhere)
+[33m╵[0m[0m
+[0m[1m[32m
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+[0mInitializing the backend...
+
+Successfully configured the backend "s3"! Terraform will automatically
+use this backend unless the backend configuration changes.
+Initializing modules...
+- bamboo in modules/products/bamboo
+- base-infrastructure in modules/common
+- base-infrastructure.eks in modules/AWS/eks
+Downloading registry.terraform.io/terraform-aws-modules/iam/aws 5.41.0 for base-infrastructure.eks.autoscaler_iam_role...
+- base-infrastructure.eks.autoscaler_iam_role in .terraform/modules/base-infrastructure.eks.autoscaler_iam_role/modules/iam-assumable-role-with-oidc
+Downloading registry.terraform.io/terraform-aws-modules/eks/aws 20.36.0 for base-infrastructure.eks.eks...
+- base-infrastructure.eks.eks in .terraform/modules/base-infrastructure.eks.eks
+- base-infrastructure.eks.eks.eks_managed_node_group in .terraform/modules/base-infrastructure.eks.eks/modules/eks-managed-node-group
+- base-infrastructure.eks.eks.eks_managed_node_group.user_data in .terraform/modules/base-infrastructure.eks.eks/modules/_user_data
+- base-infrastructure.eks.eks.fargate_profile in .terraform/modules/base-infrastructure.eks.eks/modules/fargate-profile
+Downloading registry.terraform.io/terraform-aws-modules/kms/aws 2.1.0 for base-infrastructure.eks.eks.kms...
+- base-infrastructure.eks.eks.kms in .terraform/modules/base-infrastructure.eks.eks.kms
+- base-infrastructure.eks.eks.self_managed_node_group in .terraform/modules/base-infrastructure.eks.eks/modules/self-managed-node-group
+- base-infrastructure.eks.eks.self_managed_node_group.user_data in .terraform/modules/base-infrastructure.eks.eks/modules/_user_data
+- base-infrastructure.eks.nodegroup_launch_template in modules/AWS/eks/nodegroup_launch_template
+- base-infrastructure.external_dns in modules/AWS/external-dns
+Downloading registry.terraform.io/terraform-aws-modules/iam/aws 4.13.2 for base-infrastructure.external_dns.external_dns_iam_role...
+- base-infrastructure.external_dns.external_dns_iam_role in .terraform/modules/base-infrastructure.external_dns.external_dns_iam_role/modules/iam-assumable-role-with-oidc
+- base-infrastructure.ingress in modules/AWS/ingress
+Downloading registry.terraform.io/terraform-aws-modules/acm/aws 2.14.0 for base-infrastructure.ingress.ingress_certificate...
+- base-infrastructure.ingress.ingress_certificate in .terraform/modules/base-infrastructure.ingress.ingress_certificate
+- base-infrastructure.vpc in modules/AWS/vpc
+Downloading registry.terraform.io/terraform-aws-modules/vpc/aws 5.9.0 for base-infrastructure.vpc.vpc...
+- base-infrastructure.vpc.vpc in .terraform/modules/base-infrastructure.vpc.vpc
+- bitbucket in modules/products/bitbucket
+- confluence in modules/products/confluence
+- crowd in modules/products/crowd
+- database in modules/AWS/rds
+Downloading registry.terraform.io/terraform-aws-modules/rds/aws 5.9.0 for database.db...
+- database.db in .terraform/modules/database.db
+- database.db.db_instance in .terraform/modules/database.db/modules/db_instance
+- database.db.db_option_group in .terraform/modules/database.db/modules/db_option_group
+- database.db.db_parameter_group in .terraform/modules/database.db/modules/db_parameter_group
+- database.db.db_subnet_group in .terraform/modules/database.db/modules/db_subnet_group
+Downloading registry.terraform.io/terraform-aws-modules/security-group/aws 5.3.0 for database.security_group...
+- database.security_group in .terraform/modules/database.security_group
+- discovery in modules/discovery
+- jira in modules/products/jira
+- nfs in modules/AWS/nfs
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching ">= 2.23.0, >= 2.53.0, >= 3.29.0, >= 4.0.0, >= 4.33.0, >= 4.65.0, ~> 5.0, >= 5.30.0, >= 5.95.0"...
+- Finding hashicorp/kubernetes versions matching "~> 2.7, ~> 2.31"...
+- Finding hashicorp/helm versions matching "~> 2.14"...
+- Finding hashicorp/random versions matching ">= 3.1.0, 3.6.1"...
+- Finding hashicorp/time versions matching ">= 0.9.0"...
+- Finding hashicorp/tls versions matching ">= 3.0.0"...
+- Finding hashicorp/cloudinit versions matching ">= 2.0.0"...
+- Finding hashicorp/null versions matching ">= 3.0.0"...
+- Installing hashicorp/helm v2.17.0...
+- Installed hashicorp/helm v2.17.0 (signed by HashiCorp)
+- Installing hashicorp/random v3.6.1...
+- Installed hashicorp/random v3.6.1 (signed by HashiCorp)
+- Installing hashicorp/time v0.13.1...
+- Installed hashicorp/time v0.13.1 (signed by HashiCorp)
+- Installing hashicorp/tls v4.1.0...
+- Installed hashicorp/tls v4.1.0 (signed by HashiCorp)
+- Installing hashicorp/cloudinit v2.3.7...
+- Installed hashicorp/cloudinit v2.3.7 (signed by HashiCorp)
+- Installing hashicorp/null v3.2.4...
+- Installed hashicorp/null v3.2.4 (signed by HashiCorp)
+- Installing hashicorp/aws v5.98.0...
+- Installed hashicorp/aws v5.98.0 (signed by HashiCorp)
+- Installing hashicorp/kubernetes v2.37.0...
+- Installed hashicorp/kubernetes v2.37.0 (signed by HashiCorp)
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+Initializing the backend...
+Initializing modules...
+Initializing provider plugins...
+- Reusing previous version of hashicorp/cloudinit from the dependency lock file
+- Reusing previous version of hashicorp/random from the dependency lock file
+- Reusing previous version of hashicorp/aws from the dependency lock file
+- Reusing previous version of hashicorp/kubernetes from the dependency lock file
+- Reusing previous version of hashicorp/helm from the dependency lock file
+- Reusing previous version of hashicorp/time from the dependency lock file
+- Reusing previous version of hashicorp/tls from the dependency lock file
+- Reusing previous version of hashicorp/null from the dependency lock file
+- Using previously-installed hashicorp/aws v5.98.0
+- Using previously-installed hashicorp/kubernetes v2.37.0
+- Using previously-installed hashicorp/helm v2.17.0
+- Using previously-installed hashicorp/time v0.13.1
+- Using previously-installed hashicorp/tls v4.1.0
+- Using previously-installed hashicorp/null v3.2.4
+- Using previously-installed hashicorp/cloudinit v2.3.7
+- Using previously-installed hashicorp/random v3.6.1
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+Acquiring state lock. This may take a few moments...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_caller_identity.current: Reading...
+module.database[0].module.db.module.db_instance.data.aws_partition.current: Reading...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_partition.current: Reading...
+module.database[0].data.aws_db_snapshot.atlassian_db_snapshot[0]: Reading...
+module.base-infrastructure.module.eks.data.aws_caller_identity.current: Reading...
+module.database[0].module.db.module.db_instance.data.aws_iam_policy_document.enhanced_monitoring: Reading...
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_region.current: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_partition.current[0]: Reading...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_partition.current: Read complete after 0s [id=aws]
+module.database[0].module.db.module.db_instance.data.aws_partition.current: Read complete after 0s [id=aws]
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_region.current: Read complete after 0s [id=us-east-2]
+module.base-infrastructure.module.eks.module.eks.data.aws_partition.current[0]: Read complete after 0s [id=aws]
+module.database[0].module.db.module.db_instance.data.aws_iam_policy_document.enhanced_monitoring: Read complete after 0s [id=76086537]
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_partition.current: Reading...
+module.base-infrastructure.module.vpc.data.aws_availability_zones.available: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_partition.current: Read complete after 0s [id=aws]
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2830595799]
+module.base-infrastructure.module.eks.module.eks.data.aws_caller_identity.current[0]: Reading...
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.custom[0]: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_policy_document.custom[0]: Read complete after 0s [id=513122117]
+module.base-infrastructure.module.eks.data.aws_caller_identity.current: Read complete after 0s [id=074103337776]
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.data.aws_caller_identity.current: Read complete after 0s [id=074103337776]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_caller_identity.current: Read complete after 1s [id=074103337776]
+module.base-infrastructure.module.eks.module.eks.data.aws_caller_identity.current[0]: Read complete after 1s [id=074103337776]
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_session_context.current[0]: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_iam_session_context.current[0]: Read complete after 0s [id=arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser]
+module.base-infrastructure.module.external_dns.module.external_dns_iam_role.data.aws_caller_identity.current: Read complete after 1s [id=074103337776]
+module.base-infrastructure.module.vpc.data.aws_availability_zones.available: Read complete after 1s [id=us-east-2]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_partition.current: Reading...
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_caller_identity.current: Reading...
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.base-infrastructure.module.eks.data.aws_iam_policy_document.cluster_autoscaler: Reading...
+module.base-infrastructure.module.eks.data.aws_iam_policy_document.cluster_autoscaler: Read complete after 0s [id=3377631745]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].data.aws_caller_identity.current: Read complete after 0s [id=074103337776]
+module.database[0].data.aws_db_snapshot.atlassian_db_snapshot[0]: Read complete after 1s [id=arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-10-3-4]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+ <= read (data resources)
+
+Terraform will perform the following actions:
+
+  # module.base-infrastructure.aws_security_group.vpc will be created
+  + resource "aws_security_group" "vpc" {
+      + arn                    = (known after apply)
+      + description            = "VPC security group."
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "atlas-tmh-jira-perf-large-vpc_sg"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags_all               = {
+          + "Name" = "dcapt-testing"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # module.base-infrastructure.kubernetes_deployment.dcapt_exec[0] will be created
+  + resource "kubernetes_deployment" "dcapt_exec" {
+      + id               = (known after apply)
+      + wait_for_rollout = true
+
+      + metadata {
+          + generation       = (known after apply)
+          + labels           = {
+              + "exec" = "true"
+            }
+          + name             = "dcapt"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + min_ready_seconds         = 0
+          + paused                    = false
+          + progress_deadline_seconds = 600
+          + replicas                  = "1"
+          + revision_history_limit    = 10
+
+          + selector {
+              + match_labels = {
+                  + "exec" = "true"
+                }
+            }
+
+          + strategy (known after apply)
+
+          + template {
+              + metadata {
+                  + generation       = (known after apply)
+                  + labels           = {
+                      + "exec" = "true"
+                    }
+                  + name             = (known after apply)
+                  + resource_version = (known after apply)
+                  + uid              = (known after apply)
+                }
+              + spec {
+                  + automount_service_account_token  = true
+                  + dns_policy                       = "ClusterFirst"
+                  + enable_service_links             = true
+                  + host_ipc                         = false
+                  + host_network                     = false
+                  + host_pid                         = false
+                  + hostname                         = (known after apply)
+                  + node_name                        = (known after apply)
+                  + restart_policy                   = "Always"
+                  + scheduler_name                   = (known after apply)
+                  + service_account_name             = (known after apply)
+                  + share_process_namespace          = false
+                  + termination_grace_period_seconds = 0
+
+                  + container {
+                      + image                      = "docker:24.0.7-dind"
+                      + image_pull_policy          = (known after apply)
+                      + name                       = "dcapt"
+                      + stdin                      = false
+                      + stdin_once                 = false
+                      + termination_message_path   = "/dev/termination-log"
+                      + termination_message_policy = (known after apply)
+                      + tty                        = false
+
+                      + lifecycle {
+                          + post_start {
+                              + exec {
+                                  + command = [
+                                      + "/bin/sh",
+                                      + "-c",
+                                      + "apk add --update vim bash git",
+                                    ]
+                                }
+                            }
+                        }
+
+                      + resources {
+                          + limits   = {
+                              + "cpu"    = "4"
+                              + "memory" = "8Gi"
+                            }
+                          + requests = {
+                              + "cpu"    = "3"
+                              + "memory" = "8Gi"
+                            }
+                        }
+
+                      + security_context {
+                          + allow_privilege_escalation = true
+                          + privileged                 = true
+                          + read_only_root_filesystem  = false
+                        }
+
+                      + volume_mount {
+                          + mount_path        = "/data"
+                          + mount_propagation = "None"
+                          + name              = "data"
+                          + read_only         = false
+                        }
+                    }
+
+                  + image_pull_secrets (known after apply)
+
+                  + readiness_gate (known after apply)
+
+                  + volume {
+                      + name = "data"
+
+                      + empty_dir {}
+                    }
+                }
+            }
+        }
+    }
+
+  # module.base-infrastructure.kubernetes_namespace.products will be created
+  + resource "kubernetes_namespace" "products" {
+      + id                               = (known after apply)
+      + wait_for_default_service_account = false
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+    }
+
+  # module.discovery.data.aws_network_acls.vpc_network_acls will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_network_acls" "vpc_network_acls" {
+      + id     = (known after apply)
+      + ids    = (known after apply)
+      + tags   = (known after apply)
+      + vpc_id = (known after apply)
+    }
+
+  # module.discovery.data.aws_network_interfaces.vpc_network_interfaces will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_network_interfaces" "vpc_network_interfaces" {
+      + id   = (known after apply)
+      + ids  = (known after apply)
+      + tags = (known after apply)
+
+      + filter {
+          + name   = "vpc-id"
+          + values = [
+              + (known after apply),
+            ]
+        }
+    }
+
+  # module.discovery.data.aws_route_tables.vpc_route_tables will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_route_tables" "vpc_route_tables" {
+      + id     = (known after apply)
+      + ids    = (known after apply)
+      + tags   = (known after apply)
+      + vpc_id = (known after apply)
+    }
+
+  # module.jira[0].data.aws_ebs_snapshot.local_home_snapshot[0] will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_ebs_snapshot" "local_home_snapshot" {
+      + arn                    = (known after apply)
+      + data_encryption_key_id = (known after apply)
+      + description            = (known after apply)
+      + encrypted              = (known after apply)
+      + id                     = (known after apply)
+      + kms_key_id             = (known after apply)
+      + most_recent            = true
+      + outpost_arn            = (known after apply)
+      + owner_alias            = (known after apply)
+      + owner_id               = (known after apply)
+      + snapshot_id            = (known after apply)
+      + snapshot_ids           = [
+          + "snap-09d056fb9ec6fb35b",
+        ]
+      + start_time             = (known after apply)
+      + state                  = (known after apply)
+      + storage_tier           = (known after apply)
+      + tags                   = (known after apply)
+      + volume_id              = (known after apply)
+      + volume_size            = (known after apply)
+    }
+
+  # module.jira[0].data.kubernetes_service.jira will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "kubernetes_service" "jira" {
+      + id     = (known after apply)
+      + spec   = (known after apply)
+      + status = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "jira"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+    }
+
+  # module.jira[0].aws_ebs_volume.local_home[0] will be created
+  + resource "aws_ebs_volume" "local_home" {
+      + arn               = (known after apply)
+      + availability_zone = "us-east-2a"
+      + create_time       = (known after apply)
+      + encrypted         = (known after apply)
+      + final_snapshot    = false
+      + id                = (known after apply)
+      + iops              = (known after apply)
+      + kms_key_id        = (known after apply)
+      + size              = (known after apply)
+      + snapshot_id       = "snap-09d056fb9ec6fb35b"
+      + tags              = {
+          + "Name" = "local-home-jira-0"
+        }
+      + tags_all          = {
+          + "Name" = "local-home-jira-0"
+        }
+      + throughput        = (known after apply)
+      + type              = "gp2"
+    }
+
+  # module.jira[0].helm_release.jira will be created
+  + resource "helm_release" "jira" {
+      + atomic                     = false
+      + chart                      = "jira"
+      + cleanup_on_fail            = false
+      + create_namespace           = false
+      + dependency_update          = false
+      + disable_crd_hooks          = false
+      + disable_openapi_validation = false
+      + disable_webhooks           = false
+      + force_update               = false
+      + id                         = (known after apply)
+      + lint                       = false
+      + manifest                   = (known after apply)
+      + max_history                = 0
+      + metadata                   = (known after apply)
+      + name                       = "jira"
+      + namespace                  = "atlassian"
+      + pass_credentials           = false
+      + recreate_pods              = false
+      + render_subchart_notes      = true
+      + replace                    = false
+      + repository                 = "https://atlassian.github.io/data-center-helm-charts"
+      + reset_values               = false
+      + reuse_values               = false
+      + skip_crds                  = false
+      + status                     = "deployed"
+      + timeout                    = 1500
+      + values                     = (known after apply)
+      + verify                     = false
+      + version                    = "2.0.1"
+      + wait                       = true
+      + wait_for_jobs              = false
+    }
+
+  # module.jira[0].kubernetes_job.pre_install[0] will be created
+  + resource "kubernetes_job" "pre_install" {
+      + id                  = (known after apply)
+      + wait_for_completion = true
+
+      + metadata {
+          + generation       = (known after apply)
+          + labels           = (known after apply)
+          + name             = "jira-pre-install"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + backoff_limit   = 10
+          + completion_mode = (known after apply)
+          + completions     = 1
+          + parallelism     = 1
+
+          + selector (known after apply)
+
+          + template {
+              + metadata {
+                  + generation       = (known after apply)
+                  + name             = (known after apply)
+                  + resource_version = (known after apply)
+                  + uid              = (known after apply)
+                }
+              + spec {
+                  + automount_service_account_token  = true
+                  + dns_policy                       = "ClusterFirst"
+                  + enable_service_links             = true
+                  + host_ipc                         = false
+                  + host_network                     = false
+                  + host_pid                         = false
+                  + hostname                         = (known after apply)
+                  + node_name                        = (known after apply)
+                  + restart_policy                   = "Never"
+                  + scheduler_name                   = (known after apply)
+                  + service_account_name             = (known after apply)
+                  + share_process_namespace          = false
+                  + termination_grace_period_seconds = 30
+
+                  + container {
+                      + command                    = (known after apply)
+                      + image                      = "ubuntu"
+                      + image_pull_policy          = (known after apply)
+                      + name                       = "pre-install"
+                      + stdin                      = false
+                      + stdin_once                 = false
+                      + termination_message_path   = "/dev/termination-log"
+                      + termination_message_policy = (known after apply)
+                      + tty                        = false
+
+                      + resources (known after apply)
+                    }
+
+                  + image_pull_secrets (known after apply)
+
+                  + readiness_gate (known after apply)
+                }
+            }
+        }
+
+      + timeouts {
+          + create = "3m"
+          + update = "3m"
+        }
+    }
+
+  # module.jira[0].kubernetes_persistent_volume.local_home[0] will be created
+  + resource "kubernetes_persistent_volume" "local_home" {
+      + id = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "local-home-jira-0"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + access_modes                     = [
+              + "ReadWriteOnce",
+            ]
+          + capacity                         = {
+              + "storage" = "200Gi"
+            }
+          + persistent_volume_reclaim_policy = "Retain"
+          + storage_class_name               = "ebs-csi-default-sc"
+          + volume_mode                      = "Filesystem"
+
+          + claim_ref {
+              + name      = "local-home-jira-0"
+              + namespace = "atlassian"
+            }
+
+          + node_affinity (known after apply)
+
+          + persistent_volume_source {
+              + aws_elastic_block_store {
+                  + volume_id = (known after apply)
+                }
+            }
+        }
+    }
+
+  # module.jira[0].kubernetes_persistent_volume_claim.local_home[0] will be created
+  + resource "kubernetes_persistent_volume_claim" "local_home" {
+      + id               = (known after apply)
+      + wait_until_bound = true
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "local-home-jira-0"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + access_modes       = [
+              + "ReadWriteOnce",
+            ]
+          + storage_class_name = "ebs-csi-default-sc"
+          + volume_mode        = (known after apply)
+          + volume_name        = "local-home-jira-0"
+
+          + resources {
+              + requests = {
+                  + "storage" = "200Gi"
+                }
+            }
+        }
+    }
+
+  # module.jira[0].kubernetes_secret.rds_secret will be created
+  + resource "kubernetes_secret" "rds_secret" {
+      + binary_data_wo                 = (write-only attribute)
+      + data                           = (sensitive value)
+      + data_wo                        = (write-only attribute)
+      + id                             = (known after apply)
+      + type                           = "Opaque"
+      + wait_for_service_account_token = true
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "jira-db-cred"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+    }
+
+  # module.jira[0].time_sleep.wait_jira_termination will be created
+  + resource "time_sleep" "wait_jira_termination" {
+      + destroy_duration = "30s"
+      + id               = (known after apply)
+    }
+
+  # module.nfs[0].data.kubernetes_service.nfs will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "kubernetes_service" "nfs" {
+      + id     = (known after apply)
+      + spec   = (known after apply)
+      + status = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "jira-nfs-server"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+    }
+
+  # module.nfs[0].aws_ebs_volume.shared_home will be created
+  + resource "aws_ebs_volume" "shared_home" {
+      + arn               = (known after apply)
+      + availability_zone = "us-east-2a"
+      + create_time       = (known after apply)
+      + encrypted         = (known after apply)
+      + final_snapshot    = false
+      + id                = (known after apply)
+      + iops              = (known after apply)
+      + kms_key_id        = (known after apply)
+      + size              = 200
+      + snapshot_id       = "snap-084486021b02f0ef8"
+      + tags              = {
+          + "Name" = "jira-nfs-shared-home"
+        }
+      + tags_all          = {
+          + "Name" = "jira-nfs-shared-home"
+        }
+      + throughput        = (known after apply)
+      + type              = "gp2"
+    }
+
+  # module.nfs[0].helm_release.nfs will be created
+  + resource "helm_release" "nfs" {
+      + atomic                     = false
+      + chart                      = "helm-charts/nfs-server"
+      + cleanup_on_fail            = false
+      + create_namespace           = false
+      + dependency_update          = false
+      + disable_crd_hooks          = false
+      + disable_openapi_validation = false
+      + disable_webhooks           = false
+      + force_update               = false
+      + id                         = (known after apply)
+      + lint                       = false
+      + manifest                   = (known after apply)
+      + max_history                = 0
+      + metadata                   = (known after apply)
+      + name                       = "jira-nfs"
+      + namespace                  = "atlassian"
+      + pass_credentials           = false
+      + recreate_pods              = false
+      + render_subchart_notes      = true
+      + replace                    = false
+      + reset_values               = false
+      + reuse_values               = false
+      + skip_crds                  = false
+      + status                     = "deployed"
+      + timeout                    = 300
+      + values                     = [
+          + <<-EOT
+                "nameOverride": "server"
+                "persistence":
+                  "volumeClaimName": "jira-nfs-pvc"
+                "resources":
+                  "limits":
+                    "cpu": "2"
+                    "memory": "2Gi"
+                  "requests":
+                    "cpu": "1"
+                    "memory": "1Gi"
+                "service":
+                  "clusterIP": "172.20.2.5"
+            EOT,
+        ]
+      + verify                     = false
+      + version                    = "0.2.0"
+      + wait                       = true
+      + wait_for_jobs              = false
+    }
+
+  # module.nfs[0].kubernetes_persistent_volume.nfs_shared_home will be created
+  + resource "kubernetes_persistent_volume" "nfs_shared_home" {
+      + id = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "jira-nfs-pv"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + access_modes                     = [
+              + "ReadWriteOnce",
+            ]
+          + capacity                         = {
+              + "storage" = "200Gi"
+            }
+          + persistent_volume_reclaim_policy = "Retain"
+          + storage_class_name               = "ebs-csi-default-sc"
+          + volume_mode                      = "Filesystem"
+
+          + claim_ref {
+              + name      = "jira-nfs-pvc"
+              + namespace = "atlassian"
+            }
+
+          + node_affinity (known after apply)
+
+          + persistent_volume_source {
+              + aws_elastic_block_store {
+                  + volume_id = (known after apply)
+                }
+            }
+        }
+    }
+
+  # module.nfs[0].kubernetes_persistent_volume.product_shared_home_pv will be created
+  + resource "kubernetes_persistent_volume" "product_shared_home_pv" {
+      + id = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "jira-shared-home-pv"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + access_modes                     = [
+              + "ReadWriteMany",
+            ]
+          + capacity                         = {
+              + "storage" = "200Gi"
+            }
+          + mount_options                    = [
+              + "_netdev",
+              + "intr",
+              + "lookupcache=pos",
+              + "nfsvers=3",
+              + "noatime",
+              + "rsize=32768",
+              + "rw",
+              + "wsize=32768",
+            ]
+          + persistent_volume_reclaim_policy = "Retain"
+          + storage_class_name               = "ebs-csi-default-sc"
+          + volume_mode                      = "Filesystem"
+
+          + claim_ref (known after apply)
+
+          + node_affinity (known after apply)
+
+          + persistent_volume_source {
+              + nfs {
+                  + path   = "/srv/nfs"
+                  + server = "172.20.2.5"
+                }
+            }
+        }
+    }
+
+  # module.nfs[0].kubernetes_persistent_volume_claim.nfs_shared_home will be created
+  + resource "kubernetes_persistent_volume_claim" "nfs_shared_home" {
+      + id               = (known after apply)
+      + wait_until_bound = true
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "jira-nfs-pvc"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + access_modes       = [
+              + "ReadWriteOnce",
+            ]
+          + storage_class_name = "ebs-csi-default-sc"
+          + volume_mode        = (known after apply)
+          + volume_name        = "jira-nfs-pv"
+
+          + resources {
+              + requests = {
+                  + "storage" = "200Gi"
+                }
+            }
+        }
+    }
+
+  # module.nfs[0].kubernetes_persistent_volume_claim.product_shared_home_pvc will be created
+  + resource "kubernetes_persistent_volume_claim" "product_shared_home_pvc" {
+      + id               = (known after apply)
+      + wait_until_bound = true
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "jira-shared-home-pvc"
+          + namespace        = "atlassian"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + access_modes       = [
+              + "ReadWriteMany",
+            ]
+          + storage_class_name = "ebs-csi-default-sc"
+          + volume_mode        = (known after apply)
+          + volume_name        = "jira-shared-home-pv"
+
+          + resources {
+              + requests = {
+                  + "storage" = "200Gi"
+                }
+            }
+        }
+    }
+
+  # module.base-infrastructure.module.eks.data.aws_eks_cluster.cluster will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_cluster" "cluster" {
+      + access_config             = (known after apply)
+      + arn                       = (known after apply)
+      + certificate_authority     = (known after apply)
+      + cluster_id                = (known after apply)
+      + compute_config            = (known after apply)
+      + created_at                = (known after apply)
+      + enabled_cluster_log_types = (known after apply)
+      + endpoint                  = (known after apply)
+      + id                        = (known after apply)
+      + identity                  = (known after apply)
+      + kubernetes_network_config = (known after apply)
+      + name                      = "atlas-tmh-jira-perf-large-cluster"
+      + outpost_config            = (known after apply)
+      + platform_version          = (known after apply)
+      + remote_network_config     = (known after apply)
+      + role_arn                  = (known after apply)
+      + status                    = (known after apply)
+      + storage_config            = (known after apply)
+      + tags                      = (known after apply)
+      + upgrade_policy            = (known after apply)
+      + version                   = (known after apply)
+      + vpc_config                = (known after apply)
+      + zonal_shift_config        = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.data.aws_eks_cluster_auth.cluster will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_cluster_auth" "cluster" {
+      + id    = (known after apply)
+      + name  = "atlas-tmh-jira-perf-large-cluster"
+      + token = (sensitive value)
+    }
+
+  # module.base-infrastructure.module.eks.data.aws_launch_template.nodes will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_launch_template" "nodes" {
+      + arn                                  = (known after apply)
+      + block_device_mappings                = (known after apply)
+      + capacity_reservation_specification   = (known after apply)
+      + cpu_options                          = (known after apply)
+      + credit_specification                 = (known after apply)
+      + default_version                      = (known after apply)
+      + description                          = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + elastic_gpu_specifications           = (known after apply)
+      + elastic_inference_accelerator        = (known after apply)
+      + enclave_options                      = (known after apply)
+      + hibernation_options                  = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      + id                                   = (known after apply)
+      + image_id                             = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_market_options              = (known after apply)
+      + instance_requirements                = (known after apply)
+      + instance_type                        = (known after apply)
+      + kernel_id                            = (known after apply)
+      + key_name                             = (known after apply)
+      + latest_version                       = (known after apply)
+      + license_specification                = (known after apply)
+      + maintenance_options                  = (known after apply)
+      + metadata_options                     = (known after apply)
+      + monitoring                           = (known after apply)
+      + name                                 = (known after apply)
+      + network_interfaces                   = (known after apply)
+      + placement                            = (known after apply)
+      + private_dns_name_options             = (known after apply)
+      + ram_disk_id                          = (known after apply)
+      + security_group_names                 = (known after apply)
+      + tag_specifications                   = (known after apply)
+      + tags                                 = (known after apply)
+      + user_data                            = (known after apply)
+      + vpc_security_group_ids               = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.aws_autoscaling_group_tag.this["Name"] will be created
+  + resource "aws_autoscaling_group_tag" "this" {
+      + autoscaling_group_name = (known after apply)
+      + id                     = (known after apply)
+
+      + tag {
+          + key                 = "Name"
+          + propagate_at_launch = true
+          + value               = "dcapt-testing"
+        }
+    }
+
+  # module.base-infrastructure.module.eks.aws_iam_policy.cluster_autoscaler will be created
+  + resource "aws_iam_policy" "cluster_autoscaler" {
+      + arn              = (known after apply)
+      + attachment_count = (known after apply)
+      + description      = "EKS cluster-autoscaler policy for cluster atlas-tmh-jira-perf-large-cluster"
+      + id               = (known after apply)
+      + name             = (known after apply)
+      + name_prefix      = "cluster-autoscaler"
+      + path             = "/"
+      + policy           = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action   = [
+                          + "ec2:DescribeLaunchTemplateVersions",
+                          + "ec2:DescribeInstanceTypes",
+                          + "autoscaling:DescribeTags",
+                          + "autoscaling:DescribeLaunchConfigurations",
+                          + "autoscaling:DescribeAutoScalingInstances",
+                          + "autoscaling:DescribeAutoScalingGroups",
+                        ]
+                      + Effect   = "Allow"
+                      + Resource = "*"
+                      + Sid      = "clusterAutoscalerAll"
+                    },
+                  + {
+                      + Action    = [
+                          + "autoscaling:UpdateAutoScalingGroup",
+                          + "autoscaling:TerminateInstanceInAutoScalingGroup",
+                          + "autoscaling:SetDesiredCapacity",
+                        ]
+                      + Condition = {
+                          + StringEquals = {
+                              + "autoscaling:ResourceTag/k8s.io/cluster-autoscaler/enabled"                       = "true"
+                              + "autoscaling:ResourceTag/kubernetes.io/cluster/atlas-tmh-jira-perf-large-cluster" = "owned"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Resource  = "*"
+                      + Sid       = "clusterAutoscalerOwn"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + policy_id        = (known after apply)
+      + tags_all         = {
+          + "Name" = "dcapt-testing"
+        }
+    }
+
+  # module.base-infrastructure.module.eks.aws_iam_role.node_group will be created
+  + resource "aws_iam_role" "node_group" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "ec2.amazonaws.com"
+                        }
+                      + Sid       = ""
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = (known after apply)
+      + name_prefix           = "atlas-tmh-jira-perf-large-cluster"
+      + path                  = "/"
+      + tags_all              = {
+          + "Name" = "dcapt-testing"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be created
+  + resource "aws_iam_role_policy_attachment" "eks_worker_node_policy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+      + role       = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be created
+  + resource "aws_iam_role_policy_attachment" "eks_worker_node_policy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+      + role       = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be created
+  + resource "aws_iam_role_policy_attachment" "eks_worker_node_policy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+      + role       = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"] will be created
+  + resource "aws_iam_role_policy_attachment" "eks_worker_node_policy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+      + role       = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"] will be created
+  + resource "aws_iam_role_policy_attachment" "eks_worker_node_policy" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
+      + role       = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.helm_release.cluster-autoscaler will be created
+  + resource "helm_release" "cluster-autoscaler" {
+      + atomic                     = false
+      + chart                      = "cluster-autoscaler"
+      + cleanup_on_fail            = false
+      + create_namespace           = false
+      + dependency_update          = false
+      + disable_crd_hooks          = false
+      + disable_openapi_validation = false
+      + disable_webhooks           = false
+      + force_update               = false
+      + id                         = (known after apply)
+      + lint                       = false
+      + manifest                   = (known after apply)
+      + max_history                = 0
+      + metadata                   = (known after apply)
+      + name                       = "cluster-autoscaler"
+      + namespace                  = "kube-system"
+      + pass_credentials           = false
+      + recreate_pods              = false
+      + render_subchart_notes      = true
+      + replace                    = false
+      + repository                 = "https://kubernetes.github.io/autoscaler"
+      + reset_values               = false
+      + reuse_values               = false
+      + skip_crds                  = false
+      + status                     = "deployed"
+      + timeout                    = 300
+      + values                     = (known after apply)
+      + verify                     = false
+      + version                    = "9.37.0"
+      + wait                       = true
+      + wait_for_jobs              = false
+    }
+
+  # module.base-infrastructure.module.ingress.data.aws_elb.ingress_elb will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_elb" "ingress_elb" {
+      + access_logs                 = (known after apply)
+      + arn                         = (known after apply)
+      + availability_zones          = (known after apply)
+      + connection_draining         = (known after apply)
+      + connection_draining_timeout = (known after apply)
+      + cross_zone_load_balancing   = (known after apply)
+      + desync_mitigation_mode      = (known after apply)
+      + dns_name                    = (known after apply)
+      + health_check                = (known after apply)
+      + id                          = (known after apply)
+      + idle_timeout                = (known after apply)
+      + instances                   = (known after apply)
+      + internal                    = (known after apply)
+      + listener                    = (known after apply)
+      + name                        = (known after apply)
+      + security_groups             = (known after apply)
+      + source_security_group       = (known after apply)
+      + source_security_group_id    = (known after apply)
+      + subnets                     = (known after apply)
+      + tags                        = (known after apply)
+      + zone_id                     = (known after apply)
+    }
+
+  # module.base-infrastructure.module.ingress.data.kubernetes_service.ingress_nginx will be read during apply
+  # (config refers to values not yet known)
+ <= data "kubernetes_service" "ingress_nginx" {
+      + id     = (known after apply)
+      + spec   = (known after apply)
+      + status = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "ingress-nginx-controller"
+          + namespace        = (known after apply)
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+    }
+
+  # module.base-infrastructure.module.ingress.helm_release.ingress will be created
+  + resource "helm_release" "ingress" {
+      + atomic                     = false
+      + chart                      = "ingress-nginx"
+      + cleanup_on_fail            = false
+      + create_namespace           = true
+      + dependency_update          = false
+      + disable_crd_hooks          = false
+      + disable_openapi_validation = false
+      + disable_webhooks           = false
+      + force_update               = false
+      + id                         = (known after apply)
+      + lint                       = false
+      + manifest                   = (known after apply)
+      + max_history                = 0
+      + metadata                   = (known after apply)
+      + name                       = "ingress-nginx"
+      + namespace                  = "ingress-nginx"
+      + pass_credentials           = false
+      + recreate_pods              = false
+      + render_subchart_notes      = true
+      + replace                    = false
+      + repository                 = "https://kubernetes.github.io/ingress-nginx"
+      + reset_values               = false
+      + reuse_values               = false
+      + skip_crds                  = false
+      + status                     = "deployed"
+      + timeout                    = 300
+      + values                     = [
+          + <<-EOT
+                "controller":
+                  "config":
+                    "use-forwarded-headers": "true"
+                  "service":
+                    "annotations":
+                      "service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags": "Name=dcapt-testing"
+                      "service.beta.kubernetes.io/aws-load-balancer-backend-protocol": "http"
+                      "service.beta.kubernetes.io/aws-load-balancer-internal": "false"
+                      "service.beta.kubernetes.io/aws-load-balancer-ip-address-type": "dualstack"
+                    "enableHttps": true
+                    "externalTrafficPolicy": "Local"
+                    "targetPorts":
+                      "https": "http"
+            EOT,
+          + jsonencode({}),
+          + jsonencode({}),
+          + jsonencode({}),
+        ]
+      + verify                     = false
+      + version                    = "4.11.1"
+      + wait                       = true
+      + wait_for_jobs              = false
+
+      + set {
+          + name  = "controller.service.loadBalancerSourceRanges"
+          + value = (known after apply)
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.database[0].module.security_group.aws_security_group.this_name_prefix[0] will be created
+  + resource "aws_security_group" "this_name_prefix" {
+      + arn                    = (known after apply)
+      + description            = "Database security group"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "jira_rds_sg-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Name" = "jira_rds_sg"
+        }
+      + tags_all               = {
+          + "Name" = "jira_rds_sg"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "10m"
+          + delete = "15m"
+        }
+    }
+
+  # module.database[0].module.security_group.aws_security_group_rule.ingress_with_cidr_blocks[0] will be created
+  + resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
+      + cidr_blocks              = [
+          + "10.0.0.0/18",
+        ]
+      + description              = "PostgreSQL access from within EKS cluster"
+      + from_port                = 5432
+      + id                       = (known after apply)
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 5432
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_iam_policy_document.assume_role_with_oidc[0] will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_iam_policy_document" "assume_role_with_oidc" {
+      + id            = (known after apply)
+      + json          = (known after apply)
+      + minified_json = (known after apply)
+
+      + statement (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role.this[0] will be created
+  + resource "aws_iam_role" "this" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = (known after apply)
+      + create_date           = (known after apply)
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "atlas-tmh-jira-perf-large-cluster-autoscaler"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + tags_all              = {
+          + "Name" = "dcapt-testing"
+        }
+      + unique_id             = (known after apply)
+        # (2 unchanged attributes hidden)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role_policy_attachment.custom[0] will be created
+  + resource "aws_iam_role_policy_attachment" "custom" {
+      + id         = (known after apply)
+      + policy_arn = (known after apply)
+      + role       = "atlas-tmh-jira-perf-large-cluster-autoscaler"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["aws-ebs-csi-driver"] will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_addon_version" "this" {
+      + addon_name         = "aws-ebs-csi-driver"
+      + id                 = (known after apply)
+      + kubernetes_version = "1.32"
+      + version            = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["kube-proxy"] will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_addon_version" "this" {
+      + addon_name         = "kube-proxy"
+      + id                 = (known after apply)
+      + kubernetes_version = "1.32"
+      + version            = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["vpc-cni"] will be read during apply
+  # (depends on a resource or a module with changes pending)
+ <= data "aws_eks_addon_version" "this" {
+      + addon_name         = "vpc-cni"
+      + id                 = (known after apply)
+      + kubernetes_version = "1.32"
+      + version            = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.data.tls_certificate.this[0] will be read during apply
+  # (config refers to values not yet known)
+ <= data "tls_certificate" "this" {
+      + certificates = (known after apply)
+      + id           = (known after apply)
+      + url          = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_access_entry.this["cluster_creator"] will be created
+  + resource "aws_eks_access_entry" "this" {
+      + access_entry_arn  = (known after apply)
+      + cluster_name      = (known after apply)
+      + created_at        = (known after apply)
+      + id                = (known after apply)
+      + kubernetes_groups = (known after apply)
+      + modified_at       = (known after apply)
+      + principal_arn     = "arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser"
+      + tags_all          = {
+          + "Name" = "dcapt-testing"
+        }
+      + type              = "STANDARD"
+      + user_name         = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"] will be created
+  + resource "aws_eks_access_policy_association" "this" {
+      + associated_at = (known after apply)
+      + cluster_name  = (known after apply)
+      + id            = (known after apply)
+      + modified_at   = (known after apply)
+      + policy_arn    = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+      + principal_arn = "arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser"
+
+      + access_scope {
+          + type = "cluster"
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["aws-ebs-csi-driver"] will be created
+  + resource "aws_eks_addon" "this" {
+      + addon_name                  = "aws-ebs-csi-driver"
+      + addon_version               = (known after apply)
+      + arn                         = (known after apply)
+      + cluster_name                = (known after apply)
+      + configuration_values        = jsonencode(
+            {
+              + defaultStorageClass = {
+                  + enabled = true
+                }
+            }
+        )
+      + created_at                  = (known after apply)
+      + id                          = (known after apply)
+      + modified_at                 = (known after apply)
+      + preserve                    = true
+      + resolve_conflicts_on_create = "OVERWRITE"
+      + resolve_conflicts_on_update = "OVERWRITE"
+      + tags_all                    = {
+          + "Name" = "dcapt-testing"
+        }
+
+      + timeouts {}
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["kube-proxy"] will be created
+  + resource "aws_eks_addon" "this" {
+      + addon_name                  = "kube-proxy"
+      + addon_version               = (known after apply)
+      + arn                         = (known after apply)
+      + cluster_name                = (known after apply)
+      + configuration_values        = (known after apply)
+      + created_at                  = (known after apply)
+      + id                          = (known after apply)
+      + modified_at                 = (known after apply)
+      + preserve                    = true
+      + resolve_conflicts_on_create = "OVERWRITE"
+      + resolve_conflicts_on_update = "OVERWRITE"
+      + tags_all                    = {
+          + "Name" = "dcapt-testing"
+        }
+
+      + timeouts {}
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_addon.this["vpc-cni"] will be created
+  + resource "aws_eks_addon" "this" {
+      + addon_name                  = "vpc-cni"
+      + addon_version               = (known after apply)
+      + arn                         = (known after apply)
+      + cluster_name                = (known after apply)
+      + configuration_values        = (known after apply)
+      + created_at                  = (known after apply)
+      + id                          = (known after apply)
+      + modified_at                 = (known after apply)
+      + preserve                    = true
+      + resolve_conflicts_on_create = "OVERWRITE"
+      + resolve_conflicts_on_update = "OVERWRITE"
+      + tags_all                    = {
+          + "Name" = "dcapt-testing"
+        }
+
+      + timeouts {}
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0] will be created
+  + resource "aws_eks_cluster" "this" {
+      + arn                           = (known after apply)
+      + bootstrap_self_managed_addons = true
+      + certificate_authority         = (known after apply)
+      + cluster_id                    = (known after apply)
+      + created_at                    = (known after apply)
+      + enabled_cluster_log_types     = [
+          + "api",
+          + "audit",
+          + "authenticator",
+        ]
+      + endpoint                      = (known after apply)
+      + id                            = (known after apply)
+      + identity                      = (known after apply)
+      + name                          = "atlas-tmh-jira-perf-large-cluster"
+      + platform_version              = (known after apply)
+      + role_arn                      = (known after apply)
+      + status                        = (known after apply)
+      + tags                          = {
+          + "terraform-aws-modules" = "eks"
+        }
+      + tags_all                      = {
+          + "Name"                  = "dcapt-testing"
+          + "terraform-aws-modules" = "eks"
+        }
+      + version                       = "1.32"
+
+      + access_config {
+          + authentication_mode                         = "API_AND_CONFIG_MAP"
+          + bootstrap_cluster_creator_admin_permissions = false
+        }
+
+      + kubernetes_network_config {
+          + ip_family         = "ipv4"
+          + service_ipv4_cidr = "172.20.0.0/16"
+          + service_ipv6_cidr = (known after apply)
+
+          + elastic_load_balancing (known after apply)
+        }
+
+      + timeouts {}
+
+      + upgrade_policy (known after apply)
+
+      + vpc_config {
+          + cluster_security_group_id = (known after apply)
+          + endpoint_private_access   = true
+          + endpoint_public_access    = true
+          + public_access_cidrs       = [
+              + "0.0.0.0/0",
+            ]
+          + security_group_ids        = (known after apply)
+          + subnet_ids                = (known after apply)
+          + vpc_id                    = (known after apply)
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_iam_openid_connect_provider.oidc_provider[0] will be created
+  + resource "aws_iam_openid_connect_provider" "oidc_provider" {
+      + arn             = (known after apply)
+      + client_id_list  = [
+          + "sts.amazonaws.com",
+        ]
+      + id              = (known after apply)
+      + tags            = {
+          + "Name" = "atlas-tmh-jira-perf-large-cluster-eks-irsa"
+        }
+      + tags_all        = {
+          + "Name" = "atlas-tmh-jira-perf-large-cluster-eks-irsa"
+        }
+      + thumbprint_list = (known after apply)
+      + url             = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_iam_policy.custom[0] will be created
+  + resource "aws_iam_policy" "custom" {
+      + arn              = (known after apply)
+      + attachment_count = (known after apply)
+      + id               = (known after apply)
+      + name             = "atlas-tmh-jira-perf-large-cluster-cluster"
+      + name_prefix      = (known after apply)
+      + path             = "/"
+      + policy           = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = [
+                          + "ec2:RunInstances",
+                          + "ec2:CreateLaunchTemplate",
+                          + "ec2:CreateFleet",
+                        ]
+                      + Condition = {
+                          + StringEquals = {
+                              + "aws:RequestTag/eks:eks-cluster-name" = "${aws:PrincipalTag/eks:eks-cluster-name}"
+                            }
+                          + StringLike   = {
+                              + "aws:RequestTag/eks:kubernetes-node-class-name" = "*"
+                              + "aws:RequestTag/eks:kubernetes-node-pool-name"  = "*"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Resource  = "*"
+                      + Sid       = "Compute"
+                    },
+                  + {
+                      + Action    = [
+                          + "ec2:CreateVolume",
+                          + "ec2:CreateSnapshot",
+                        ]
+                      + Condition = {
+                          + StringEquals = {
+                              + "aws:RequestTag/eks:eks-cluster-name" = "${aws:PrincipalTag/eks:eks-cluster-name}"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Resource  = [
+                          + "arn:aws:ec2:*:*:volume/*",
+                          + "arn:aws:ec2:*:*:snapshot/*",
+                        ]
+                      + Sid       = "Storage"
+                    },
+                  + {
+                      + Action    = "ec2:CreateNetworkInterface"
+                      + Condition = {
+                          + StringEquals = {
+                              + "aws:RequestTag/eks:eks-cluster-name"         = "${aws:PrincipalTag/eks:eks-cluster-name}"
+                              + "aws:RequestTag/eks:kubernetes-cni-node-name" = "*"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Resource  = "*"
+                      + Sid       = "Networking"
+                    },
+                  + {
+                      + Action    = [
+                          + "elasticloadbalancing:CreateTargetGroup",
+                          + "elasticloadbalancing:CreateRule",
+                          + "elasticloadbalancing:CreateLoadBalancer",
+                          + "elasticloadbalancing:CreateListener",
+                          + "ec2:CreateSecurityGroup",
+                        ]
+                      + Condition = {
+                          + StringEquals = {
+                              + "aws:RequestTag/eks:eks-cluster-name" = "${aws:PrincipalTag/eks:eks-cluster-name}"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Resource  = "*"
+                      + Sid       = "LoadBalancer"
+                    },
+                  + {
+                      + Action    = "shield:CreateProtection"
+                      + Condition = {
+                          + StringEquals = {
+                              + "aws:RequestTag/eks:eks-cluster-name" = "${aws:PrincipalTag/eks:eks-cluster-name}"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Resource  = "*"
+                      + Sid       = "ShieldProtection"
+                    },
+                  + {
+                      + Action    = "shield:TagResource"
+                      + Condition = {
+                          + StringEquals = {
+                              + "aws:RequestTag/eks:eks-cluster-name" = "${aws:PrincipalTag/eks:eks-cluster-name}"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Resource  = "arn:aws:shield::*:protection/*"
+                      + Sid       = "ShieldTagResource"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + policy_id        = (known after apply)
+      + tags_all         = {
+          + "Name" = "dcapt-testing"
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_iam_role.this[0] will be created
+  + resource "aws_iam_role" "this" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = [
+                          + "sts:TagSession",
+                          + "sts:AssumeRole",
+                        ]
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "eks.amazonaws.com"
+                        }
+                      + Sid       = "EKSClusterAssumeRole"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + force_detach_policies = true
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "atlas-tmh-jira-perf-large-cluster-cluster"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + tags_all              = {
+          + "Name" = "dcapt-testing"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.custom[0] will be created
+  + resource "aws_iam_role_policy_attachment" "custom" {
+      + id         = (known after apply)
+      + policy_arn = (known after apply)
+      + role       = "atlas-tmh-jira-perf-large-cluster-cluster"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+      + role       = "atlas-tmh-jira-perf-large-cluster-cluster"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
+      + role       = "atlas-tmh-jira-perf-large-cluster-cluster"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group.cluster[0] will be created
+  + resource "aws_security_group" "cluster" {
+      + arn                    = (known after apply)
+      + description            = "EKS cluster security group"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "atlas-tmh-jira-perf-large-cluster-cluster-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Name" = "atlas-tmh-jira-perf-large-cluster-cluster"
+        }
+      + tags_all               = {
+          + "Name" = "atlas-tmh-jira-perf-large-cluster-cluster"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group.node[0] will be created
+  + resource "aws_security_group" "node" {
+      + arn                    = (known after apply)
+      + description            = "EKS node shared security group"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "atlas-tmh-jira-perf-large-cluster-node-"
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Name"                                                    = "atlas-tmh-jira-perf-large-cluster-node"
+          + "kubernetes.io/cluster/atlas-tmh-jira-perf-large-cluster" = "owned"
+        }
+      + tags_all               = {
+          + "Name"                                                    = "atlas-tmh-jira-perf-large-cluster-node"
+          + "kubernetes.io/cluster/atlas-tmh-jira-perf-large-cluster" = "owned"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.cluster["ingress_nodes_443"] will be created
+  + resource "aws_security_group_rule" "cluster" {
+      + description              = "Node groups to cluster API"
+      + from_port                = 443
+      + id                       = (known after apply)
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 443
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["egress_all"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + cidr_blocks              = [
+          + "0.0.0.0/0",
+        ]
+      + description              = "Allow all egress"
+      + from_port                = 0
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "-1"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 0
+      + type                     = "egress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_443"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Cluster API to node groups"
+      + from_port                = 443
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 443
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Cluster API to node 4443/tcp webhook"
+      + from_port                = 4443
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 4443
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Cluster API to node 6443/tcp webhook"
+      + from_port                = 6443
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 6443
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Cluster API to node 8443/tcp webhook"
+      + from_port                = 8443
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 8443
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Cluster API to node 9443/tcp webhook"
+      + from_port                = 9443
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 9443
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Cluster API to node kubelets"
+      + from_port                = 10250
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = false
+      + source_security_group_id = (known after apply)
+      + to_port                  = 10250
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Node to node ingress on ephemeral ports"
+      + from_port                = 1025
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = true
+      + source_security_group_id = (known after apply)
+      + to_port                  = 65535
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Node to node CoreDNS"
+      + from_port                = 53
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "tcp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = true
+      + source_security_group_id = (known after apply)
+      + to_port                  = 53
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"] will be created
+  + resource "aws_security_group_rule" "node" {
+      + description              = "Node to node CoreDNS UDP"
+      + from_port                = 53
+      + id                       = (known after apply)
+      + prefix_list_ids          = []
+      + protocol                 = "udp"
+      + security_group_id        = (known after apply)
+      + security_group_rule_id   = (known after apply)
+      + self                     = true
+      + source_security_group_id = (known after apply)
+      + to_port                  = 53
+      + type                     = "ingress"
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.time_sleep.this[0] will be created
+  + resource "time_sleep" "this" {
+      + create_duration = "30s"
+      + id              = (known after apply)
+      + triggers        = {
+          + "cluster_certificate_authority_data" = (known after apply)
+          + "cluster_endpoint"                   = (known after apply)
+          + "cluster_name"                       = (known after apply)
+          + "cluster_service_cidr"               = (known after apply)
+          + "cluster_version"                    = "1.32"
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.nodegroup_launch_template.aws_launch_template.nodegroup will be created
+  + resource "aws_launch_template" "nodegroup" {
+      + arn                    = (known after apply)
+      + default_version        = (known after apply)
+      + description            = "atlas-tmh-jira-perf-large-cluster Nodegroup Launch Template"
+      + id                     = (known after apply)
+      + instance_type          = "m5.2xlarge"
+      + latest_version         = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "atlas-tmh-jira-perf-large-cluster"
+      + tags_all               = {
+          + "Name" = "dcapt-testing"
+        }
+      + update_default_version = true
+
+      + block_device_mappings {
+          + device_name = "/dev/xvda"
+
+          + ebs {
+              + delete_on_termination = "true"
+              + iops                  = (known after apply)
+              + throughput            = (known after apply)
+              + volume_size           = 200
+              + volume_type           = "gp2"
+            }
+        }
+
+      + metadata_options (known after apply)
+
+      + tag_specifications {
+          + resource_type = "instance"
+          + tags          = {
+              + "Name" = "dcapt-testing"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "volume"
+          + tags          = {
+              + "Name" = "dcapt-testing"
+            }
+        }
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_default_network_acl.this[0] will be created
+  + resource "aws_default_network_acl" "this" {
+      + arn                    = (known after apply)
+      + default_network_acl_id = (known after apply)
+      + id                     = (known after apply)
+      + owner_id               = (known after apply)
+      + tags                   = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-default"
+        }
+      + tags_all               = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-default"
+        }
+      + vpc_id                 = (known after apply)
+
+      + egress {
+          + action          = "allow"
+          + from_port       = 0
+          + ipv6_cidr_block = "::/0"
+          + protocol        = "-1"
+          + rule_no         = 101
+          + to_port         = 0
+            # (1 unchanged attribute hidden)
+        }
+      + egress {
+          + action          = "allow"
+          + cidr_block      = "0.0.0.0/0"
+          + from_port       = 0
+          + protocol        = "-1"
+          + rule_no         = 100
+          + to_port         = 0
+            # (1 unchanged attribute hidden)
+        }
+
+      + ingress {
+          + action          = "allow"
+          + from_port       = 0
+          + ipv6_cidr_block = "::/0"
+          + protocol        = "-1"
+          + rule_no         = 101
+          + to_port         = 0
+            # (1 unchanged attribute hidden)
+        }
+      + ingress {
+          + action          = "allow"
+          + cidr_block      = "0.0.0.0/0"
+          + from_port       = 0
+          + protocol        = "-1"
+          + rule_no         = 100
+          + to_port         = 0
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_default_route_table.default[0] will be created
+  + resource "aws_default_route_table" "default" {
+      + arn                    = (known after apply)
+      + default_route_table_id = (known after apply)
+      + id                     = (known after apply)
+      + owner_id               = (known after apply)
+      + route                  = (known after apply)
+      + tags                   = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-default"
+        }
+      + tags_all               = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-default"
+        }
+      + vpc_id                 = (known after apply)
+
+      + timeouts {
+          + create = "5m"
+          + update = "5m"
+        }
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_default_security_group.this[0] will be created
+  + resource "aws_default_security_group" "this" {
+      + arn                    = (known after apply)
+      + description            = (known after apply)
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-default"
+        }
+      + tags_all               = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-default"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_eip.nat[0] will be created
+  + resource "aws_eip" "nat" {
+      + allocation_id        = (known after apply)
+      + arn                  = (known after apply)
+      + association_id       = (known after apply)
+      + carrier_ip           = (known after apply)
+      + customer_owned_ip    = (known after apply)
+      + domain               = "vpc"
+      + id                   = (known after apply)
+      + instance             = (known after apply)
+      + ipam_pool_id         = (known after apply)
+      + network_border_group = (known after apply)
+      + network_interface    = (known after apply)
+      + private_dns          = (known after apply)
+      + private_ip           = (known after apply)
+      + ptr_record           = (known after apply)
+      + public_dns           = (known after apply)
+      + public_ip            = (known after apply)
+      + public_ipv4_pool     = (known after apply)
+      + tags                 = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-use2-az1"
+        }
+      + tags_all             = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-use2-az1"
+        }
+      + vpc                  = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_internet_gateway.this[0] will be created
+  + resource "aws_internet_gateway" "this" {
+      + arn      = (known after apply)
+      + id       = (known after apply)
+      + owner_id = (known after apply)
+      + tags     = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc"
+        }
+      + tags_all = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc"
+        }
+      + vpc_id   = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_nat_gateway.this[0] will be created
+  + resource "aws_nat_gateway" "this" {
+      + allocation_id                      = (known after apply)
+      + association_id                     = (known after apply)
+      + connectivity_type                  = "public"
+      + id                                 = (known after apply)
+      + network_interface_id               = (known after apply)
+      + private_ip                         = (known after apply)
+      + public_ip                          = (known after apply)
+      + secondary_private_ip_address_count = (known after apply)
+      + secondary_private_ip_addresses     = (known after apply)
+      + subnet_id                          = (known after apply)
+      + tags                               = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-use2-az1"
+        }
+      + tags_all                           = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-use2-az1"
+        }
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route.private_nat_gateway[0] will be created
+  + resource "aws_route" "private_nat_gateway" {
+      + destination_cidr_block = "0.0.0.0/0"
+      + id                     = (known after apply)
+      + instance_id            = (known after apply)
+      + instance_owner_id      = (known after apply)
+      + nat_gateway_id         = (known after apply)
+      + network_interface_id   = (known after apply)
+      + origin                 = (known after apply)
+      + route_table_id         = (known after apply)
+      + state                  = (known after apply)
+
+      + timeouts {
+          + create = "5m"
+        }
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route.public_internet_gateway[0] will be created
+  + resource "aws_route" "public_internet_gateway" {
+      + destination_cidr_block = "0.0.0.0/0"
+      + gateway_id             = (known after apply)
+      + id                     = (known after apply)
+      + instance_id            = (known after apply)
+      + instance_owner_id      = (known after apply)
+      + network_interface_id   = (known after apply)
+      + origin                 = (known after apply)
+      + route_table_id         = (known after apply)
+      + state                  = (known after apply)
+
+      + timeouts {
+          + create = "5m"
+        }
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table.private[0] will be created
+  + resource "aws_route_table" "private" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags             = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-private-subnet"
+        }
+      + tags_all         = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-private-subnet"
+        }
+      + vpc_id           = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table.public[0] will be created
+  + resource "aws_route_table" "public" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags             = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-public-subnet"
+        }
+      + tags_all         = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-public-subnet"
+        }
+      + vpc_id           = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[0] will be created
+  + resource "aws_route_table_association" "private" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[1] will be created
+  + resource "aws_route_table_association" "private" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[0] will be created
+  + resource "aws_route_table_association" "public" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[1] will be created
+  + resource "aws_route_table_association" "public" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[0] will be created
+  + resource "aws_subnet" "private" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = "use2-az1"
+      + cidr_block                                     = "10.0.0.0/22"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-private-subnet-use2-az1"
+        }
+      + tags_all                                       = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-private-subnet-use2-az1"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[1] will be created
+  + resource "aws_subnet" "private" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = "use2-az2"
+      + cidr_block                                     = "10.0.4.0/22"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-private-subnet-use2-az2"
+        }
+      + tags_all                                       = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-private-subnet-use2-az2"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[0] will be created
+  + resource "aws_subnet" "public" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = "use2-az1"
+      + cidr_block                                     = "10.0.16.0/22"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-public-subnet-use2-az1"
+        }
+      + tags_all                                       = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-public-subnet-use2-az1"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[1] will be created
+  + resource "aws_subnet" "public" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = "use2-az2"
+      + cidr_block                                     = "10.0.20.0/22"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-public-subnet-use2-az2"
+        }
+      + tags_all                                       = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc-public-subnet-use2-az2"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.base-infrastructure.module.vpc.module.vpc.aws_vpc.this[0] will be created
+  + resource "aws_vpc" "this" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.0.0.0/18"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = true
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc"
+        }
+      + tags_all                             = {
+          + "Name" = "atlas-tmh-jira-perf-large-vpc"
+        }
+    }
+
+  # module.database[0].module.db.module.db_instance.aws_db_instance.this[0] will be created
+  + resource "aws_db_instance" "this" {
+      + address                               = (known after apply)
+      + allocated_storage                     = 200
+      + allow_major_version_upgrade           = true
+      + apply_immediately                     = true
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = false
+      + availability_zone                     = (known after apply)
+      + backup_retention_period               = 0
+      + backup_target                         = (known after apply)
+      + backup_window                         = "03:00-06:00"
+      + ca_cert_identifier                    = (known after apply)
+      + character_set_name                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + database_insights_mode                = (known after apply)
+      + db_name                               = "jira"
+      + db_subnet_group_name                  = (known after apply)
+      + dedicated_log_volume                  = false
+      + delete_automated_backups              = true
+      + deletion_protection                   = false
+      + domain_fqdn                           = (known after apply)
+      + endpoint                              = (known after apply)
+      + engine                                = "postgres"
+      + engine_lifecycle_support              = (known after apply)
+      + engine_version                        = "14.15"
+      + engine_version_actual                 = (known after apply)
+      + hosted_zone_id                        = (known after apply)
+      + iam_database_authentication_enabled   = false
+      + id                                    = (known after apply)
+      + identifier                            = "atlas-tmh-jira-perf-large-jira-db"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.m5.xlarge"
+      + iops                                  = 1000
+      + kms_key_id                            = (known after apply)
+      + latest_restorable_time                = (known after apply)
+      + license_model                         = (known after apply)
+      + listener_endpoint                     = (known after apply)
+      + maintenance_window                    = "mon:00:00-mon:03:00"
+      + master_user_secret                    = (known after apply)
+      + master_user_secret_kms_key_id         = (known after apply)
+      + max_allocated_storage                 = 0
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + multi_az                              = false
+      + nchar_character_set_name              = (known after apply)
+      + network_type                          = (known after apply)
+      + option_group_name                     = (known after apply)
+      + parameter_group_name                  = (known after apply)
+      + password                              = (sensitive value)
+      + password_wo                           = (write-only attribute)
+      + performance_insights_enabled          = false
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = 5432
+      + publicly_accessible                   = false
+      + replica_mode                          = (known after apply)
+      + replicas                              = (known after apply)
+      + resource_id                           = (known after apply)
+      + skip_final_snapshot                   = true
+      + snapshot_identifier                   = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-10-3-4"
+      + status                                = (known after apply)
+      + storage_encrypted                     = false
+      + storage_throughput                    = (known after apply)
+      + storage_type                          = (known after apply)
+      + tags_all                              = {
+          + "Name" = "dcapt-testing"
+        }
+      + timezone                              = (known after apply)
+      + username                              = "atljira"
+      + vpc_security_group_ids                = (known after apply)
+
+      + timeouts {}
+    }
+
+  # module.database[0].module.db.module.db_subnet_group.aws_db_subnet_group.this[0] will be created
+  + resource "aws_db_subnet_group" "this" {
+      + arn                     = (known after apply)
+      + description             = "atlas-tmh-jira-perf-large-jira-db subnet group"
+      + id                      = (known after apply)
+      + name                    = (known after apply)
+      + name_prefix             = "atlas-tmh-jira-perf-large-jira-db-"
+      + subnet_ids              = (known after apply)
+      + supported_network_types = (known after apply)
+      + tags                    = {
+          + "Name" = "atlas-tmh-jira-perf-large-jira-db"
+        }
+      + tags_all                = {
+          + "Name" = "atlas-tmh-jira-perf-large-jira-db"
+        }
+      + vpc_id                  = (known after apply)
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0] will be created
+  + resource "aws_eks_node_group" "this" {
+      + ami_type               = "AL2_x86_64"
+      + arn                    = (known after apply)
+      + capacity_type          = "ON_DEMAND"
+      + cluster_name           = (known after apply)
+      + disk_size              = (known after apply)
+      + id                     = (known after apply)
+      + instance_types         = (known after apply)
+      + node_group_name        = (known after apply)
+      + node_group_name_prefix = "appNode-m5_2xlarge-"
+      + node_role_arn          = (known after apply)
+      + release_version        = (known after apply)
+      + resources              = (known after apply)
+      + status                 = (known after apply)
+      + subnet_ids             = (known after apply)
+      + tags                   = {
+          + "Name" = "appNode-m5_2xlarge"
+        }
+      + tags_all               = {
+          + "Name" = "appNode-m5_2xlarge"
+        }
+      + version                = "1.32"
+
+      + launch_template {
+          + id      = (known after apply)
+          + name    = (known after apply)
+          + version = (known after apply)
+        }
+
+      + node_repair_config (known after apply)
+
+      + scaling_config {
+          + desired_size = 1
+          + max_size     = 6
+          + min_size     = 1
+        }
+
+      + timeouts {}
+
+      + update_config {
+          + max_unavailable_percentage = 33
+        }
+    }
+
+  # module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].module.user_data.null_resource.validate_cluster_service_cidr will be created
+  + resource "null_resource" "validate_cluster_service_cidr" {
+      + id = (known after apply)
+    }
+
+Plan: 80 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + bitbucket_ebs_snapshot              = "snap-0112fed8bf6866bc0"
+  + bitbucket_rds_snapshot              = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-bitbucket-9-4-4"
+  + confluence_db_snapshot_build_number = "9109"
+  + confluence_ebs_snapshot             = "snap-03b8437f931e28c57"
+  + confluence_local_home_snapshot      = "snap-0af55f20a2333c8a9"
+  + confluence_rds_snapshot             = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-confluence-9-2-2"
+  + crowd_db_snapshot_build_number      = "2301"
+  + crowd_ebs_snapshot                  = "snap-0938248bec3bb51bb"
+  + crowd_rds_snapshot                  = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-crowd-6-3-0"
+  + eks                                 = (sensitive value)
+  + ingress                             = {
+      + certificate            = "Certificate is not provisioned"
+      + load_balancer_hostname = (known after apply)
+    }
+  + jira_database                       = {
+      + db_name                = "jira"
+      + jdbc_connection        = (known after apply)
+      + kubernetes_secret_name = "jira-db-cred"
+      + rds_instance_id        = (known after apply)
+    }
+  + jira_ebs_snapshot                   = "snap-084486021b02f0ef8"
+  + jira_local_home_snapshot            = "snap-09d056fb9ec6fb35b"
+  + jira_rds_snapshot                   = "arn:aws:rds:us-east-2:585036043680:snapshot:dcapt-jira-10-3-4"
+  + network_acl_ids                     = (known after apply)
+  + network_interface_ids               = (known after apply)
+  + product_urls                        = {
+      + bamboo     = null
+      + bitbucket  = null
+      + confluence = null
+      + crowd      = null
+      + jira       = (known after apply)
+    }
+  + route_table_ids                     = (known after apply)
+  + tags                                = {
+      + Name = "dcapt-testing"
+    }
+  + vpc                                 = {
+      + id                   = (known after apply)
+      + private_subnets_cidr = [
+          + "10.0.0.0/22",
+          + "10.0.4.0/22",
+        ]
+      + public_subnets_cidr  = [
+          + "10.0.16.0/22",
+          + "10.0.20.0/22",
+        ]
+    }
+module.base-infrastructure.module.eks.aws_iam_role.node_group: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_vpc.this[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_iam_role.this[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_iam_policy.custom[0]: Creating...
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.aws_launch_template.nodegroup: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_iam_policy.custom[0]: Creation complete after 2s [id=arn:aws:iam::074103337776:policy/atlas-tmh-jira-perf-large-cluster-cluster]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role.this[0]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster-cluster]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.custom[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Creating...
+module.base-infrastructure.module.eks.aws_iam_role.node_group: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster20250521065037142900000001]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Creating...
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"]: Creating...
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]: Creating...
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Creating...
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.custom[0]: Creation complete after 1s [id=atlas-tmh-jira-perf-large-cluster-cluster-20250521065039607300000005]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Creation complete after 1s [id=atlas-tmh-jira-perf-large-cluster-cluster-20250521065039607300000004]
+module.base-infrastructure.module.eks.module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster-cluster-20250521065039793100000006]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster20250521065037142900000001-20250521065039929600000007]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster20250521065037142900000001-20250521065039938700000008]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster20250521065037142900000001-20250521065040156300000009]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster20250521065037142900000001-2025052106504025000000000a]
+module.base-infrastructure.module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster20250521065037142900000001-2025052106504026580000000b]
+module.base-infrastructure.module.eks.module.nodegroup_launch_template.aws_launch_template.nodegroup: Creation complete after 8s [id=lt-090be5fe6111dd3cf]
+module.base-infrastructure.module.eks.data.aws_launch_template.nodes: Reading...
+module.base-infrastructure.module.eks.data.aws_launch_template.nodes: Read complete after 1s [id=lt-090be5fe6111dd3cf]
+module.base-infrastructure.module.vpc.module.vpc.aws_vpc.this[0]: Still creating... [10s elapsed]
+module.base-infrastructure.module.vpc.module.vpc.aws_vpc.this[0]: Creation complete after 15s [id=vpc-01391f9cee264d27b]
+module.base-infrastructure.module.vpc.module.vpc.aws_internet_gateway.this[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_default_route_table.default[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_default_security_group.this[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table.public[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_default_network_acl.this[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[1]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group.cluster[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[1]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_default_route_table.default[0]: Creation complete after 2s [id=rtb-0098dcf4baf70fb28]
+module.base-infrastructure.aws_security_group.vpc: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[1]: Creation complete after 2s [id=subnet-04b83ac7b6ee88bcc]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table.private[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[1]: Creation complete after 2s [id=subnet-0d1226eef7ea38e3d]
+module.base-infrastructure.module.eks.module.eks.aws_security_group.node[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_internet_gateway.this[0]: Creation complete after 2s [id=igw-0aebb23ec1cc02a80]
+module.base-infrastructure.module.vpc.module.vpc.aws_eip.nat[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table.public[0]: Creation complete after 2s [id=rtb-0e62047c252773090]
+module.base-infrastructure.module.vpc.module.vpc.aws_route.public_internet_gateway[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.public[0]: Creation complete after 3s [id=subnet-0a1c2e754146426e0]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_subnet.private[0]: Creation complete after 3s [id=subnet-08a2c63e41e5a4821]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[1]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[1]: Creation complete after 1s [id=rtbassoc-09927a77333dcf8af]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table.private[0]: Creation complete after 2s [id=rtb-07c8de4423fcb283e]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[1]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_eip.nat[0]: Creation complete after 2s [id=eipalloc-07310c1423b3e69c4]
+module.base-infrastructure.module.vpc.module.vpc.aws_nat_gateway.this[0]: Creating...
+module.base-infrastructure.module.vpc.module.vpc.aws_route.public_internet_gateway[0]: Creation complete after 2s [id=r-rtb-0e62047c2527730901080289494]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.public[0]: Creation complete after 1s [id=rtbassoc-03cfb66c4e486a94f]
+module.base-infrastructure.module.vpc.module.vpc.aws_default_network_acl.this[0]: Creation complete after 4s [id=acl-073395417cc00eb30]
+module.base-infrastructure.module.vpc.module.vpc.aws_default_security_group.this[0]: Creation complete after 5s [id=sg-0266a5fc1fb76bb72]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[1]: Creation complete after 1s [id=rtbassoc-0a6f7241de0496391]
+module.base-infrastructure.module.vpc.module.vpc.aws_route_table_association.private[0]: Creation complete after 1s [id=rtbassoc-0b7194dd336c06bc7]
+module.base-infrastructure.module.eks.module.eks.aws_security_group.cluster[0]: Creation complete after 5s [id=sg-08f40ea680f2cd49e]
+module.base-infrastructure.aws_security_group.vpc: Creation complete after 4s [id=sg-0a2f80234c6275b2d]
+module.base-infrastructure.module.eks.module.eks.aws_security_group.node[0]: Creation complete after 4s [id=sg-0eede9ae6acd84c32]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["egress_all"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Creation complete after 1s [id=sgrule-1465664938]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Creation complete after 4s [id=sgrule-1038158339]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Creation complete after 4s [id=sgrule-872248929]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Creation complete after 4s [id=sgrule-711482411]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Creation complete after 5s [id=sgrule-1140881803]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Creation complete after 6s [id=sgrule-4160983419]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["egress_all"]: Creation complete after 8s [id=sgrule-4177568483]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Creation complete after 9s [id=sgrule-2369920541]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Still creating... [10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Still creating... [10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Creation complete after 10s [id=sgrule-3166826411]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Creation complete after 11s [id=sgrule-2386034628]
+module.base-infrastructure.module.eks.module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Creation complete after 9s [id=sgrule-133287560]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [50s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [1m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [1m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [1m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [1m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [1m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [1m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [2m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [2m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [2m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [2m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [2m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [2m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [3m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [3m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [3m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [3m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [3m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [3m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [4m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [4m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [4m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [4m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [4m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [4m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [5m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [5m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [5m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [5m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [5m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [5m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [6m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [6m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [6m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [6m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [6m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [6m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [7m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [7m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [7m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [7m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [7m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Still creating... [7m51s elapsed]
+module.base-infrastructure.module.eks.module.eks.aws_eks_cluster.this[0]: Creation complete after 7m57s [id=atlas-tmh-jira-perf-large-cluster]
+module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["vpc-cni"]: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["aws-ebs-csi-driver"]: Reading...
+module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["kube-proxy"]: Reading...
+module.base-infrastructure.module.eks.module.eks.aws_eks_access_entry.this["cluster_creator"]: Creating...
+module.base-infrastructure.module.eks.module.eks.data.tls_certificate.this[0]: Reading...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_iam_policy_document.assume_role_with_oidc[0]: Reading...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.data.aws_iam_policy_document.assume_role_with_oidc[0]: Read complete after 0s [id=3256780512]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role.this[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.time_sleep.this[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["kube-proxy"]: Read complete after 0s [id=kube-proxy]
+module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["vpc-cni"]: Read complete after 0s [id=vpc-cni]
+module.base-infrastructure.module.eks.module.eks.data.aws_eks_addon_version.this["aws-ebs-csi-driver"]: Read complete after 0s [id=aws-ebs-csi-driver]
+module.base-infrastructure.module.eks.module.eks.data.tls_certificate.this[0]: Read complete after 1s [id=0a759b1370f2328d0bd5dd3ac81215f4c3398ef8]
+module.base-infrastructure.module.eks.module.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_eks_access_entry.this["cluster_creator"]: Creation complete after 1s [id=atlas-tmh-jira-perf-large-cluster:arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser]
+module.base-infrastructure.module.eks.module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"]: Creating...
+module.base-infrastructure.module.eks.module.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Creation complete after 1s [id=arn:aws:iam::074103337776:oidc-provider/oidc.eks.us-east-2.amazonaws.com/id/B16CE7E13662890129C54618CC7B1565]
+module.base-infrastructure.module.eks.module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"]: Creation complete after 1s [id=atlas-tmh-jira-perf-large-cluster#arn:aws:iam::074103337776:user/Sarthak.Bansal-IAMUser#arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy]
+module.base-infrastructure.module.eks.data.aws_eks_cluster_auth.cluster: Reading...
+module.base-infrastructure.module.eks.data.aws_eks_cluster.cluster: Reading...
+module.base-infrastructure.module.eks.aws_iam_policy.cluster_autoscaler: Creating...
+module.base-infrastructure.module.eks.data.aws_eks_cluster_auth.cluster: Read complete after 0s [id=atlas-tmh-jira-perf-large-cluster]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role.this[0]: Creation complete after 2s [id=atlas-tmh-jira-perf-large-cluster-autoscaler]
+module.base-infrastructure.module.eks.data.aws_eks_cluster.cluster: Read complete after 0s [id=atlas-tmh-jira-perf-large-cluster]
+module.base-infrastructure.module.eks.aws_iam_policy.cluster_autoscaler: Creation complete after 1s [id=arn:aws:iam::074103337776:policy/cluster-autoscaler20250521065913046500000012]
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role_policy_attachment.custom[0]: Creating...
+module.base-infrastructure.module.eks.module.autoscaler_iam_role.aws_iam_role_policy_attachment.custom[0]: Creation complete after 1s [id=atlas-tmh-jira-perf-large-cluster-autoscaler-20250521065914531500000013]
+module.base-infrastructure.module.eks.module.eks.time_sleep.this[0]: Still creating... [10s elapsed]
+module.base-infrastructure.module.eks.module.eks.time_sleep.this[0]: Still creating... [20s elapsed]
+module.base-infrastructure.module.eks.module.eks.time_sleep.this[0]: Still creating... [30s elapsed]
+module.base-infrastructure.module.eks.module.eks.time_sleep.this[0]: Creation complete after 30s [id=2025-05-21T06:59:40Z]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].module.user_data.null_resource.validate_cluster_service_cidr: Creating...
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Creating...
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].module.user_data.null_resource.validate_cluster_service_cidr: Creation complete after 0s [id=4626386523458454708]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [1m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [1m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [1m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [1m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [1m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [1m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [2m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [2m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [2m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [2m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [2m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [2m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [3m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [3m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [3m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [3m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [3m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [3m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [4m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [4m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [4m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [4m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [4m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [4m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [5m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [5m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [5m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [5m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [5m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [5m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [6m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [6m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [6m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [6m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [6m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [6m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [7m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [7m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [7m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [7m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [7m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [7m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [8m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [8m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [8m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [8m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [8m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [8m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [9m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [9m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [9m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [9m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [9m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [9m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [10m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [10m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [10m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [10m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [10m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [10m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [11m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [11m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [11m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [11m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [11m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [11m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [12m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [12m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [12m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [12m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [12m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [12m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [13m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [13m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [13m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [13m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [13m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [13m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [14m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [14m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [14m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [14m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [14m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [14m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [15m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [15m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [15m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [15m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [15m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [15m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [16m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [16m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [16m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [16m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [16m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [16m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [17m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [17m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [17m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [17m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [17m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [17m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [18m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [18m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [18m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [18m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [18m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [18m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [19m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [19m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [19m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [19m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [19m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [19m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [20m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [20m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [20m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [20m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [20m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [20m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [21m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [21m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [21m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [21m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [21m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [21m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [22m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [22m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [22m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [22m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [22m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [22m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [23m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [23m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [23m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [23m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [23m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [23m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [24m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [24m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [24m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [24m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [24m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [24m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [25m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [25m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [25m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [25m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [25m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [25m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [26m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [26m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [26m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [26m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [26m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [26m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [27m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [27m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [27m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [27m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [27m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [27m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [28m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [28m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [28m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [28m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [28m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [28m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [29m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [29m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [29m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [29m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [29m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [29m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [30m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [30m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [30m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [30m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [30m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [30m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [31m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [31m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [31m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [31m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [31m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [31m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [32m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [32m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [32m20s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [32m30s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [32m40s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [32m50s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [33m0s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [33m10s elapsed]
+module.base-infrastructure.module.eks.module.eks.module.eks_managed_node_group["appNodes"].aws_eks_node_group.this[0]: Still creating... [33m20s elapsed]
+Releasing state lock. This may take a few moments...
