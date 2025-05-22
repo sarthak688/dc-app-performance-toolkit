@@ -11,7 +11,7 @@
 # This value can not be altered after the configuration has been applied.
 # Only lowercase letters, numbers, dashes, and dots are allowed.
 # ! REQUIRED !
-environment_name = "tmh-jira-perf-large"
+environment_name = "tmh-jira-perf-large2"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
@@ -34,7 +34,7 @@ bamboo_license = "bamboo-license"
 # Number of product application nodes.
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after product is fully
 # installed and configured.
-jira_replica_count = 1
+jira_replica_count = 2
 confluence_replica_count = 1
 bitbucket_replica_count = 1
 crowd_replica_count = 1

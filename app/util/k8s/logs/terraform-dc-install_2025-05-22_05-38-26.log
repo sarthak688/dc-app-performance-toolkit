@@ -1,0 +1,14 @@
+2025-05-22 05:38:26 [INFO] Terraform will use '/data-center-terraform/conf.tfvars' to install the infrastructure.
+2025-05-22 05:38:26 [INFO] Verifying the config file.
+2025-05-22 05:38:26 [INFO] Checking jira license
+2025-05-22 05:38:26 [INFO] Testing jira license: AAAB4A0ODAoPeNqVUk1v2kAUvPtXWOqlPRitzUcw0kqFZUlpbEOAoKTi8jCPeIuxnfWahPz6+gMELQlSJV921jvzZt58GUihu7DXia0Tq2OaHcvUWX+mW8RqakwiKBFHfVBIC8Qg+WdrjvAxSnG2T9CDLVI2cl0+YcOuo/0WEmqHe74SxWvKvRmfjCfDKde8bLtEOVo/pChTaphHKv6WCLk/02kZpF2RJTJeZb6qFQcjjdfqFSTWwFdih1TJDLVptkx9KZJSrET4DsIMTueSKGcHhpFCWYFhJf0D0oC67JUNus0BWjZj73h3y+Y784VZbGVu3F7rrhvcP964WW8CnLTfn+yXZRD9CsO53CXd9f2CLujRybBPnWF/yj3DsYjdaDbqjWs+pgpkMdEawjR3gnKHMqfoPRLLsJ9GpjH02i3DGTVvtQ3u53lqhSmzRcgNadfrpvYsEaMgThKUV3IfZ9IPIMV/N3n+uowmkSI9xso9+rePD7Q+6kAfT+v4mbvVpwe3+tdiB3q1hG+Ljn7ak+aCyNEIIv//y3DRqvNBz5tyheOTdhwTt7SRfIZIpFWrHsQYVKCxOFI5P8+HDyls0gBUbSuUgvB7JpL8j5ofbyvVixlL9GK4K7EexEr4U60/10tPfzAsAhR6BoB2I0qhCILkgS7BDLcmg+PUuwIUcqbRoNrM+3cYX+g97XwvluKiI/E=X02mq 
+2025-05-22 05:38:26 [INFO] The provided license is valid
+2025-05-22 05:38:26 [INFO] Starting pre-flight checks for jira
+2025-05-22 05:38:26 [INFO] Dataset size is large
+2025-05-22 05:38:26 [INFO] Checking EBS snapshot snap-084486021b02f0ef8 compatibility with jira version 10.3.4
+
+An error occurred (AuthFailure) when calling the DescribeSnapshots operation: AWS was not able to validate the provided access credentials
+2025-05-22 05:38:28 [ERROR] ****************FAILED TO GET EBS SNAPSHOT******************
+2025-05-22 05:38:28 [ERROR] Failed to describe EBS snapshot defined by jira_shared_home_snapshot_id
+2025-05-22 05:38:28 [ERROR] Please check if correct 'jira_shared_home_snapshot_id' variable is defined in tfvars config file
+2025-05-22 05:38:28 [ERROR] ****************FAILED TO GET EBS SNAPSHOT******************

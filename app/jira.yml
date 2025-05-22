@@ -5,7 +5,7 @@ settings:
   verbose: false
   check-updates: false                 # disable bzt check for updates
   env:
-    application_hostname: ab226eb21a1dd422fa286d1a4216a0f0-878048563.us-east-2.elb.amazonaws.com    # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
+    application_hostname: adfba08d6638246c4b60873b1d525024-1473715323.us-east-2.elb.amazonaws.com    # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
     application_protocol: http      # http or https
     application_port: 80            # 80, 443, 8080, 2990, etc
     secure: True                    # Set False to allow insecure connections, e.g. when using self-signed SSL certificate
