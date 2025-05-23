@@ -1,0 +1,191 @@
+Scenario status: OK
+========================================================================================================================
+Run name: 1 Node
+
+Summary run status                                                     OK
+                 
+Artifacts dir                                                          2025-05-21_12-42-55 
+OS                                                                     Linux               
+DC Apps Performance Toolkit version                                    8.7.0 (OK: Toolkit is up to date)
+Application                                                            jira 10.3.4         
+Dataset info                                                           1081954 issues      
+Application nodes count                                                1                   
+Available Processors                                                   6                   
+Deployment                                                             other               
+Concurrency                                                            200                 
+Expected test run duration from yml file                               2700 sec            
+Actual test run duration                                               2899 sec            
+Finished                                                               (True, 'OK')        
+Compliant                                                              (True, 'OK')        
+Success                                                                (True, 'OK')        
+Has app-specific actions                                               True                
+
+Action                                                                Success Rate        90th Percentile     Status              
+jmeter_login_and_view_dashboard                                        100.0               0.68                OK                  
+jmeter_view_issue                                                      100.0               0.46                OK                  
+jmeter_search_jql                                                      100.0               1.04                OK                  
+jmeter_browse_projects                                                 100.0               0.18                OK                  
+jmeter_view_scrum_board                                                100.0               0.44                OK                  
+jmeter_view_kanban_board                                               100.0               0.48                OK                  
+jmeter_view_backlog                                                    100.0               0.73                OK                  
+jmeter_edit_issue:open_editor                                          100.0               0.25                OK                  
+jmeter_edit_issue:save_edit                                            100.0               0.71                OK                  
+jmeter_create_issue:open_quick_create                                  100.0               0.13                OK                  
+jmeter_create_issue:fill_and_submit_issue_form                         100.0               0.46                OK                  
+jmeter_view_dashboard                                                  100.0               0.31                OK                  
+jmeter_view_project_summary                                            100.0               0.29                OK                  
+jmeter_add_comment:open_comment                                        100.0               0.19                OK                  
+jmeter_add_comment:save_comment                                        100.0               0.6                 OK                  
+jmeter_browse_boards                                                   100.0               0.19                OK                  
+selenium_login:open_login_page                                         100.0               1.22                OK                  
+selenium_login:login_and_view_dashboard                                100.0               3.38                OK                  
+selenium_login                                                         100.0               4.59                OK                  
+selenium_project_summary                                               100.0               0.4                 OK                  
+selenium_browse_projects_list                                          100.0               0.33                OK                  
+selenium_browse_boards_list                                            100.0               0.28                OK                  
+selenium_create_issue:open_quick_create                                100.0               2.02                OK                  
+selenium_create_issue:fill_and_submit_issue_form:submit_issue_form     100.0               1.92                OK                  
+selenium_create_issue:fill_and_submit_issue_form                       100.0               2.62                OK                  
+selenium_create_issue                                                  100.0               4.63                OK                  
+selenium_edit_issue:open_edit_issue_form                               100.0               0.57                OK                  
+selenium_edit_issue:save_edit_issue_form                               100.0               0.85                OK                  
+selenium_edit_issue                                                    100.0               2.25                OK                  
+selenium_save_comment:open_comment_form                                100.0               0.27                OK                  
+selenium_save_comment:submit_form                                      100.0               0.8                 OK                  
+selenium_save_comment                                                  100.0               2.87                OK                  
+selenium_search_jql                                                    100.0               2.19                OK                  
+selenium_view_scrum_board_backlog                                      100.0               2.25                OK                  
+selenium_view_scrum_board                                              100.0               2.05                OK                  
+selenium_view_kanban_board                                             100.0               2.09                OK                  
+selenium_view_dashboard                                                100.0               0.29                OK                  
+selenium_view_issue                                                    100.0               0.58                OK                  
+selenium_log_out                                                       100.0               0.42                OK                  
+jmeter_app_specific_action                                             100.0               1.29                OK                  APP-SPECIFIC        
+
+========================================================================================================================
+Run name: 2 Nodes
+
+Summary run status                                                     OK
+                 
+Artifacts dir                                                          2025-05-22_07-02-07 
+OS                                                                     Linux               
+DC Apps Performance Toolkit version                                    8.7.0 (OK: Toolkit is up to date)
+Application                                                            jira 10.3.4         
+Dataset info                                                           1078775 issues      
+Application nodes count                                                2                   
+Available Processors                                                   6                   
+Deployment                                                             other               
+Concurrency                                                            200                 
+Expected test run duration from yml file                               2700 sec            
+Actual test run duration                                               2898 sec            
+Finished                                                               (True, 'OK')        
+Compliant                                                              (True, 'OK')        
+Success                                                                (True, 'OK')        
+Has app-specific actions                                               True                
+
+Action                                                                Success Rate        90th Percentile     Status              
+jmeter_login_and_view_dashboard                                        100.0               0.41                OK                  
+jmeter_view_issue                                                      100.0               0.27                OK                  
+jmeter_search_jql                                                      100.0               0.63                OK                  
+jmeter_browse_projects                                                 100.0               0.1                 OK                  
+jmeter_view_scrum_board                                                100.0               0.24                OK                  
+jmeter_view_kanban_board                                               100.0               0.27                OK                  
+jmeter_view_backlog                                                    100.0               0.41                OK                  
+jmeter_edit_issue:open_editor                                          100.0               0.13                OK                  
+jmeter_edit_issue:save_edit                                            100.0               0.35                OK                  
+jmeter_create_issue:open_quick_create                                  100.0               0.07                OK                  
+jmeter_create_issue:fill_and_submit_issue_form                         100.0               0.18                OK                  
+jmeter_view_dashboard                                                  100.0               0.17                OK                  
+jmeter_view_project_summary                                            100.0               0.17                OK                  
+jmeter_add_comment:open_comment                                        100.0               0.1                 OK                  
+jmeter_add_comment:save_comment                                        100.0               0.32                OK                  
+jmeter_browse_boards                                                   100.0               0.11                OK                  
+selenium_login:open_login_page                                         100.0               1.19                OK                  
+selenium_login:login_and_view_dashboard                                100.0               3.17                OK                  
+selenium_login                                                         100.0               4.36                OK                  
+selenium_project_summary                                               100.0               0.37                OK                  
+selenium_browse_projects_list                                          100.0               0.26                OK                  
+selenium_browse_boards_list                                            100.0               0.22                OK                  
+selenium_create_issue:open_quick_create                                100.0               2.02                OK                  
+selenium_create_issue:fill_and_submit_issue_form:submit_issue_form     100.0               1.92                OK                  
+selenium_create_issue:fill_and_submit_issue_form                       100.0               2.57                OK                  
+selenium_create_issue                                                  100.0               4.53                OK                  
+selenium_edit_issue:open_edit_issue_form                               100.0               0.45                OK                  
+selenium_edit_issue:save_edit_issue_form                               100.0               0.7                 OK                  
+selenium_edit_issue                                                    100.0               1.82                OK                  
+selenium_save_comment:open_comment_form                                100.0               0.22                OK                  
+selenium_save_comment:submit_form                                      100.0               0.56                OK                  
+selenium_save_comment                                                  100.0               2.58                OK                  
+selenium_search_jql                                                    100.0               2.0                 OK                  
+selenium_view_scrum_board_backlog                                      100.0               2.19                OK                  
+selenium_view_scrum_board                                              100.0               2.06                OK                  
+selenium_view_kanban_board                                             100.0               2.11                OK                  
+selenium_view_dashboard                                                100.0               0.23                OK                  
+selenium_view_issue                                                    100.0               0.44                OK                  
+selenium_log_out                                                       100.0               1.06                OK                  
+jmeter_app_specific_action                                             100.0               0.57                OK                  APP-SPECIFIC        
+
+========================================================================================================================
+Run name: 4 Nodes
+
+Summary run status                                                     OK
+                 
+Artifacts dir                                                          2025-05-22_09-20-02 
+OS                                                                     Linux               
+DC Apps Performance Toolkit version                                    8.7.0 (OK: Toolkit is up to date)
+Application                                                            jira 10.3.4         
+Dataset info                                                           1078271 issues      
+Application nodes count                                                4                   
+Available Processors                                                   6                   
+Deployment                                                             other               
+Concurrency                                                            200                 
+Expected test run duration from yml file                               2700 sec            
+Actual test run duration                                               2899 sec            
+Finished                                                               (True, 'OK')        
+Compliant                                                              (True, 'OK')        
+Success                                                                (True, 'OK')        
+Has app-specific actions                                               True                
+
+Action                                                                Success Rate        90th Percentile     Status              
+jmeter_login_and_view_dashboard                                        100.0               3.58                OK                  
+jmeter_view_issue                                                      100.0               0.3                 OK                  
+jmeter_browse_projects                                                 100.0               0.1                 OK                  
+jmeter_view_scrum_board                                                100.0               0.27                OK                  
+jmeter_search_jql                                                      100.0               0.69                OK                  
+jmeter_create_issue:open_quick_create                                  100.0               0.1                 OK                  
+jmeter_edit_issue:open_editor                                          100.0               0.15                OK                  
+jmeter_view_kanban_board                                               100.0               0.28                OK                  
+jmeter_create_issue:fill_and_submit_issue_form                         100.0               0.22                OK                  
+jmeter_edit_issue:save_edit                                            100.0               0.42                OK                  
+jmeter_view_dashboard                                                  100.0               0.19                OK                  
+jmeter_view_backlog                                                    100.0               0.43                OK                  
+jmeter_view_project_summary                                            100.0               0.2                 OK                  
+jmeter_add_comment:open_comment                                        100.0               0.12                OK                  
+jmeter_add_comment:save_comment                                        100.0               0.37                OK                  
+jmeter_browse_boards                                                   100.0               0.12                OK                  
+selenium_login:open_login_page                                         100.0               1.2                 OK                  
+selenium_login:login_and_view_dashboard                                100.0               3.35                OK                  
+selenium_login                                                         100.0               4.57                OK                  
+selenium_project_summary                                               100.0               0.38                OK                  
+selenium_browse_projects_list                                          100.0               0.27                OK                  
+selenium_browse_boards_list                                            100.0               0.22                OK                  
+selenium_create_issue:open_quick_create                                100.0               2.06                OK                  
+selenium_create_issue:fill_and_submit_issue_form:submit_issue_form     100.0               1.94                OK                  
+selenium_create_issue:fill_and_submit_issue_form                       100.0               2.6                 OK                  
+selenium_create_issue                                                  100.0               4.66                OK                  
+selenium_edit_issue:open_edit_issue_form                               100.0               0.47                OK                  
+selenium_edit_issue:save_edit_issue_form                               100.0               0.71                OK                  
+selenium_edit_issue                                                    100.0               1.91                OK                  
+selenium_save_comment:open_comment_form                                100.0               0.22                OK                  
+selenium_save_comment:submit_form                                      100.0               0.59                OK                  
+selenium_save_comment                                                  100.0               2.68                OK                  
+selenium_search_jql                                                    100.0               2.13                OK                  
+selenium_view_scrum_board_backlog                                      100.0               2.19                OK                  
+selenium_view_scrum_board                                              100.0               2.07                OK                  
+selenium_view_kanban_board                                             100.0               2.13                OK                  
+selenium_view_dashboard                                                100.0               0.25                OK                  
+selenium_view_issue                                                    100.0               0.47                OK                  
+selenium_log_out                                                       100.0               1.01                OK                  
+jmeter_app_specific_action                                             100.0               0.68                OK                  APP-SPECIFIC        
+
+========================================================================================================================
